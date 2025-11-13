@@ -819,7 +819,7 @@ export function Header() {
                         Annual Corporation Tax Accounts Preparation
                       </Link>
                      
-                      <Link
+                      {/* <Link
                         href="/services/logo-kit"
                         className="block text-sm text-gray-600 hover:text-orange-600"
                       >
@@ -842,7 +842,7 @@ export function Header() {
                         className="block text-sm text-gray-600 hover:text-orange-600"
                       >
                         Full Statutory Accounts Filing
-                      </Link>
+                      </Link> */}
                       <Link
                         href="/services/confirmation-statement-filing-services"
                         className="block text-sm text-gray-600 hover:text-orange-600"
@@ -861,24 +861,24 @@ export function Header() {
                       >
                         VAT Return Filing
                       </Link>
-                      <Link
+                      {/* <Link
                         href="/services/logo-kit"
                         className="block text-sm text-gray-600 hover:text-orange-600"
                       >
                         Tax Planning & Consulation On Zoom
-                      </Link>
-                      <Link
+                      </Link> */}
+                      {/* <Link
                         href="/services/logo-kit"
                         className="block text-sm text-gray-600 hover:text-orange-600"
                       >
                         Tax Budgeting & Taxation In Investment Appraisal
-                      </Link>
-                      <Link
+                      </Link> */}
+                      {/* <Link
                         href="/services/logo-kit"
                         className="block text-sm text-gray-600 hover:text-orange-600"
                       >
                         Company Registration
-                      </Link>
+                      </Link> */}
                       <Link
                         href="/services/initial-compliance-after-formation"
                         className="block text-sm text-gray-600 hover:text-orange-600"
@@ -890,17 +890,23 @@ export function Header() {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="learning">
+              <AccordionItem value="get-better">
                 <AccordionTrigger className="text-sm">
-                  Learning Center
+                  Get Better
                 </AccordionTrigger>
                 <AccordionContent>
                   <div className="pl-4 space-y-2">
                     <Link
-                      href="/blog"
-                      className="block text-sm text-gray-600 hover:text-orange-600"
+                      href="https://ttmhub.co/better-me/"
+                      className="block text-sm text-gray-600 hover:text-green-600"
                     >
-                      Visit our Blog
+                      Better Me
+                    </Link>
+                    <Link
+                      href="https://ttmhub.co/better-teams/"
+                      className="block text-sm text-gray-600 hover:text-green-600"
+                    >
+                      Better Teams
                     </Link>
                   </div>
                 </AccordionContent>

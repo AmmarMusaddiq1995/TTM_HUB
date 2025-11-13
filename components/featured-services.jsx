@@ -21,7 +21,7 @@ export function FeaturedServices() {
 
 
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 py-8 place-items-center">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-4 py-2 place-items-center">
 
 <CometCard className="w-full max-w-[18rem] sm:max-w-[20rem] h-auto">
 <button
