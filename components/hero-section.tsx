@@ -69,7 +69,7 @@ export function HeroSection() {
             <Link href="/start-business">
               <Button
                 size="lg"
-                className="bg-[#2bb673] cursor-pointer hover:scale-115 transition-all duration-300 text-white px-8 py-4 text-lg"
+                className="bg-[#2bb673] cursor-pointer hover:scale-115 transition-all duration-300 animate-bounce text-white px-8 py-4 text-lg"
               >
                 Get started
               </Button>
