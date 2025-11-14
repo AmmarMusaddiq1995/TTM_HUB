@@ -14,7 +14,7 @@ export default function SimpleCT600FilingPage() {
       <section className="py-20 px-4">
         <div className="container max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Simple Corporation Tax Return Filing (CT600)
+            <span className="text-[#2bb673]">Simple Corporation Tax</span> Return Filing (CT600)
           </h1>
           <p className="text-xl text-muted-foreground mb-8 text-pretty">
             File your company’s Corporation Tax Return (CT600) quickly and
@@ -22,7 +22,7 @@ export default function SimpleCT600FilingPage() {
             submission, and stress-free tax filing for your limited company.
           </p>
           <Link href="/submission-forms/simple-corp-tax-return-ct600-form">
-            <Button size="lg" className="text-lg px-8 py-6">
+            <Button size="lg" className="text-lg px-8 py-6 bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer">
               File Your CT600 Now
             </Button>
           </Link>
@@ -38,7 +38,7 @@ export default function SimpleCT600FilingPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card>
               <CardHeader>
-                <Calculator className="h-12 w-12 text-primary mb-4" />
+                <Calculator className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Accurate Tax Calculation</CardTitle>
               </CardHeader>
               <CardContent>
@@ -51,7 +51,7 @@ export default function SimpleCT600FilingPage() {
 
             <Card>
               <CardHeader>
-                <FileText className="h-12 w-12 text-primary mb-4" />
+                <FileText className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>CT600 Form Preparation</CardTitle>
               </CardHeader>
               <CardContent>
@@ -64,7 +64,7 @@ export default function SimpleCT600FilingPage() {
 
             <Card>
               <CardHeader>
-                <ShieldCheck className="h-12 w-12 text-primary mb-4" />
+                <ShieldCheck className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>HMRC Submission</CardTitle>
               </CardHeader>
               <CardContent>
@@ -77,7 +77,7 @@ export default function SimpleCT600FilingPage() {
 
             <Card>
               <CardHeader>
-                <CheckCircle className="h-12 w-12 text-primary mb-4" />
+                <CheckCircle className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Confirmation & Support</CardTitle>
               </CardHeader>
               <CardContent>

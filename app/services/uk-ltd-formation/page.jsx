@@ -14,7 +14,7 @@ export default function UKFormationLTDPage() {
       <section className="py-20 px-4">
         <div className="container max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            UK Formation LTD
+            <span className="text-[#2bb673]">UK Formation</span> LTD
           </h1>
           <p className="text-xl text-muted-foreground mb-8 text-pretty">
             Start your business journey in the United Kingdom with our UK LTD
@@ -22,7 +22,7 @@ export default function UKFormationLTDPage() {
             House, ensuring full compliance with HMRC and UK regulations.
           </p>
           <Link href="/submission-forms/uk-ltd-formation-form">
-            <Button size="lg" className="text-lg px-8 py-6">
+            <Button size="lg" className="text-lg px-8 py-6 bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer">
               Register Your LTD Company
             </Button>
           </Link>
@@ -38,7 +38,7 @@ export default function UKFormationLTDPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card>
               <CardHeader>
-                <Building2 className="h-12 w-12 text-primary mb-4" />
+                <Building2 className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Company Registration</CardTitle>
               </CardHeader>
               <CardContent>
@@ -51,7 +51,7 @@ export default function UKFormationLTDPage() {
 
             <Card>
               <CardHeader>
-                <FileText className="h-12 w-12 text-primary mb-4" />
+                <FileText className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Official Documents</CardTitle>
               </CardHeader>
               <CardContent>
@@ -64,7 +64,7 @@ export default function UKFormationLTDPage() {
 
             <Card>
               <CardHeader>
-                <ShieldCheck className="h-12 w-12 text-primary mb-4" />
+                <ShieldCheck className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>HMRC Compliance</CardTitle>
               </CardHeader>
               <CardContent>
@@ -77,7 +77,7 @@ export default function UKFormationLTDPage() {
 
             <Card>
               <CardHeader>
-                <Globe className="h-12 w-12 text-primary mb-4" />
+                <Globe className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Registered UK Address</CardTitle>
               </CardHeader>
               <CardContent>

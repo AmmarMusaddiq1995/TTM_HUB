@@ -14,7 +14,7 @@ export default function ProBookkeepingServicesLargePage() {
       <section className="py-20 px-4">
         <div className="container max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Pro-Bookkeeping Services (Large Business)
+            <span className="text-[#2bb673]">Pro-Bookkeeping</span> Services (Large Business)
           </h1>
           <p className="text-xl text-muted-foreground mb-8 text-pretty">
             Empower your enterprise with comprehensive bookkeeping solutions
@@ -23,7 +23,7 @@ export default function ProBookkeepingServicesLargePage() {
             maintain accuracy and compliance across your organization.
           </p>
           <Link href="/submission-forms/book-keeping-services-form-large">
-            <Button size="lg" className="text-lg px-8 py-6">
+            <Button size="lg" className="text-lg px-8 py-6 bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer">
               Get Bookkeeping Service
             </Button>
           </Link>
@@ -39,7 +39,7 @@ export default function ProBookkeepingServicesLargePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card>
               <CardHeader>
-                <Building2 className="h-12 w-12 text-primary mb-4" />
+                <Building2 className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Enterprise-Scale Management</CardTitle>
               </CardHeader>
               <CardContent>
@@ -52,7 +52,7 @@ export default function ProBookkeepingServicesLargePage() {
 
             <Card>
               <CardHeader>
-                <BarChart3 className="h-12 w-12 text-primary mb-4" />
+                <BarChart3 className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Advanced Financial Insights</CardTitle>
               </CardHeader>
               <CardContent>
@@ -65,7 +65,7 @@ export default function ProBookkeepingServicesLargePage() {
 
             <Card>
               <CardHeader>
-                <FileSpreadsheet className="h-12 w-12 text-primary mb-4" />
+                <FileSpreadsheet className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Multi-Department Reporting</CardTitle>
               </CardHeader>
               <CardContent>
@@ -78,7 +78,7 @@ export default function ProBookkeepingServicesLargePage() {
 
             <Card>
               <CardHeader>
-                <ShieldCheck className="h-12 w-12 text-primary mb-4" />
+                <ShieldCheck className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Security & Regulatory Compliance</CardTitle>
               </CardHeader>
               <CardContent>

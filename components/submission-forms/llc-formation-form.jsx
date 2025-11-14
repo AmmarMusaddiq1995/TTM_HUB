@@ -952,7 +952,7 @@ export function BusinessFormationForm({ pricingData }) {
             </div>
           </div>
 
-          <Button type="submit" className="w-full hover:bg-primary/80 hover:scale-105 cursor-pointer transition-all duration-300" disabled={loading}>
+            <Button type="submit" className="w-full bg-[#2bb673] shadow-md shadow-black hover:bg-[#2bb673]/80 hover:scale-105 cursor-pointer transition-all duration-300" disabled={loading}>
             {loading ? "Submitting..." : "Start LLC Formation"}
           </Button>
         </form>

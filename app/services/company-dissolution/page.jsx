@@ -14,7 +14,7 @@ export default function CompanyDissolutionServicePage() {
       <section className="py-20 px-4">
         <div className="container max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Company Dissolution Service
+            <span className="text-[#2bb673]">Company Dissolution</span> Service
           </h1>
           <p className="text-xl text-muted-foreground mb-8 text-pretty">
             Officially close your business with ease and full compliance. Our
@@ -22,7 +22,7 @@ export default function CompanyDissolutionServicePage() {
             filings to ensure your business is legally and properly closed.
           </p>
           <Link href="/submission-forms/company-dissolution-form">
-            <Button size="lg" className="text-lg px-8 py-6">
+            <Button size="lg" className="text-lg px-8 py-6 bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer">
               Start Company Dissolution
             </Button>
           </Link>
@@ -38,7 +38,7 @@ export default function CompanyDissolutionServicePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card>
               <CardHeader>
-                <Shield className="h-12 w-12 text-primary mb-4" />
+                <Shield className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Stay Legally Compliant</CardTitle>
               </CardHeader>
               <CardContent>
@@ -52,7 +52,7 @@ export default function CompanyDissolutionServicePage() {
 
             <Card>
               <CardHeader>
-                <FileText className="h-12 w-12 text-primary mb-4" />
+                <FileText className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Handle All Paperwork</CardTitle>
               </CardHeader>
               <CardContent>
@@ -65,7 +65,7 @@ export default function CompanyDissolutionServicePage() {
 
             <Card>
               <CardHeader>
-                <CheckCircle className="h-12 w-12 text-primary mb-4" />
+                <CheckCircle className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Peace of Mind</CardTitle>
               </CardHeader>
               <CardContent>
@@ -78,7 +78,7 @@ export default function CompanyDissolutionServicePage() {
 
             <Card>
               <CardHeader>
-                <Clock className="h-12 w-12 text-primary mb-4" />
+                <Clock className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Fast & Efficient Process</CardTitle>
               </CardHeader>
               <CardContent>

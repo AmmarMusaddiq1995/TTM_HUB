@@ -14,7 +14,7 @@ export default function AdvanceSA100FilingPage() {
       <section className="py-20 px-4">
         <div className="container max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Advance Self Assessment (SA100) Filing
+            <span className="text-[#2bb663]">Advance Self Assessment</span> (SA100) Filing
           </h1>
           <p className="text-xl text-muted-foreground mb-8 text-pretty">
             Manage complex Self Assessment (SA100) filings with expert precision.
@@ -22,7 +22,7 @@ export default function AdvanceSA100FilingPage() {
             and capital gains to ensure full HMRC compliance and peace of mind.
           </p>
           <Link href="/submission-forms/simple-sa100-filing-form">
-            <Button size="lg" className="text-lg px-8 py-6">
+            <Button size="lg" className="text-lg px-8 py-6 bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer">
               File Your Advance SA100
             </Button>
           </Link>
@@ -38,7 +38,7 @@ export default function AdvanceSA100FilingPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card>
               <CardHeader>
-                <Calculator className="h-12 w-12 text-primary mb-4" />
+                <Calculator className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Complex Tax Calculations</CardTitle>
               </CardHeader>
               <CardContent>
@@ -51,7 +51,7 @@ export default function AdvanceSA100FilingPage() {
 
             <Card>
               <CardHeader>
-                <FileSpreadsheet className="h-12 w-12 text-primary mb-4" />
+                <FileSpreadsheet className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Capital Gains & Investments</CardTitle>
               </CardHeader>
               <CardContent>
@@ -64,7 +64,7 @@ export default function AdvanceSA100FilingPage() {
 
             <Card>
               <CardHeader>
-                <ShieldAlert className="h-12 w-12 text-primary mb-4" />
+                <ShieldAlert className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>HMRC Compliance Review</CardTitle>
               </CardHeader>
               <CardContent>
@@ -77,7 +77,7 @@ export default function AdvanceSA100FilingPage() {
 
             <Card>
               <CardHeader>
-                <CheckCircle className="h-12 w-12 text-primary mb-4" />
+                <CheckCircle className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Full Support & Guidance</CardTitle>
               </CardHeader>
               <CardContent>

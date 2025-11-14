@@ -14,7 +14,7 @@ export default function RegisterSelfAssessmentPage() {
       <section className="py-20 px-4">
         <div className="container max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Registering Client for Self Assessment
+            <span className="text-[#2bb673]">Registering Client</span> for Self Assessment
           </h1>
           <p className="text-xl text-muted-foreground mb-8 text-pretty">
             We make it easy to register individuals and businesses for HMRC Self
@@ -23,7 +23,7 @@ export default function RegisterSelfAssessmentPage() {
             HMRC requirements.
           </p>
           <Link href="/submission-forms/register-client-for-self-assessment-form">
-            <Button size="lg" className="text-lg px-8 py-6">
+            <Button size="lg" className="text-lg px-8 py-6 bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer">
               Register Client for Self Assessment
             </Button>
           </Link>
@@ -39,7 +39,7 @@ export default function RegisterSelfAssessmentPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card>
               <CardHeader>
-                <UserPlus className="h-12 w-12 text-primary mb-4" />
+                <UserPlus className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>HMRC Registration</CardTitle>
               </CardHeader>
               <CardContent>
@@ -53,7 +53,7 @@ export default function RegisterSelfAssessmentPage() {
 
             <Card>
               <CardHeader>
-                <FileText className="h-12 w-12 text-primary mb-4" />
+                <FileText className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>UTR Application</CardTitle>
               </CardHeader>
               <CardContent>
@@ -66,7 +66,7 @@ export default function RegisterSelfAssessmentPage() {
 
             <Card>
               <CardHeader>
-                <ShieldCheck className="h-12 w-12 text-primary mb-4" />
+                <ShieldCheck className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Compliance Assurance</CardTitle>
               </CardHeader>
               <CardContent>
@@ -79,7 +79,7 @@ export default function RegisterSelfAssessmentPage() {
 
             <Card>
               <CardHeader>
-                <CheckCircle className="h-12 w-12 text-primary mb-4" />
+                <CheckCircle className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>End-to-End Support</CardTitle>
               </CardHeader>
               <CardContent>

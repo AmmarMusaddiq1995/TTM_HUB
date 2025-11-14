@@ -334,7 +334,7 @@ export function UKLTDFormationForm() {
                     desiredCompanyName: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -352,7 +352,7 @@ export function UKLTDFormationForm() {
                     alternativeCompanyName: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -366,7 +366,7 @@ export function UKLTDFormationForm() {
                 }
                 required
               >
-                <SelectTrigger className="border-gray-300 shadow-md shadow-black">
+                <SelectTrigger className="border-gray-300 shadow-md shadow-black text-black">
                   <SelectValue placeholder="Select business entity type" />
                 </SelectTrigger>
                 <SelectContent>
@@ -415,7 +415,7 @@ export function UKLTDFormationForm() {
                       return next;
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -435,7 +435,7 @@ export function UKLTDFormationForm() {
                       return next;
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -455,7 +455,7 @@ export function UKLTDFormationForm() {
                       return next;
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -475,7 +475,7 @@ export function UKLTDFormationForm() {
                       return next;
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -498,7 +498,7 @@ export function UKLTDFormationForm() {
                       return next;
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -521,7 +521,7 @@ export function UKLTDFormationForm() {
                       return next;
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -544,7 +544,7 @@ export function UKLTDFormationForm() {
                       return next;
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -567,7 +567,7 @@ export function UKLTDFormationForm() {
                       return next;
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -589,7 +589,7 @@ export function UKLTDFormationForm() {
                       return next;
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                   placeholder="If you want to keep your personal address hidden, you can purchase our service address for 39£ + VAT."
                 />
@@ -613,19 +613,19 @@ export function UKLTDFormationForm() {
                       return next;
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
 
-              
+                      
             </div>
           ))}
 
           <div>
             <Button
               type="button"
-              variant="secondary"
+              className="bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-md shadow-black hover:scale-105 cursor-pointer px-8 py-4"
               onClick={() =>
                 setMembers((prev) => [
                   ...prev,
@@ -671,7 +671,7 @@ export function UKLTDFormationForm() {
                   })
                 }
                 maxLength={3}
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -689,7 +689,7 @@ export function UKLTDFormationForm() {
                   })
                 }
                 maxLength={3}
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -707,7 +707,7 @@ export function UKLTDFormationForm() {
                   })
                 }
                 maxLength={3}
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -739,7 +739,7 @@ export function UKLTDFormationForm() {
                     firstName: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -755,7 +755,7 @@ export function UKLTDFormationForm() {
                     lastName: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -772,7 +772,7 @@ export function UKLTDFormationForm() {
                     phoneNumberBusiness: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -785,7 +785,7 @@ export function UKLTDFormationForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, emailBusiness: e.target.value })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -798,7 +798,7 @@ export function UKLTDFormationForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, faxNumber: e.target.value })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -811,7 +811,7 @@ export function UKLTDFormationForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, country: e.target.value })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -824,7 +824,7 @@ export function UKLTDFormationForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, addressLocal: e.target.value })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -837,7 +837,7 @@ export function UKLTDFormationForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, city: e.target.value })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -850,7 +850,7 @@ export function UKLTDFormationForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, state: e.target.value })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -864,7 +864,7 @@ export function UKLTDFormationForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, zipCode: e.target.value })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -889,7 +889,7 @@ export function UKLTDFormationForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, typeOfProduct: e.target.value })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -936,7 +936,7 @@ export function UKLTDFormationForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, businessWebsite: e.target.value })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -1044,7 +1044,7 @@ export function UKLTDFormationForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, description: e.target.value })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -1059,7 +1059,7 @@ export function UKLTDFormationForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, businessWebsite: e.target.value })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -1072,13 +1072,13 @@ export function UKLTDFormationForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, businessEmail: e.target.value })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
           </div>
 
-          <Button type="submit" className="w-full hover:bg-primary/80 hover:scale-105 cursor-pointer transition-all duration-300" disabled={loading}>
+          <Button type="submit" className="w-full bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-md shadow-black hover:scale-105 cursor-pointer px-8 py-4" disabled={loading}>
             {loading ? "Submitting..." : "Start UK LTD Formation"}
           </Button>
         </form>

@@ -283,7 +283,7 @@ export function ItinApplicationForm() {
                   }}
                   required
                   placeholder="Scan of your passport copy"
-                  className="border-gray-300 cursor-pointer"
+                  className="border-gray-300 cursor-pointer shadow-md shadow-black border rounded-md p-1"
                 />
               </div>
 
@@ -297,7 +297,7 @@ export function ItinApplicationForm() {
                   }}
                   optional
                   placeholder="Only if you have a USA visa"
-                  className="border-gray-300 cursor-pointer"
+                  className="border-gray-300 cursor-pointer shadow-md shadow-black border rounded-md p-1"
                 />
               </div>
 
@@ -310,7 +310,7 @@ export function ItinApplicationForm() {
                     handleFileUpload(e, "einLetter");
                   }}
                   required
-                  className="border-gray-300 cursor-pointer"
+                  className="border-gray-300 cursor-pointer shadow-md shadow-black border rounded-md p-1"
                 />
               </div>
 
@@ -325,12 +325,12 @@ export function ItinApplicationForm() {
                     handleFileUpload(e, "certificateOfFormation");
                   }}
                   required
-                  className="border-gray-300 cursor-pointer"
+                  className="border-gray-300 cursor-pointer shadow-md shadow-black border rounded-md p-1"
                 />
               </div>
             </div>
 
-            <Button type="submit" className="w-full hover:bg-primary/80 hover:scale-105 cursor-pointer transition-all duration-300" disabled={loading}>
+            <Button type="submit" className="w-full bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-md shadow-black hover:scale-105 cursor-pointer px-8 py-4" disabled={loading}>
               {loading ? "Submitting..." : "Start ITIN Application"}
             </Button>
           </form>

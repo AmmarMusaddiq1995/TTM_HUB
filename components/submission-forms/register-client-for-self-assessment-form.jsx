@@ -154,7 +154,7 @@ export function RegisterClientForSelfAssessmentForm() {
                       fullName: e.target.value,
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -171,7 +171,7 @@ export function RegisterClientForSelfAssessmentForm() {
                       governmentGatewayId: e.target.value,
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                 />
                 <div className="flex items-center space-x-2">
                   <input
@@ -214,7 +214,7 @@ export function RegisterClientForSelfAssessmentForm() {
                       governmentPassword: e.target.value,
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -231,7 +231,7 @@ export function RegisterClientForSelfAssessmentForm() {
                       emailAddress: e.target.value,
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -247,7 +247,7 @@ export function RegisterClientForSelfAssessmentForm() {
                       phoneNumber: e.target.value,
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -264,7 +264,7 @@ export function RegisterClientForSelfAssessmentForm() {
                       reasonToRegisterForSelfAssessment: e.target.value,
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                   rows={4}
                 />
@@ -278,7 +278,7 @@ export function RegisterClientForSelfAssessmentForm() {
               
             </div>
 
-            <Button type="submit" className="w-full hover:bg-primary/80 hover:scale-105 cursor-pointer transition-all duration-300" disabled={loading}>
+            <Button type="submit" className="w-full bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-md shadow-black hover:scale-105 cursor-pointer px-8 py-4" disabled={loading}>
               {loading ? "Submitting..." : "Start Register Client for Self Assessment"}
             </Button>
           </form>

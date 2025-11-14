@@ -14,7 +14,7 @@ export default function SetupNewBooksPage() {
       <section className="py-20 px-4">
         <div className="container max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Setting Up New Books in QBO, Xero, or Any ERP
+            <span className="text-[#2bb673]">Setting Up New Books</span> in QBO, Xero, or Any ERP
           </h1>
           <p className="text-xl text-muted-foreground mb-8 text-pretty">
             Start your accounting journey on the right foot with professionally
@@ -23,7 +23,7 @@ export default function SetupNewBooksPage() {
             compliance from day one.
           </p>
           <Link href="/submission-forms/setting-up-new-books-in-QBO-form">
-            <Button size="lg" className="text-lg px-8 py-6">
+            <Button size="lg" className="text-lg px-8 py-6 bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer">
               Set Up New Books
             </Button>
           </Link>
@@ -39,7 +39,7 @@ export default function SetupNewBooksPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card>
               <CardHeader>
-                <Settings className="h-12 w-12 text-primary mb-4" />
+                <Settings className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Customized ERP Configuration</CardTitle>
               </CardHeader>
               <CardContent>
@@ -53,7 +53,7 @@ export default function SetupNewBooksPage() {
 
             <Card>
               <CardHeader>
-                <FilePlus2 className="h-12 w-12 text-primary mb-4" />
+                <FilePlus2 className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Chart of Accounts Setup</CardTitle>
               </CardHeader>
               <CardContent>
@@ -67,7 +67,7 @@ export default function SetupNewBooksPage() {
 
             <Card>
               <CardHeader>
-                <Database className="h-12 w-12 text-primary mb-4" />
+                <Database className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Data Migration & Integrations</CardTitle>
               </CardHeader>
               <CardContent>
@@ -80,7 +80,7 @@ export default function SetupNewBooksPage() {
 
             <Card>
               <CardHeader>
-                <ShieldCheck className="h-12 w-12 text-primary mb-4" />
+                <ShieldCheck className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Accuracy & Compliance</CardTitle>
               </CardHeader>
               <CardContent>

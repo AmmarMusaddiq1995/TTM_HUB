@@ -44,7 +44,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-50 to-blue-50 flex items-center justify-center p-6">
+    <div className="min-h-screen flex items-center justify-center p-6">
       {/* Toast notifications */}
       <ToastContainer position="top-right" autoClose={3000} />
 
@@ -55,7 +55,7 @@ export default function LoginPage() {
           </Link>
         </div>
 
-        <Card className="hover:shadow-xl shadow-primary transition-all duration-300">
+        <Card className="hover:shadow-xl transition-all duration-300 shadow-md shadow-black">
           <CardHeader className="text-center">
             <CardTitle className="text-2xl">Welcome Back</CardTitle>
             <CardDescription>
@@ -74,6 +74,7 @@ export default function LoginPage() {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    className="border-gray-300 shadow-md shadow-black"
                   />
                 </div>
                 <div className="grid gap-2">
@@ -84,12 +85,13 @@ export default function LoginPage() {
                     required
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    className="border-gray-300 shadow-md shadow-black"
                   />
                 </div>
 
                 <Button
                   type="submit"
-                  className="w-full bg-primary hover:bg-primary/80 cursor-pointer"
+                  className="w-full bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-md shadow-black hover:scale-105 cursor-pointer px-8 py-4"
                   disabled={isLoading}
                 >
                   {isLoading ? "Signing in..." : "Sign In"}
@@ -98,7 +100,7 @@ export default function LoginPage() {
               <div className="mt-6 text-center text-sm">
                 <Link
                   href="#"
-                  className="text-cyan-600 hover:text-cyan-700 underline underline-offset-4"
+                  className="text-[#2bb673] hover:text-[#2bb673]/80 underline underline-offset-4"
                 >
                   Forgot your password?
                 </Link>
@@ -107,7 +109,7 @@ export default function LoginPage() {
                 Don&apos;t have an account?{" "}
                 <Link
                   href="/auth/sign-up2"
-                  className="text-cyan-600 hover:text-cyan-700 underline underline-offset-4 font-medium"
+                  className="text-[#2bb673] hover:text-[#2bb673]/80 underline underline-offset-4 font-medium"
                 >
                   Create one now
                 </Link>

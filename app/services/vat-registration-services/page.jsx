@@ -22,7 +22,7 @@ export default function VATRegistrationServicesPage() {
             ensuring compliance, correct setup, and a smooth transition to VAT reporting.
           </p>
           <Link href="/submission-forms/vat-registration-services-form">
-            <Button size="lg" className="text-lg px-8 py-6">
+            <Button size="lg" className="text-lg px-8 py-6 bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer">
               Register for VAT
             </Button>
           </Link>
@@ -39,7 +39,7 @@ export default function VATRegistrationServicesPage() {
             
             <Card>
               <CardHeader>
-                <Calculator className="h-12 w-12 text-primary mb-4" />
+                <Calculator className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Seamless HMRC Registration</CardTitle>
               </CardHeader>
               <CardContent>
@@ -52,7 +52,7 @@ export default function VATRegistrationServicesPage() {
 
             <Card>
               <CardHeader>
-                <FileSpreadsheet className="h-12 w-12 text-primary mb-4" />
+                <FileSpreadsheet className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Proper VAT Scheme Selection</CardTitle>
               </CardHeader>
               <CardContent>
@@ -65,7 +65,7 @@ export default function VATRegistrationServicesPage() {
 
             <Card>
               <CardHeader>
-                <ShieldAlert className="h-12 w-12 text-primary mb-4" />
+                <ShieldAlert className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Compliance & Documentation</CardTitle>
               </CardHeader>
               <CardContent>
@@ -78,7 +78,7 @@ export default function VATRegistrationServicesPage() {
 
             <Card>
               <CardHeader>
-                <CheckCircle className="h-12 w-12 text-primary mb-4" />
+                <CheckCircle className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Expert Guidance Post-Registration</CardTitle>
               </CardHeader>
               <CardContent>

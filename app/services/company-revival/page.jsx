@@ -14,7 +14,7 @@ export default function CompanyRevivalServicePage() {
       <section className="py-20 px-4">
         <div className="container max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Company Revival Service
+            <span className="text-[#2bb673]">Company Revival</span> Service
           </h1>
           <p className="text-xl text-muted-foreground mb-8 text-pretty">
             Bring your business back to life with our expert Company Revival
@@ -23,7 +23,7 @@ export default function CompanyRevivalServicePage() {
             good standing quickly and efficiently.
           </p>
           <Link href="/submission-forms/company-revival-form">
-            <Button size="lg" className="text-lg px-8 py-6">
+            <Button size="lg" className="text-lg px-8 py-6 bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer">
               Revive Your Company
             </Button>
           </Link>
@@ -39,7 +39,7 @@ export default function CompanyRevivalServicePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card>
               <CardHeader>
-                <RefreshCw className="h-12 w-12 text-primary mb-4" />
+                <RefreshCw className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Restore Your Business Status</CardTitle>
               </CardHeader>
               <CardContent>
@@ -53,7 +53,7 @@ export default function CompanyRevivalServicePage() {
 
             <Card>
               <CardHeader>
-                <FileCheck2 className="h-12 w-12 text-primary mb-4" />
+                <FileCheck2 className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Clear Compliance Backlogs</CardTitle>
               </CardHeader>
               <CardContent>
@@ -66,7 +66,7 @@ export default function CompanyRevivalServicePage() {
 
             <Card>
               <CardHeader>
-                <Building2 className="h-12 w-12 text-primary mb-4" />
+                <Building2 className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Reinstate Business Operations</CardTitle>
               </CardHeader>
               <CardContent>
@@ -79,7 +79,7 @@ export default function CompanyRevivalServicePage() {
 
             <Card>
               <CardHeader>
-                <Shield className="h-12 w-12 text-primary mb-4" />
+                <Shield className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Legal Protection & Guidance</CardTitle>
               </CardHeader>
               <CardContent>

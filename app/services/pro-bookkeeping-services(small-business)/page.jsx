@@ -14,7 +14,7 @@ export default function ProBookkeepingServicesPage() {
       <section className="py-20 px-4">
         <div className="container max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Pro-Bookkeeping Services (Small Business)
+            <span className="text-[#2bb673]">Pro-Bookkeeping</span> Services (Small Business)
           </h1>
           <p className="text-xl text-muted-foreground mb-8 text-pretty">
             Keep your small business finances organized and stress-free with our
@@ -23,7 +23,7 @@ export default function ProBookkeepingServicesPage() {
             growing your business.
           </p>
           <Link href="/submission-forms/book-keeping-services-form-small">
-            <Button size="lg" className="text-lg px-8 py-6">
+            <Button size="lg" className="text-lg px-8 py-6 bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer">
               Get Bookkeeping Service
             </Button>
           </Link>
@@ -39,7 +39,7 @@ export default function ProBookkeepingServicesPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card>
               <CardHeader>
-                <Shield className="h-12 w-12 text-primary mb-4" />
+                <Shield className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Accurate Financial Tracking</CardTitle>
               </CardHeader>
               <CardContent>
@@ -52,7 +52,7 @@ export default function ProBookkeepingServicesPage() {
 
             <Card>
               <CardHeader>
-                <FileText className="h-12 w-12 text-primary mb-4" />
+                <FileText className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Tax-Ready Reports</CardTitle>
               </CardHeader>
               <CardContent>
@@ -65,7 +65,7 @@ export default function ProBookkeepingServicesPage() {
 
             <Card>
               <CardHeader>
-                <CheckCircle className="h-12 w-12 text-primary mb-4" />
+                <CheckCircle className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Financial Clarity</CardTitle>
               </CardHeader>
               <CardContent>
@@ -78,7 +78,7 @@ export default function ProBookkeepingServicesPage() {
 
             <Card>
               <CardHeader>
-                <Clock className="h-12 w-12 text-primary mb-4" />
+                <Clock className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Save Time & Reduce Stress</CardTitle>
               </CardHeader>
               <CardContent>

@@ -14,7 +14,7 @@ export default function AnnualAccountsPreparationPage() {
       <section className="py-20 px-4">
         <div className="container max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Simple and Complex Annual Accounts Preparation
+            <span className="text-[#2bb673]">Simple and Complex</span> Annual Accounts Preparation
           </h1>
           <p className="text-xl text-muted-foreground mb-8 text-pretty">
             We prepare both simple and complex annual accounts for businesses of all sizes.
@@ -22,7 +22,7 @@ export default function AnnualAccountsPreparationPage() {
             compliance with accounting standards, and clarity for stakeholders and HMRC.
           </p>
           <Link href="/submission-forms/annual-accounts-preparation-services-form">
-            <Button size="lg" className="text-lg px-8 py-6">
+            <Button size="lg" className="text-lg px-8 py-6 bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer">
               Get Your Annual Accounts Prepared
             </Button>
           </Link>
@@ -39,7 +39,7 @@ export default function AnnualAccountsPreparationPage() {
             
             <Card>
               <CardHeader>
-                <Calculator className="h-12 w-12 text-primary mb-4" />
+                <Calculator className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Accurate Financial Statements</CardTitle>
               </CardHeader>
               <CardContent>
@@ -52,7 +52,7 @@ export default function AnnualAccountsPreparationPage() {
 
             <Card>
               <CardHeader>
-                <FileSpreadsheet className="h-12 w-12 text-primary mb-4" />
+                <FileSpreadsheet className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Complex Accounts Handling</CardTitle>
               </CardHeader>
               <CardContent>
@@ -65,7 +65,7 @@ export default function AnnualAccountsPreparationPage() {
 
             <Card>
               <CardHeader>
-                <ShieldAlert className="h-12 w-12 text-primary mb-4" />
+                <ShieldAlert className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Regulatory Compliance</CardTitle>
               </CardHeader>
               <CardContent>
@@ -78,7 +78,7 @@ export default function AnnualAccountsPreparationPage() {
 
             <Card>
               <CardHeader>
-                <CheckCircle className="h-12 w-12 text-primary mb-4" />
+                <CheckCircle className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Expert Guidance & Review</CardTitle>
               </CardHeader>
               <CardContent>

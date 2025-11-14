@@ -22,14 +22,14 @@ export default function AddressChangeServicesPage() {
       <section className="py-20 px-4">
         <div className="container max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Address Change Services
+            <span className="text-[#2bb673]">Address Change</span> Services
           </h1>
           <p className="text-xl text-muted-foreground mb-8 text-pretty">
           Keep your business compliant with state regulations by updating your official business address.
           We handle the filing process, ensure timely updates with the Secretary of State, and protect your privacy.
           </p>
           <Link href="/submission-forms/address-change-services-form">
-            <Button size="lg" className="text-lg px-8 py-6 cursor-pointer">
+            <Button size="lg" className="text-lg px-8 py-6 bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer">
               Get Address Change Services
             </Button>
           </Link>
@@ -45,7 +45,7 @@ export default function AddressChangeServicesPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card>
               <CardHeader>
-                <Shield className="h-12 w-12 text-primary mb-4" />
+                <Shield className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Stay Compliant</CardTitle>
               </CardHeader>
               <CardContent>
@@ -57,7 +57,7 @@ export default function AddressChangeServicesPage() {
             <Card>
               <CardHeader>
                 
-                <Check className="h-12 w-12 text-primary mb-4" />
+                <Check className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Avoid Penalties</CardTitle>
               </CardHeader>
               <CardContent>
@@ -68,7 +68,7 @@ export default function AddressChangeServicesPage() {
             </Card>
             <Card>
               <CardHeader>
-                <MapPin className="h-12 w-12 text-primary mb-4" />
+                <MapPin className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Protect Your Privacy</CardTitle>
               </CardHeader>
               <CardContent>
@@ -79,7 +79,7 @@ export default function AddressChangeServicesPage() {
             </Card>
             <Card>
               <CardHeader>
-              <Clock className="h-12 w-12 text-primary mb-4" />
+              <Clock className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Save Time</CardTitle>
               </CardHeader>
               <CardContent>

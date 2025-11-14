@@ -38,7 +38,7 @@ return (
     <section className="py-20 px-4">
       <div className="container max-w-4xl mx-auto text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-          Corporation Formation Services
+          <span className="text-[#2bb673]">Corporation</span> Formation Services
         </h1>
         <p className="text-xl text-muted-foreground mb-8 text-pretty">
           Start your Corporation with confidence. We handle the
@@ -51,7 +51,7 @@ return (
             
           }}
         >
-          <Button size="lg" className="text-lg px-8 py-6">
+          <Button size="lg" className="text-lg bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer px-8 py-4">
             Start Your Corporation Today
           </Button>
         </Link>
@@ -67,7 +67,7 @@ return (
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <Card>
             <CardHeader>
-              <Shield className="h-12 w-12 text-primary mb-4" />
+              <Shield className="h-12 w-12 text-[#2bb673] mb-4" />
               <CardTitle>Personal Protection</CardTitle>
             </CardHeader>
             <CardContent>
@@ -79,7 +79,7 @@ return (
           </Card>
           <Card>
             <CardHeader>
-              <FileText className="h-12 w-12 text-primary mb-4" />
+              <FileText className="h-12 w-12 text-[#2bb673] mb-4" />
               <CardTitle>Tax Benefits</CardTitle>
             </CardHeader>
             <CardContent>
@@ -91,7 +91,7 @@ return (
           </Card>
           <Card>
             <CardHeader>
-              <Clock className="h-12 w-12 text-primary mb-4" />
+              <Clock className="h-12 w-12 text-[#2bb673] mb-4" />
               <CardTitle>Quick Setup</CardTitle>
             </CardHeader>
             <CardContent>
@@ -102,7 +102,7 @@ return (
           </Card>
           <Card>
             <CardHeader>
-              <Check className="h-12 w-12 text-primary mb-4" />
+              <Check className="h-12 w-12 text-[#2bb673] mb-4" />
               <CardTitle>Professional Image</CardTitle>
             </CardHeader>
             <CardContent>

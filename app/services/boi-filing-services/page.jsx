@@ -14,7 +14,7 @@ export default function BOIFilingServicesPage() {
       <section className="py-20 px-4">
         <div className="container max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            BOI Filing Services
+            <span className="text-[#2bb673]">BOI Filing</span> Services
           </h1>
           <p className="text-xl text-muted-foreground mb-8 text-pretty">
             Stay compliant with the new FinCEN requirements by filing your
@@ -23,7 +23,7 @@ export default function BOIFilingServicesPage() {
             accurately and on time.
           </p>
           <Link href="/submission-forms/boi-filing-services-form">
-            <Button size="lg" className="text-lg px-8 py-6">
+            <Button size="lg" className="text-lg bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer px-8 py-4">
               Get BOI Filing Service
             </Button>
           </Link>
@@ -39,7 +39,7 @@ export default function BOIFilingServicesPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card>
               <CardHeader>
-                <Shield className="h-12 w-12 text-primary mb-4" />
+                <Shield className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Stay Legally Compliant</CardTitle>
               </CardHeader>
               <CardContent>
@@ -53,7 +53,7 @@ export default function BOIFilingServicesPage() {
 
             <Card>
               <CardHeader>
-                <AlertCircle className="h-12 w-12 text-primary mb-4" />
+                <AlertCircle className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Avoid Fines & Penalties</CardTitle>
               </CardHeader>
               <CardContent>
@@ -66,7 +66,7 @@ export default function BOIFilingServicesPage() {
 
             <Card>
               <CardHeader>
-                <FileCheck className="h-12 w-12 text-primary mb-4" />
+                <FileCheck className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Secure Data Handling</CardTitle>
               </CardHeader>
               <CardContent>
@@ -79,7 +79,7 @@ export default function BOIFilingServicesPage() {
 
             <Card>
               <CardHeader>
-                <Clock className="h-12 w-12 text-primary mb-4" />
+                <Clock className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Fast & Hassle-Free Filing</CardTitle>
               </CardHeader>
               <CardContent>

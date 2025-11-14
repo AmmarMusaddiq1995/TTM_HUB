@@ -492,7 +492,7 @@ export function Header() {
               </>
             ) : (
               <>
-                <Button size="sm" className="cursor-pointer text-lg bg:[#2bb673] hover:bg-primary/50" onClick={() => router.push("/auth/login2")}>
+                <Button size="sm" className=" text-lg bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-md shadow-black hover:scale-105 cursor-pointer px-8 py-4" onClick={() => router.push("/auth/login2")}>
                   Log In
                 </Button>
               </>

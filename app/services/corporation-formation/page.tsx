@@ -15,14 +15,14 @@ export default function CorporationFormationPage() {
         <section className="py-20 px-4">
           <div className="container max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-              Corporation Formation Services
+              <span className="text-[#2bb673]">Corporation</span> Formation Services
             </h1>
             <p className="text-xl text-muted-foreground mb-8 text-pretty">
               Incorporate your business for maximum growth potential, investor
               appeal, and tax advantages.
             </p>
             <Link href="/services/corp-formation-2">
-              <Button size="lg" className="text-lg px-8 py-6">
+              <Button size="lg" className="text-lg px-8 py-6 bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer">
                 Start Your Corporation
               </Button>
             </Link>
@@ -38,7 +38,7 @@ export default function CorporationFormationPage() {
             <div className="grid md:grid-cols-3 gap-8">
               <Card>
                 <CardHeader>
-                  <Building className="h-12 w-12 text-primary mb-4" />
+                  <Building className="h-12 w-12 text-[#2bb673] mb-4" />
                   <CardTitle>Investor Ready</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -50,7 +50,7 @@ export default function CorporationFormationPage() {
               </Card>
               <Card>
                 <CardHeader>
-                  <Users className="h-12 w-12 text-primary mb-4" />
+                  <Users className="h-12 w-12 text-[#2bb673] mb-4" />
                   <CardTitle>Stock Options</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -61,7 +61,7 @@ export default function CorporationFormationPage() {
               </Card>
               <Card>
                 <CardHeader>
-                  <TrendingUp className="h-12 w-12 text-primary mb-4" />
+                  <TrendingUp className="h-12 w-12 text-[#2bb673] mb-4" />
                   <CardTitle>Growth Potential</CardTitle>
                 </CardHeader>
                 <CardContent>

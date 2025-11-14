@@ -213,7 +213,7 @@ export function DBATrademarkRegistrationServicesForm() {
                       businessLegalName: e.target.value,
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -232,7 +232,7 @@ export function DBATrademarkRegistrationServicesForm() {
                       proposedTradeName: e.target.value,
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -296,7 +296,7 @@ export function DBATrademarkRegistrationServicesForm() {
                       ownerLegalName: e.target.value,
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -356,7 +356,7 @@ export function DBATrademarkRegistrationServicesForm() {
                       businessAddress: e.target.value,
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -373,7 +373,7 @@ export function DBATrademarkRegistrationServicesForm() {
                       ownerAddress: e.target.value,
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -391,7 +391,7 @@ export function DBATrademarkRegistrationServicesForm() {
                       naicsCode: e.target.value,
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -442,7 +442,7 @@ export function DBATrademarkRegistrationServicesForm() {
                       primaryBusinessActivities: e.target.value,
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -481,7 +481,7 @@ export function DBATrademarkRegistrationServicesForm() {
                 
                 </div>
 
-                <Button type="submit" className="w-full hover:bg-primary/80 hover:scale-105 cursor-pointer transition-all duration-300" disabled={loading}>
+                <Button type="submit" className="w-full bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-md shadow-black hover:scale-105 cursor-pointer transition-all duration-300" disabled={loading}>
                 {loading ? "Submitting..." : "Start DBA Trademark Registration Services"}
             </Button>
           </form>

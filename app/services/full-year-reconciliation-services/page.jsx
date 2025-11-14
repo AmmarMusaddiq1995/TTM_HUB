@@ -14,7 +14,7 @@ export default function FullYearReconciliationPage() {
       <section className="py-20 px-4">
         <div className="container max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Full Year Reconciliation Service
+            <span className="text-[#2bb673]">Full Year Reconciliation</span> Service
           </h1>
           <p className="text-xl text-muted-foreground mb-8 text-pretty">
             Ensure your books are accurate and compliant with our Full Year
@@ -23,7 +23,7 @@ export default function FullYearReconciliationPage() {
             your bank statements and accounting reports.
           </p>
           <Link href="/submission-forms/full-year-reconciliation-form">
-            <Button size="lg" className="text-lg px-8 py-6">
+            <Button size="lg" className="text-lg px-8 py-6 bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer">
               Get Reconciliation Service
             </Button>
           </Link>
@@ -39,7 +39,7 @@ export default function FullYearReconciliationPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card>
               <CardHeader>
-                <FileSearch className="h-12 w-12 text-primary mb-4" />
+                <FileSearch className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Identify Discrepancies</CardTitle>
               </CardHeader>
               <CardContent>
@@ -53,7 +53,7 @@ export default function FullYearReconciliationPage() {
 
             <Card>
               <CardHeader>
-                <Calculator className="h-12 w-12 text-primary mb-4" />
+                <Calculator className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Accurate Financial Records</CardTitle>
               </CardHeader>
               <CardContent>
@@ -66,7 +66,7 @@ export default function FullYearReconciliationPage() {
 
             <Card>
               <CardHeader>
-                <BarChart3 className="h-12 w-12 text-primary mb-4" />
+                <BarChart3 className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Year-End Reporting Support</CardTitle>
               </CardHeader>
               <CardContent>
@@ -79,7 +79,7 @@ export default function FullYearReconciliationPage() {
 
             <Card>
               <CardHeader>
-                <ShieldCheck className="h-12 w-12 text-primary mb-4" />
+                <ShieldCheck className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Compliance & Accuracy Guaranteed</CardTitle>
               </CardHeader>
               <CardContent>

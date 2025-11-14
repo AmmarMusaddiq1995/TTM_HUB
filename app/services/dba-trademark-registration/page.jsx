@@ -13,7 +13,7 @@ export default function DBATrademarkRegistrationPage() {
       <section className="py-20 px-4">
         <div className="container max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            DBA / Trademark Registration
+            <span className="text-[#2bb673]">DBA/Trademark</span> Registration
           </h1>
           <p className="text-xl text-muted-foreground mb-8 text-pretty">
             Secure your business name and brand identity legally. 
@@ -21,7 +21,7 @@ export default function DBATrademarkRegistrationPage() {
             ensuring compliance across all U.S. states.
           </p>
           <Link href="/submission-forms/dba-trademark-registration-form">
-            <Button size="lg" className="text-lg px-8 py-6">
+            <Button size="lg" className="text-lg bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer px-8 py-4">
               Start My Registration
             </Button>
           </Link>
@@ -37,7 +37,7 @@ export default function DBATrademarkRegistrationPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card>
               <CardHeader>
-                <Shield className="h-12 w-12 text-primary mb-4" />
+                <Shield className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Legal Protection</CardTitle>
               </CardHeader>
               <CardContent>
@@ -49,7 +49,7 @@ export default function DBATrademarkRegistrationPage() {
 
             <Card>
               <CardHeader>
-                <Briefcase className="h-12 w-12 text-primary mb-4" />
+                <Briefcase className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Operate Under a Trade Name</CardTitle>
               </CardHeader>
               <CardContent>
@@ -62,7 +62,7 @@ export default function DBATrademarkRegistrationPage() {
 
             <Card>
               <CardHeader>
-                <Check className="h-12 w-12 text-primary mb-4" />
+                <Check className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>State & Federal Compliance</CardTitle>
               </CardHeader>
               <CardContent>
@@ -75,7 +75,7 @@ export default function DBATrademarkRegistrationPage() {
 
             <Card>
               <CardHeader>
-                <Rocket className="h-12 w-12 text-primary mb-4" />
+                <Rocket className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Build Brand Credibility</CardTitle>
               </CardHeader>
               <CardContent>

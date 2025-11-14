@@ -165,7 +165,7 @@ export function EinClosingServicesForm() {
                     BusinessLegalName: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -182,7 +182,7 @@ export function EinClosingServicesForm() {
                     OwnerFullLegalName: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -199,7 +199,7 @@ export function EinClosingServicesForm() {
                     AddressOfBusiness: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -216,7 +216,7 @@ export function EinClosingServicesForm() {
                     AddressOfOwner: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -233,7 +233,7 @@ export function EinClosingServicesForm() {
                     EmailAddress: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -250,7 +250,7 @@ export function EinClosingServicesForm() {
                     ContactNumber: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -268,7 +268,7 @@ export function EinClosingServicesForm() {
                 <PopoverTrigger asChild>
                   <Button
                     variant="outline"
-                    className=" justify-start text-left font-normal border-gray-300 shadow-md shadow-black"
+                    className=" justify-start text-left font-normal border-gray-300 shadow-md shadow-black rounded-md"
                     id="DateOfEINClosing"
                   >
                     <CalendarIcon className="mr-2 h-4 w-4" />
@@ -316,7 +316,7 @@ export function EinClosingServicesForm() {
                 <PopoverTrigger asChild>
                   <Button
                     variant="outline"
-                    className="justify-start text-left font-normal border-gray-300 shadow-md shadow-black"
+                    className="justify-start text-left font-normal border-gray-300 shadow-md shadow-black rounded-md"
                     id="BusinessDissolutionDate"
                   >
                     <CalendarIcon className="mr-2 h-4 w-4" />
@@ -355,7 +355,7 @@ export function EinClosingServicesForm() {
           
           </div>
 
-          <Button type="submit" className="w-full hover:bg-primary/80 hover:scale-105 cursor-pointer transition-all duration-300" disabled={loading}>
+          <Button type="submit" className="w-full bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-md shadow-black hover:scale-105 cursor-pointer px-8 py-4" disabled={loading}>
             {loading ? "Submitting..." : "Start EIN Closing Services"}
           </Button>
         </form>

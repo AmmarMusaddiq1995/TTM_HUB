@@ -15,6 +15,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useAuthContext } from "@/context/AppContext";
+import Image from "next/image";
 
 export default function SignUpPage() {
   const [firstName, setFirstName] = useState("");
@@ -57,20 +58,15 @@ export default function SignUpPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-50 to-blue-50 flex items-center justify-center p-6">
+    <div className="min-h-screen flex items-center justify-center p-6">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center space-x-2">
-            <div className="h-12 w-12 rounded-full bg-cyan-600 flex items-center justify-center">
-              <span className="text-white font-bold">TTM</span>
-            </div>
-            <span className="font-bold text-2xl text-gray-900">
-              The Talent Management Hub
-            </span>
+            <Image src="/logottm.png" alt="The Talent Management Hub" width={250} height={150} className=" object-contain" />
           </Link>
         </div>
 
-        <Card className="shadow-md hover:shadow-xl shadow-primary transition-all duration-300">
+        <Card className="hover:shadow-xl transition-all duration-300 shadow-md shadow-black">
           <CardHeader className="text-center">
             <CardTitle className="text-2xl">
               Start Your Business Journey
@@ -92,6 +88,7 @@ export default function SignUpPage() {
                       required
                       value={firstName}
                       onChange={(e) => setFirstName(e.target.value)}
+                      className="border-gray-300 shadow-md shadow-black"
                     />
                   </div>
                   <div>
@@ -102,6 +99,7 @@ export default function SignUpPage() {
                       required
                       value={lastName}
                       onChange={(e) => setLastName(e.target.value)}
+                      className="border-gray-300 shadow-md shadow-black"
                     />
                   </div>
                 </div>
@@ -114,6 +112,7 @@ export default function SignUpPage() {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    className="border-gray-300 shadow-md shadow-black"
                   />
                 </div>
                 <div className="grid gap-2">
@@ -124,6 +123,7 @@ export default function SignUpPage() {
                     required
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    className="border-gray-300 shadow-md shadow-black"
                   />
                   <p className="text-xs text-gray-500">
                     Must be at least 8 characters long
@@ -137,6 +137,7 @@ export default function SignUpPage() {
                     required
                     value={repeatPassword}
                     onChange={(e) => setRepeatPassword(e.target.value)}
+                    className="border-gray-300 shadow-md shadow-black"
                   />
                 </div>
 
@@ -150,14 +151,14 @@ export default function SignUpPage() {
                     I agree to the{" "}
                     <Link
                       href="/legal/terms"
-                      className="text-cyan-600 hover:text-cyan-700 underline"
+                      className="text-[#2bb673] hover:text-[#2bb673]/80 underline underline-offset-4 font-medium"
                     >
                       Terms of Service
                     </Link>{" "}
                     and{" "}
                     <Link
                       href="/legal/privacy"
-                      className="text-cyan-600 hover:text-cyan-700 underline"
+                      className="text-[#2bb673] hover:text-[#2bb673]/80 underline underline-offset-4 font-medium"
                     >
                       Privacy Policy
                     </Link>
@@ -171,7 +172,7 @@ export default function SignUpPage() {
                 )}
                 <Button
                   type="submit"
-                  className="w-full bg-cyan-600 hover:bg-cyan-700"
+                  className="w-full bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-md shadow-black hover:scale-105 cursor-pointer px-8 py-4"
                   disabled={isLoading}
                 >
                   {isLoading ? "Creating Account..." : "Create Account"}
@@ -181,7 +182,7 @@ export default function SignUpPage() {
                 Already have an account?{" "}
                 <Link
                   href="/auth/login2"
-                  className="text-cyan-600 hover:text-cyan-700 underline underline-offset-4 font-medium"
+                  className="text-[#2bb673] hover:text-[#2bb673]/80 underline underline-offset-4 font-medium"
                 >
                   Sign in
                 </Link>
@@ -192,7 +193,7 @@ export default function SignUpPage() {
 
         <div className="mt-8 text-center">
           <Link href="/" className="text-gray-600 hover:text-gray-900 text-sm">
-            ← Back to The Talent Management Hub
+            ← Back to Home
           </Link>
         </div>
       </div>

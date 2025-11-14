@@ -363,7 +363,7 @@ export function CorporationFormationForm({ pricingData }) {
                     desiredCompanyName: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -381,7 +381,7 @@ export function CorporationFormationForm({ pricingData }) {
                     alternativeCompanyName: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -413,7 +413,7 @@ export function CorporationFormationForm({ pricingData }) {
                       return next;
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -433,7 +433,7 @@ export function CorporationFormationForm({ pricingData }) {
                       return next;
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -453,7 +453,7 @@ export function CorporationFormationForm({ pricingData }) {
                       return next;
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -475,7 +475,7 @@ export function CorporationFormationForm({ pricingData }) {
                       return next;
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -497,7 +497,7 @@ export function CorporationFormationForm({ pricingData }) {
                       return next;
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -508,6 +508,7 @@ export function CorporationFormationForm({ pricingData }) {
             <Button
               type="button"
               variant="secondary"
+              className="bg-[#2bb673] hover:bg-[#2bb673]/80 hover:scale-105 cursor-pointer transition-all duration-300"
               onClick={() =>
                 setMembers((prev) => [
                   ...prev,
@@ -545,7 +546,7 @@ export function CorporationFormationForm({ pricingData }) {
                     phoneNumber: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -558,7 +559,7 @@ export function CorporationFormationForm({ pricingData }) {
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -571,7 +572,7 @@ export function CorporationFormationForm({ pricingData }) {
                 onChange={(e) =>
                   setFormData({ ...formData, faxNumber: e.target.value })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -584,7 +585,7 @@ export function CorporationFormationForm({ pricingData }) {
                 onChange={(e) =>
                   setFormData({ ...formData, country: e.target.value })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -597,7 +598,7 @@ export function CorporationFormationForm({ pricingData }) {
                 onChange={(e) =>
                   setFormData({ ...formData, addressLocal: e.target.value })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -610,7 +611,7 @@ export function CorporationFormationForm({ pricingData }) {
                 onChange={(e) =>
                   setFormData({ ...formData, city: e.target.value })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -774,7 +775,7 @@ export function CorporationFormationForm({ pricingData }) {
                 onChange={(e) =>
                   setFormData({ ...formData, zipCode: e.target.value })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -890,7 +891,7 @@ export function CorporationFormationForm({ pricingData }) {
                 onChange={(e) =>
                   setFormData({ ...formData, description: e.target.value })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -932,7 +933,7 @@ export function CorporationFormationForm({ pricingData }) {
                 onChange={(e) =>
                   setFormData({ ...formData, businessWebsite: e.target.value })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -945,13 +946,13 @@ export function CorporationFormationForm({ pricingData }) {
                 onChange={(e) =>
                   setFormData({ ...formData, businessEmail: e.target.value })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
           </div>
 
-          <Button type="submit" className="w-full hover:bg-primary/80 hover:scale-105 cursor-pointer transition-all duration-300" disabled={loading}>
+          <Button type="submit" className="w-full bg-[#2bb673] shadow-md shadow-black hover:bg-[#2bb673]/80 hover:scale-105 cursor-pointer transition-all duration-300" disabled={loading}>
             {loading ? "Submitting..." : "Start C-Corporation Formation"}
           </Button>
         </form>

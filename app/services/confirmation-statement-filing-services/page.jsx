@@ -14,7 +14,7 @@ export default function ConfirmationStatementFilingPage() {
       <section className="py-20 px-4">
         <div className="container max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Confirmation Statement Filing Service
+            <span className="text-[#2bb673]">Confirmation Statement</span> Filing Service
           </h1>
           <p className="text-xl text-muted-foreground mb-8 text-pretty">
             Ensure your company remains compliant with Companies House by filing your annual 
@@ -22,7 +22,7 @@ export default function ConfirmationStatementFilingPage() {
             company details, shareholders, and key information to keep your records up to date.
           </p>
           <Link href="/submission-forms/confirmation-statement-filing-form">
-            <Button size="lg" className="text-lg px-8 py-6">
+            <Button size="lg" className="text-lg px-8 py-6 bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer">
               File Your Confirmation Statement
             </Button>
           </Link>
@@ -39,7 +39,7 @@ export default function ConfirmationStatementFilingPage() {
             
             <Card>
               <CardHeader>
-                <Calculator className="h-12 w-12 text-primary mb-4" />
+                <Calculator className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Accurate Company Information</CardTitle>
               </CardHeader>
               <CardContent>
@@ -52,7 +52,7 @@ export default function ConfirmationStatementFilingPage() {
 
             <Card>
               <CardHeader>
-                <FileSpreadsheet className="h-12 w-12 text-primary mb-4" />
+                <FileSpreadsheet className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>On-Time Submission</CardTitle>
               </CardHeader>
               <CardContent>
@@ -65,7 +65,7 @@ export default function ConfirmationStatementFilingPage() {
 
             <Card>
               <CardHeader>
-                <ShieldAlert className="h-12 w-12 text-primary mb-4" />
+                <ShieldAlert className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Compliance Assurance</CardTitle>
               </CardHeader>
               <CardContent>
@@ -78,7 +78,7 @@ export default function ConfirmationStatementFilingPage() {
 
             <Card>
               <CardHeader>
-                <CheckCircle className="h-12 w-12 text-primary mb-4" />
+                <CheckCircle className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Professional Support</CardTitle>
               </CardHeader>
               <CardContent>

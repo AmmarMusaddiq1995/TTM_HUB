@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { supabase } from "@/lib/supabaseClient";
 import { toast } from "react-toastify";
+import Image from "next/image";
 
 const navigation = [
   { name: "Overview", href: "/admin", icon: LayoutDashboard },
@@ -113,7 +114,9 @@ export function AdminLayout({ children }) {
       <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col">
         <div className="flex flex-col flex-grow bg-white border-r border-gray-200">
           <div className="flex h-16 items-center px-4">
+            <Link href="/" className="flex items-center space-x-2">
             <h1 className="text-xl font-bold text-gray-900">Admin Panel</h1>
+            </Link>
           </div>
           <nav className="flex-1 space-y-1 px-2 py-4">
             {navigation.map((item) => {

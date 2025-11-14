@@ -465,8 +465,8 @@ export function EinServicesForm() {
           
           </div>
 
-          <Button type="submit" className="w-full hover:bg-primary/80 hover:scale-105 cursor-pointer transition-all duration-300" disabled={loading}>
-            {loading ? "Submitting..." : "Start Business Formation"}
+          <Button type="submit" className="w-full bg-[#2bb673] shadow-md shadow-black hover:bg-[#2bb673]/80 hover:scale-105 cursor-pointer transition-all duration-300" disabled={loading}>
+            {loading ? "Submitting..." : "Start EIN Services"}
           </Button>
         </form>
       </CardContent>

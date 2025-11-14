@@ -14,7 +14,7 @@ export default function FilingArticlesOfAmendmentPage() {
       <section className="py-20 px-4">
         <div className="container max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Filing Articles of Amendment
+            <span className="text-[#2bb673]">Filing Articles</span> of Amendment
           </h1>
           <p className="text-xl text-muted-foreground mb-8 text-pretty">
             Keep your business compliant and up to date with our Filing Articles
@@ -23,7 +23,7 @@ export default function FilingArticlesOfAmendmentPage() {
             filing process accurately and efficiently.
           </p>
           <Link href="/submission-forms/filing-articles-of-amendments-form">
-            <Button size="lg" className="text-lg px-8 py-6">
+            <Button size="lg" className="text-lg px-8 py-6 bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer">
               File Articles of Amendment
             </Button>
           </Link>
@@ -39,7 +39,7 @@ export default function FilingArticlesOfAmendmentPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card>
               <CardHeader>
-                <FileEdit className="h-12 w-12 text-primary mb-4" />
+                <FileEdit className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Update Business Details</CardTitle>
               </CardHeader>
               <CardContent>
@@ -52,7 +52,7 @@ export default function FilingArticlesOfAmendmentPage() {
 
             <Card>
               <CardHeader>
-                <FileText className="h-12 w-12 text-primary mb-4" />
+                <FileText className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Accurate Document Preparation</CardTitle>
               </CardHeader>
               <CardContent>
@@ -65,7 +65,7 @@ export default function FilingArticlesOfAmendmentPage() {
 
             <Card>
               <CardHeader>
-                <Landmark className="h-12 w-12 text-primary mb-4" />
+                <Landmark className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>State-Level Compliance</CardTitle>
               </CardHeader>
               <CardContent>
@@ -78,7 +78,7 @@ export default function FilingArticlesOfAmendmentPage() {
 
             <Card>
               <CardHeader>
-                <ShieldCheck className="h-12 w-12 text-primary mb-4" />
+                <ShieldCheck className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Secure & Reliable Filing</CardTitle>
               </CardHeader>
               <CardContent>

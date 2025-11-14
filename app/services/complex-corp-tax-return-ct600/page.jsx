@@ -14,7 +14,7 @@ export default function ComplexCT600FilingPage() {
       <section className="py-20 px-4">
         <div className="container max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Complex Corporation Tax Return (CT600)
+            <span className="text-[#2bb673]">Complex Corporation Tax</span> Return (CT600)
           </h1>
           <p className="text-xl text-muted-foreground mb-8 text-pretty">
             Handle complex Corporation Tax Return (CT600) filings with expert
@@ -23,7 +23,7 @@ export default function ComplexCT600FilingPage() {
             compliance for your company.
           </p>
           <Link href="/submission-forms/complex-ct600-filing-form">
-            <Button size="lg" className="text-lg px-8 py-6">
+            <Button size="lg" className="text-lg px-8 py-6 bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer">
               File Your Complex CT600
             </Button>
           </Link>
@@ -39,7 +39,7 @@ export default function ComplexCT600FilingPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card>
               <CardHeader>
-                <Calculator className="h-12 w-12 text-primary mb-4" />
+                <Calculator className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Advanced Tax Calculations</CardTitle>
               </CardHeader>
               <CardContent>
@@ -53,7 +53,7 @@ export default function ComplexCT600FilingPage() {
 
             <Card>
               <CardHeader>
-                <FileSpreadsheet className="h-12 w-12 text-primary mb-4" />
+                <FileSpreadsheet className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Group Relief & Loss Claims</CardTitle>
               </CardHeader>
               <CardContent>
@@ -66,7 +66,7 @@ export default function ComplexCT600FilingPage() {
 
             <Card>
               <CardHeader>
-                <ShieldAlert className="h-12 w-12 text-primary mb-4" />
+                <ShieldAlert className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>HMRC Compliance Review</CardTitle>
               </CardHeader>
               <CardContent>
@@ -79,7 +79,7 @@ export default function ComplexCT600FilingPage() {
 
             <Card>
               <CardHeader>
-                <CheckCircle className="h-12 w-12 text-primary mb-4" />
+                <CheckCircle className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Submission & Expert Support</CardTitle>
               </CardHeader>
               <CardContent>

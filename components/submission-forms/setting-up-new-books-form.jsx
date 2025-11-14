@@ -183,7 +183,7 @@ ${user?.email || 'User'}
                     businessName: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -204,7 +204,7 @@ ${user?.email || 'User'}
                     accountingSoftware: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -224,7 +224,7 @@ ${user?.email || 'User'}
                     businessActivityNature: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -242,7 +242,7 @@ ${user?.email || 'User'}
                     monthlyVolume: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -260,7 +260,7 @@ ${user?.email || 'User'}
                     annualSalesVolume: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -279,7 +279,7 @@ ${user?.email || 'User'}
                     contactNumber: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -296,7 +296,7 @@ ${user?.email || 'User'}
                     emailAddress: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -306,7 +306,7 @@ ${user?.email || 'User'}
           
           </div>
 
-          <Button type="submit" className="w-full hover:bg-primary/80 hover:scale-105 cursor-pointer transition-all duration-300" disabled={loading}>
+          <Button type="submit" className="w-full bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-md shadow-black hover:scale-105 cursor-pointer px-8 py-4" disabled={loading}>
             {loading ? "Submitting..." : "Get Quotation For Setting Up New Books in QBO, Xero, or Any ERP"}
           </Button>
         </form>

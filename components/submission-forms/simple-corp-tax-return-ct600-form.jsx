@@ -332,7 +332,7 @@ export function SimpleCorpTaxReturnPage() {
               
             </div>
 
-            <Button type="submit" className="w-full hover:bg-primary/80 hover:scale-105 cursor-pointer transition-all duration-300" disabled={loading}>
+            <Button type="submit" className="w-full bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-md shadow-black hover:scale-105 cursor-pointer px-8 py-4" disabled={loading}>
               {loading ? "Submitting..." : "Start Simple Corporation Tax Return (CT600)"}
             </Button>
           </form>

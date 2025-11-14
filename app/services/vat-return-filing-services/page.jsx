@@ -14,7 +14,7 @@ export default function VATReturnFilingPage() {
       <section className="py-20 px-4">
         <div className="container max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            VAT Return Filing Service
+            <span className="text-[#2bb673]">VAT Return</span> Filing Service
           </h1>
           <p className="text-xl text-muted-foreground mb-8 text-pretty">
             Stay compliant with HMRC by letting us handle your VAT return filing. 
@@ -22,7 +22,7 @@ export default function VATReturnFilingPage() {
             minimizing errors and keeping your business on track with timely submissions.
           </p>
           <Link href="/submission-forms/vat-return-filing-services-form">
-            <Button size="lg" className="text-lg px-8 py-6">
+            <Button size="lg" className="text-lg px-8 py-6 bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer">
               File Your VAT Return
             </Button>
           </Link>
@@ -39,7 +39,7 @@ export default function VATReturnFilingPage() {
             
             <Card>
               <CardHeader>
-                <Calculator className="h-12 w-12 text-primary mb-4" />
+                <Calculator className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Accurate VAT Calculations</CardTitle>
               </CardHeader>
               <CardContent>
@@ -52,7 +52,7 @@ export default function VATReturnFilingPage() {
 
             <Card>
               <CardHeader>
-                <FileSpreadsheet className="h-12 w-12 text-primary mb-4" />
+                <FileSpreadsheet className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>MTD-Compliant Submissions</CardTitle>
               </CardHeader>
               <CardContent>
@@ -65,7 +65,7 @@ export default function VATReturnFilingPage() {
 
             <Card>
               <CardHeader>
-                <ShieldAlert className="h-12 w-12 text-primary mb-4" />
+                <ShieldAlert className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Error Prevention & Review</CardTitle>
               </CardHeader>
               <CardContent>
@@ -78,7 +78,7 @@ export default function VATReturnFilingPage() {
 
             <Card>
               <CardHeader>
-                <CheckCircle className="h-12 w-12 text-primary mb-4" />
+                <CheckCircle className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Expert Support & Guidance</CardTitle>
               </CardHeader>
               <CardContent>

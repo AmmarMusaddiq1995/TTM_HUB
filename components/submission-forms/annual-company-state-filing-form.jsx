@@ -347,7 +347,7 @@ export function AnnualCompanyStateFilingForm() {
                       businessName: e.target.value,
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -362,7 +362,7 @@ export function AnnualCompanyStateFilingForm() {
                 }
                 required
               >
-                <SelectTrigger className="border-gray-300 shadow-md shadow-black">
+                <SelectTrigger className="border-gray-300 shadow-md shadow-black rounded-md ">
                   <SelectValue placeholder="Select state" />
                 </SelectTrigger>
                 <SelectContent>
@@ -385,7 +385,7 @@ export function AnnualCompanyStateFilingForm() {
                  }
                  required
                 >
-               <SelectTrigger className="border-gray-300 shadow-md shadow-black">
+               <SelectTrigger className="border-gray-300 shadow-md shadow-black rounded-md ">
                 <SelectValue placeholder="Select package type" />
               </SelectTrigger>
               <SelectContent>
@@ -470,7 +470,7 @@ export function AnnualCompanyStateFilingForm() {
                 <PopoverTrigger asChild>
                   <Button
                     variant="outline"
-                    className="justify-start text-left font-normal border-gray-300 shadow-md shadow-black"
+                    className="justify-start text-left font-normal border-gray-300 shadow-md shadow-black rounded-md "
                     id="dateOfFormation"
                   >
                     <CalendarIcon className="mr-2 h-4 w-4" />
@@ -524,7 +524,7 @@ export function AnnualCompanyStateFilingForm() {
                       ownerFullLegalName: e.target.value,
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -542,7 +542,7 @@ export function AnnualCompanyStateFilingForm() {
                       emailAddress: e.target.value,
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -559,7 +559,7 @@ export function AnnualCompanyStateFilingForm() {
                       cashBalanceOfBusiness: e.target.value,
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -578,7 +578,7 @@ export function AnnualCompanyStateFilingForm() {
                       accountsRecieveables: e.target.value,
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -595,7 +595,7 @@ export function AnnualCompanyStateFilingForm() {
                       bankAccountBalanaceAsOfDate: e.target.value,
                     })
                   }
-                  className="border-gray-300"
+                  className="border-gray-300 shadow-md shadow-black"
                   required
                 />
               </div>
@@ -612,7 +612,7 @@ export function AnnualCompanyStateFilingForm() {
                     handleFileUpload(e, "balanceSheet");
                   }}
                   required
-                  className="border-gray-300 cursor-pointer"
+                  className="border-gray-300 cursor-pointer shadow-md shadow-black border rounded-md p-1"
                 />
               </div>
 
@@ -627,7 +627,7 @@ export function AnnualCompanyStateFilingForm() {
               
             </div>
 
-            <Button type="submit" className="w-full hover:bg-primary/80 hover:scale-105 cursor-pointer transition-all duration-300" disabled={loading}>
+            <Button type="submit" className="w-full bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-md shadow-black hover:scale-105 cursor-pointer px-8 py-4" disabled={loading}>
               {loading ? "Submitting..." : "Start Annual Company State Filing"}
             </Button>
           </form>

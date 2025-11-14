@@ -14,14 +14,14 @@ export default function InitialComplianceAfterFormationPage() {
       <section className="py-20 px-4">
         <div className="container max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Initial Compliance After Formation
+            <span className="text-[#2bb673]">Initial Compliance</span> After Formation
           </h1>
           <p className="text-xl text-muted-foreground mb-8 text-pretty">
             Ensure your newly formed company meets all initial compliance requirements with HMRC and Companies House. 
             We handle the essential filings, registrations, and documentation to set your business on a fully compliant foundation.
           </p>
           <Link href="/submission-forms/initial-compliance-after-formation-form">
-            <Button size="lg" className="text-lg px-8 py-6">
+            <Button size="lg" className="text-lg px-8 py-6 bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer">
               Start Your Compliance Setup
             </Button>
           </Link>
@@ -38,7 +38,7 @@ export default function InitialComplianceAfterFormationPage() {
             
             <Card>
               <CardHeader>
-                <Calculator className="h-12 w-12 text-primary mb-4" />
+                <Calculator className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>HMRC Registration</CardTitle>
               </CardHeader>
               <CardContent>
@@ -50,7 +50,7 @@ export default function InitialComplianceAfterFormationPage() {
 
             <Card>
               <CardHeader>
-                <FileSpreadsheet className="h-12 w-12 text-primary mb-4" />
+                <FileSpreadsheet className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Company Records Setup</CardTitle>
               </CardHeader>
               <CardContent>
@@ -62,7 +62,7 @@ export default function InitialComplianceAfterFormationPage() {
 
             <Card>
               <CardHeader>
-                <ShieldAlert className="h-12 w-12 text-primary mb-4" />
+                <ShieldAlert className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Confirmation Statement Guidance</CardTitle>
               </CardHeader>
               <CardContent>
@@ -74,7 +74,7 @@ export default function InitialComplianceAfterFormationPage() {
 
             <Card>
               <CardHeader>
-                <CheckCircle className="h-12 w-12 text-primary mb-4" />
+                <CheckCircle className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Ongoing Compliance Support</CardTitle>
               </CardHeader>
               <CardContent>

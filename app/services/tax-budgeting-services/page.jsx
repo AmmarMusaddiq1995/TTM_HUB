@@ -14,14 +14,14 @@ export default function TaxBudgetingPage() {
       <section className="py-20 px-4">
         <div className="container max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Tax Budgeting Services
+            <span className="text-[#2bb673]">Tax Budgeting</span> Services
           </h1>
           <p className="text-xl text-muted-foreground mb-8 text-pretty">
             Plan ahead and manage your tax liabilities effectively with our professional Tax Budgeting service. 
             We help individuals and businesses forecast, plan, and optimize their taxes to ensure compliance and maximize savings throughout the financial year.
           </p>
           <Link href="/submission-forms/tax-budgeting-services-form">
-            <Button size="lg" className="text-lg px-8 py-6">
+            <Button size="lg" className="text-lg px-8 py-6 bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer">
               Start Your Tax Budgeting Plan
             </Button>
           </Link>
@@ -38,7 +38,7 @@ export default function TaxBudgetingPage() {
 
             <Card>
               <CardHeader>
-                <Calculator className="h-12 w-12 text-primary mb-4" />
+                <Calculator className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Accurate Tax Forecasting</CardTitle>
               </CardHeader>
               <CardContent>
@@ -50,7 +50,7 @@ export default function TaxBudgetingPage() {
 
             <Card>
               <CardHeader>
-                <PieChart className="h-12 w-12 text-primary mb-4" />
+                <PieChart className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Cash Flow Management</CardTitle>
               </CardHeader>
               <CardContent>
@@ -62,7 +62,7 @@ export default function TaxBudgetingPage() {
 
             <Card>
               <CardHeader>
-                <ShieldAlert className="h-12 w-12 text-primary mb-4" />
+                <ShieldAlert className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Compliance & Risk Control</CardTitle>
               </CardHeader>
               <CardContent>
@@ -74,7 +74,7 @@ export default function TaxBudgetingPage() {
 
             <Card>
               <CardHeader>
-                <CheckCircle className="h-12 w-12 text-primary mb-4" />
+                <CheckCircle className="h-12 w-12 text-[#2bb673] mb-4" />
                 <CardTitle>Strategic Tax Planning</CardTitle>
               </CardHeader>
               <CardContent>

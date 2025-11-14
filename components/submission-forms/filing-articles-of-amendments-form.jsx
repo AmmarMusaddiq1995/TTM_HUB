@@ -37,12 +37,12 @@ const PACKAGE_FEATURES = {
     normal: [
       "Delivery in 14 business days",
       "State fee is not included",
-      "Our service fee is 125$"
+      
     ],
     express: [
       "Delivery in 7 business days",
       "State fee is not included",
-      "Our service fee is 125$"
+      
     ],
   };
 
@@ -192,7 +192,7 @@ export function FilingArticlesOfAmendmentsForm() {
                     businessName: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -212,7 +212,7 @@ export function FilingArticlesOfAmendmentsForm() {
                     reasonForFilingAmendments: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -230,7 +230,7 @@ export function FilingArticlesOfAmendmentsForm() {
                     provideNewBusinessName: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 optional
                 placeholder="If business name is changing, provide new business name (optional)"
               />
@@ -250,7 +250,7 @@ export function FilingArticlesOfAmendmentsForm() {
                     ownerFullLegalName: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -268,7 +268,7 @@ export function FilingArticlesOfAmendmentsForm() {
                     emailAddress: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -286,7 +286,7 @@ export function FilingArticlesOfAmendmentsForm() {
                     ownerAddress: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -305,7 +305,7 @@ export function FilingArticlesOfAmendmentsForm() {
                     contactNumber: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -323,7 +323,7 @@ export function FilingArticlesOfAmendmentsForm() {
                     businessAddress: e.target.value,
                   })
                 }
-                className="border-gray-300"
+                className="border-gray-300 shadow-md shadow-black"
                 required
               />
             </div>
@@ -340,7 +340,7 @@ export function FilingArticlesOfAmendmentsForm() {
                  }
                  required
                 >
-               <SelectTrigger className="border-gray-300 shadow-md shadow-black">
+               <SelectTrigger className="border-gray-300 shadow-md shadow-black rounded-md">
                 <SelectValue placeholder="Select package type" />
               </SelectTrigger>
               <SelectContent>
@@ -420,7 +420,7 @@ export function FilingArticlesOfAmendmentsForm() {
           
           </div>
 
-          <Button type="submit" className="w-full hover:bg-primary/80 hover:scale-105 cursor-pointer transition-all duration-300" disabled={loading}>
+          <Button type="submit" className="w-full bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-md shadow-black hover:scale-105 cursor-pointer px-8 py-4" disabled={loading}>
             {loading ? "Submitting..." : "Start Filing Articles of Amendments"}
           </Button>
         </form>
