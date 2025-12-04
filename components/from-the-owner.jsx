@@ -24,11 +24,11 @@ export function FromTheOwner() {
                   translateZ="60"
                   className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
                 >
-                  <strong>CEO</strong> of TTM Hub
+                  <strong>CEO</strong> of TTM HUB
                 </CardItem>
                 <CardItem translateZ="100" className="w-full mt-4">
                   <img
-                    src="/lara.png"
+                    src="/lara.jpeg"
                     height="1000"
                     width="1000"
                     className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl shadow-[#2bb673]"
@@ -39,7 +39,7 @@ export function FromTheOwner() {
                   <CardItem
                     translateZ={20}
                     as="a"
-                    href="https://twitter.com/mannupaaji"
+                    href="https://www.linkedin.com/in/laraservicestt/"
                     target="__blank"
                     className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white hover:bg-[#2bb673] hover:text-white"
                   >
@@ -47,7 +47,8 @@ export function FromTheOwner() {
                   </CardItem>
                   <CardItem
                     translateZ={20}
-                    as="button"
+                    as="a"
+                    href="https://www.facebook.com/223891504150403/"
                     className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold hover:bg-[#2bb673] cursor-pointer hover:text-white"
                   >
                     Facebook

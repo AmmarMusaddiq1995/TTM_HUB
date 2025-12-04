@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 export function CTASection() {
@@ -53,9 +54,10 @@ export function CTASection() {
         <Button
           onClick={handleClick}
           size="lg"
-          className="bg-[#2bb673] cursor-pointer text-primary-foreground hover:scale-115 transition-all duration-300 px-8 py-4 text-lg"
+          className="bg-[#2bb673] cursor-pointer text-primary-foreground shadow-md shadow-black hover:scale-115 hover:shadow-lg hover:bg-[#2bb673]/80 transition-all duration-300 px-8 py-4 text-lg"
         >
-          Start Your LLC Today
+          Start Your Compliance Process
+          <ArrowRight className="ml-2 h-5 w-5" />
         </Button>
       </div>
     </section>

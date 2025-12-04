@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Star } from "lucide-react";
+import { ArrowRight, Star } from "lucide-react";
 import Link from "next/link";
 
 export function HeroSection() {
@@ -56,22 +56,22 @@ export function HeroSection() {
             </span>
           </div>
 
-          <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-balance gradient-title">
-            Let's Make Better Business Together
+          <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-balance ">
+            Let's Make <span className="text-[#2bb673]">Better Business</span> Together
           </h1>
 
           <p className="text-xl lg:text-2xl text-gray-300 mb-8 text-pretty">
-            Start and protect your business with worry-free services and expert
-            support. 
+            Your business deserves stability - let's secure it.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center items-center">
             <Link href="/start-business">
               <Button
                 size="lg"
-                className="bg-[#2bb673] cursor-pointer hover:scale-115 transition-all duration-300 animate-bounce text-white px-8 py-4 text-lg"
+                className="bg-[#2bb673] cursor-pointer  hover:scale-115  hover:bg-white hover:text-[#2bb673] transition-all duration-300 animate-bounce text-white px-8 py-4 text-lg"
               >
-                Get started
+                Book a Consultation
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
           </div>
