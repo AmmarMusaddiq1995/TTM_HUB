@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star } from "lucide-react";
 import Link from "next/link";
+import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 export function HeroSection() {
   return (
@@ -57,9 +58,11 @@ export function HeroSection() {
           </div>
 
           <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-balance ">
-            Let's Make <span className="text-[#2bb673]">Better Business</span> Together
+            {/* Let's Make <span className="text-[#2bb673]">Better Business</span> Together */}
+            <TextGenerateEffect words="Let's Make Better Business Together" className="text-4xl lg:text-6xl font-bold mb-6 text-balance"></TextGenerateEffect>
           </h1>
 
+        
           <p className="text-xl lg:text-2xl text-gray-300 mb-8 text-pretty">
             Your business deserves stability - let's secure it.
           </p>
