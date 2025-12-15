@@ -244,3 +244,19 @@
 .animate-float-orb {
   animation: float-orb 10s ease-in-out infinite;
 }
+
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 2s ease-out forwards;
+}

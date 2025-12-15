@@ -1,7 +1,10 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star } from "lucide-react";
 import Link from "next/link";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
+import { motion } from "framer-motion";
 
 export function HeroSection() {
   return (
@@ -15,46 +18,21 @@ export function HeroSection() {
         />
       </div>
 
-      {/* Content */}
-      {/* <div className="relative container px-4 py-20 lg:py-32">
-        <div className="max-w-2xl">
-          <div className="mb-6">
-            <span className="inline-block bg-primary/20 text-primary-foreground px-3 py-1 rounded-full text-md font-medium mb-4">
-              ONE HOME FOR ALL YOUR BUSINESS NEEDS.
-            </span>
-          </div>
-
-          <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-balance">
-            Let's Make Better <span className="text-primary/60">Business</span> Together
-          </h1>
-
-          <p className="text-xl lg:text-2xl text-gray-300 mb-8 text-pretty">
-            Start and protect your business with worry-free services and expert
-            support. 
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            <Link href="/start-business">
-              <Button
-                size="lg"
-                className="bg-primary/60 cursor-pointer hover:scale-115 transition-all duration-300 text-primary-foreground px-8 py-4 text-lg"
-              >
-                Get started
-              </Button>
-            </Link>
-          </div>
-
-      
-        </div>
-      </div> */}
+   
 
 
 <div className="relative flex flex-col items-center justify-center container px-4 py-10 lg:py-20  mx-auto">
         <div className="max-w-2xl text-center">
-          <div className="mb-6">
-            <span className="inline-block bg-primary/20 text-primary-foreground px-3 py-1 rounded-full text-md font-medium mb-4">
-              ONE HOME FOR ALL YOUR BUSINESS NEEDS.
+          <div className="mb-6 ">
+          <motion.section
+              initial={{ x: -500, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 4.8, ease: "easeOut" }}
+          >
+            <span className="inline-block bg-primary/20 text-primary-foreground px-3 py-1 rounded-full  text-sm  mb-4 ">
+              LET'S BUILD BETTER BUSINESS TOGETHER.
             </span>
+            </motion.section>
           </div>
 
           <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-balance ">
@@ -62,11 +40,21 @@ export function HeroSection() {
             <TextGenerateEffect words="Let's Make Better Business Together" className="text-4xl lg:text-6xl font-bold mb-6 text-balance"></TextGenerateEffect>
           </h1>
 
-        
+          <motion.section
+              initial={{ x: -500, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 4.8, ease: "easeOut" }}
+          >
           <p className="text-xl lg:text-2xl text-gray-300 mb-8 text-pretty">
             Your business deserves stability - let's secure it.
           </p>
+          </motion.section>
 
+          <motion.section
+              initial={{ x: -500, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 4.8, ease: "easeOut" }}
+          >  
           <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center items-center">
             <Link href="/start-business">
               <Button
@@ -78,6 +66,7 @@ export function HeroSection() {
               </Button>
             </Link>
           </div>
+          </motion.section>
 
       
         </div>
@@ -87,6 +76,7 @@ export function HeroSection() {
       <div className="relative  ">
         <div className="container mx-auto  px-4 py-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          
             <div className="flex flex-col items-center space-y-2">
               <div className="h-18 w-18 border-2 border-primary/60 rounded-full flex items-center justify-center">
                 <span className="text-primary text-3xl">📋</span>
@@ -95,20 +85,27 @@ export function HeroSection() {
                 Formation and Compliance
               </span>
             </div>
+           
+            
             {/* <div className="flex flex-col items-center space-y-2">
               <div className="h-12 w-12 bg-primary/20 rounded-full flex items-center justify-center">
                 <span className="text-primary text-xl">🌐</span>
               </div>
               <span className="text-sm text-gray-300">Website and Domain</span>
             </div> */}
+
+         
             <div className="flex flex-col items-center space-y-2">
               <div className="h-18 w-18 border-2 border-primary/60 rounded-full flex items-center justify-center">
                 <span className="text-primary text-3xl">📊</span>
-              </div>
+              </div>            
               <span className="text-md font-medium text-gray-300">
                 Banking and Bookkeeping
               </span>
             </div>
+            
+
+           
             <div className="flex flex-col items-center space-y-2">
               <div className="h-18 w-18 border-2 border-primary/60 rounded-full flex items-center justify-center">
                 <span className="text-primary text-3xl">💡</span>
@@ -117,6 +114,9 @@ export function HeroSection() {
                 Tax Advice and Filing
               </span>
             </div>
+            
+
+            
             <div className="flex flex-col items-center space-y-2">
               <div className="h-18 w-18 border-2 border-primary/60 rounded-full flex items-center justify-center">
                 <span className="text-primary text-3xl">🎯</span>
@@ -125,6 +125,8 @@ export function HeroSection() {
                 Expert Customer Support
               </span>
             </div>
+            
+            
           </div>
         </div>
       </div>
