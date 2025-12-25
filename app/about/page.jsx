@@ -47,6 +47,8 @@ export default function AboutPage() {
     },
   ];
 
+  const audience = [];
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -151,6 +153,22 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+
+        {/* Who This is For */}
+        {/* <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Who This is For?
+              </h2>
+              <p className="text-xl text-pretty text-gray-600">
+              If your goal is a well-run business that supports strong leaders and thriving teams — this is the place to start.
+              Better Business is for organizations that:
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+          </div>
+        </section> */}
 
         {/* CTA Section */}
         <section className="bg-gray-900 text-white py-20">

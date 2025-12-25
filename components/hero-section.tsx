@@ -30,7 +30,7 @@ export function HeroSection() {
               transition={{ duration: 4.8, ease: "easeOut" }}
           >
             <span className="inline-block bg-primary/20 text-primary-foreground px-3 py-1 rounded-full  text-sm  mb-4 ">
-              LET'S BUILD BETTER BUSINESS TOGETHER.
+              WHERE STABILITY MEETS STRATEGY
             </span>
             </motion.section>
           </div>

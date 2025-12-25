@@ -7,37 +7,58 @@ export function ServicesSection() {
   const services = [
     {
       icon: "🚀",
-      title: "Start Strong",
+      title: "Growing Businesses",
       description:
-        "Select your LLC package, appoint a registered agent, secure your Employer ID Number (EIN), set up your company online with a professional website, and keep your personal and business banking separate with our personal and business banking.",
-      image: "/business-formation-documents-and-laptop.png",
+        "Businesses that are growing and need more structure.",
+      image: "/growingBusiness.png",
     },
     {
       icon: "🛡️",
-      title: "Stay Protected",
+      title: "Struggling Businesses",
       description:
-        "Meet all ongoing local, state, and federal requirements by securing the business licenses and permits you need to legally operate, completing annual reports and filings, and managing your business finances to file your business tax returns.",
-      image: "/business-compliance-and-protection-documents.png",
+        "Businesses that are struggling with compliance or operational clarity.",
+      image: "/compliance.png",
     },
     {
       icon: "📈",
-      title: "Strengthen and Grow",
+      title: "Strong Leaders",
       description:
-        "Access business tools and educational resources that help refine your business plan, expand your online presence, automate your finances, and streamline your sales and marketing.",
-      image: "/business-growth-charts-and-analytics-dashboard.png",
+        "Businesses that have leaders stretched beyond their capacity.",
+      image: "/leaders.png",
     },
+    {
+      icon: "📈",
+      title: "Flexible HR Support",
+      description:
+        "Businesses that need HR support but can’t hire a full-time HR manager.",
+      image: "/hr.png",
+    },
+    {
+      icon: "📈",
+      title: "Strong Culture",
+      description:
+        "Businesses that want to strengthen culture and reduce risk.",
+      image: "/culture.png",
+    },
+    {
+      icon: "📈",
+      title: "Support",
+      description:
+        "Businesses that want to build systems that support people and performance.",
+      image: "/build.png",
+    },
+   
   ]
 
   return (
-    <section className="py-20 bg-background mb-20">
+    <section className="py-20 bg-background">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-6xl font-bold mb-4 text-balance">
-            Everything You Need to <span className="text-[#2bb673]">Start</span> , <span className="text-[#2bb673]">Protect</span> , and <span className="text-[#2bb673]">Grow</span> Your Business
+          <h2 className="text-3xl lg:text-6xl font-extrabold mb-4 text-balance">
+           <span className="text-[#2bb673]">Who</span> This Is For?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-            From formation to ongoing compliance, we provide comprehensive business services to help entrepreneurs
-            succeed at every stage.
+            Better business is for organizations that:
           </p>
         </div>
 
