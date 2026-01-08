@@ -1,4 +1,5 @@
 import { CardBody , CardContainer, CardItem } from "@/components/ui/3d-card";
+import NoteFromOwner from "./noteFromOwner";
 
 export function FromTheOwner() {
   return (
@@ -10,7 +11,7 @@ export function FromTheOwner() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-start">
           {/* Left column: Card */}
-          <div className="w-full flex justify-center">
+          <div className="w-full flex justify-center sm:mt-20">
             <CardContainer className="w-full">
               <CardBody className="bg-gray-50 relative group/card border rounded-xl shadow-md hover:shadow-xl shadow-[#2bb673] transition-all duration-300  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2]  w-auto sm:w-[30rem] h-auto  p-6">
                 <CardItem
@@ -59,19 +60,75 @@ export function FromTheOwner() {
           </div>
 
           {/* Right column: Text */}
-          <div className="w-full sm:py-5 lg:py-40">
-            <h3 className="text-xl lg:text-2xl font-semibold mb-4">A Note from the Owner</h3>
-            <p className="text-neutral-600 dark:text-neutral-300 leading-7 mb-4">
-              Welcome to TTM Hub. Our mission is to empower entrepreneurs and
+          <div className="w-full sm:py-5 lg:py-5">
+            {/* <h3 className="text-xl lg:text-2xl font-semibold mb-4">A Note from the Owner</h3> */}
+            <NoteFromOwner />
+            {/* <p className="text-neutral-600 dark:text-neutral-300 leading-7 mb-4"> */}
+              {/* Welcome to TTM Hub. Our mission is to empower entrepreneurs and
               businesses with the right tools, guidance, and services to start,
               manage, and grow with confidence. We believe in transparent
-              processes, exceptional support, and long-term partnerships.
-            </p>
-            <p className="text-neutral-600 dark:text-neutral-300 leading-7">
+              processes, exceptional support, and long-term partnerships. */}
+                 {/* After years of working with leaders across industries, regions and stages of growth, one pattern shows up again and again:<br />
+              businesses do not struggle because leaders lack commitment or intelligence, they struggle because
+              the systems meant to support them are fragmented.
+                I have seen strong leaders burn out under the weight of unclear structures. I have seen capable teams underperform
+              because the business foundations around them were unstable, and I have seen promising businessess stall -- not from
+              lack of vision, but from loack of integrated support. <br />
+                That is why Better Business exists. <br />
+                At The Talent Management Hub, we do not believe business success happens in silos. A truly healthy organization
+              is built when leaders are supported as people(Better Me), teams are equipped to work well together(Better Teams),
+              and the business itself is structured to protect, guide and sustain. <br />
+                Better Business is about creating clarity, confidence and compliance--without losing the human element. It is about
+              putting the right foundations in place so leaders can focus on leading, teams can focus on performing, and businesses
+              can grow with integrity abd resilience. <br />
+                Better Business matters because when businesses are built well, people thrive within them. <br />
+              If you are building something that matters, you do not have to do it alone. This is the ecosystem designed to help you thrive. <br />
+
+              Let's make better business together. */}
+               {/* <p className="text-lg font-medium text-gray-900 border-l-4 border-green-500 pl-4">
+      Businesses don’t struggle because leaders lack commitment —  
+      they struggle because their systems fail to support them.
+    </p>
+
+    <p>
+      After years of working with leaders across industries, regions, and stages of growth,
+      one pattern appears again and again.
+    </p>
+
+    <p>
+      I’ve seen strong leaders burn out under unclear structures, capable teams underperform
+      due to unstable foundations, and promising businesses stall — not from lack of vision,
+      but from lack of integrated support.
+    </p>
+
+    <p className="font-semibold text-gray-900">
+      That is why Better Business exists.
+    </p>
+
+    {/* Pills */}
+    {/* <div className="flex flex-wrap gap-3 pt-4">
+      <span className="px-4 py-2 rounded-full bg-green-50 text-green-700 text-sm font-medium">
+        Better Me
+      </span>
+      <span className="px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-medium">
+        Better Teams
+      </span>
+      <span className="px-4 py-2 rounded-full bg-purple-50 text-purple-700 text-sm font-medium">
+        Better Business
+      </span>
+    </div>
+
+    <p className="pt-6 font-medium text-gray-900">
+      Let’s build better business — together.
+    </p> */}
+
+              
+            {/* </p> */} 
+            {/* <p className="text-neutral-600 dark:text-neutral-300 leading-7">
               Thank you for trusting us as your partner in formation and
               compliance. If there is anything we can do to support your journey,
               please reach out to our team.
-            </p>
+            </p> */}
           </div>
         </div>
       </div>

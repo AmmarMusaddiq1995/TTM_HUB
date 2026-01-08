@@ -31,7 +31,7 @@ export function ServicesSection() {
       title: "Flexible HR Support",
       description:
         "Businesses that need HR support but can’t hire a full-time HR manager.",
-      image: "/hr.png",
+      image: "/hr2.png",
     },
     {
       icon: "📈",

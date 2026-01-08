@@ -10,63 +10,51 @@ export function HeroSection() {
   return (
     <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0 opacity-100 ">
+      <div className="absolute min-h-screen inset-0 opacity-100 ">
         <img
           src="/zero-section.png"
           alt="Entrepreneur working"
-          className="w-full h-full object-cover"
+          className="w-full h-full min-h-screen object-cover"
         />
       </div>
 
    
 
 
-<div className="relative flex flex-col items-center justify-center container px-4 py-10 lg:py-20  mx-auto">
+<div className="relative flex flex-col items-left justify-center container px-4 py-10 lg:py-20  mx-auto ">
         <div className="max-w-2xl text-center">
           <div className="mb-6 ">
-          <motion.section
-              initial={{ x: -500, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 4.8, ease: "easeOut" }}
-          >
-            <span className="inline-block bg-primary/20 text-primary-foreground px-3 py-1 rounded-full  text-sm  mb-4 ">
+         
+            <span className="inline-block bg-primary/20 text-primary-foreground px-3 py-1 rounded-full  text-md sm:text-md  mb-4 ">
               WHERE STABILITY MEETS STRATEGY
             </span>
-            </motion.section>
+        
           </div>
 
-          <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-balance ">
+          <h1 className="text-4xl lg:text-6xl font-extrabold mb-6 text-balance ">
             {/* Let's Make <span className="text-[#2bb673]">Better Business</span> Together */}
-            <TextGenerateEffect words="Let's Make Better Business Together" className="text-4xl lg:text-6xl font-bold mb-6 text-balance"></TextGenerateEffect>
+            <TextGenerateEffect words="Let's Make Better Business Together" className="text-4xl lg:text-6xl font-extrabold mb-6 text-balance"></TextGenerateEffect>
           </h1>
 
-          <motion.section
-              initial={{ x: -500, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 4.8, ease: "easeOut" }}
-          >
+        
           <p className="text-xl lg:text-2xl text-gray-300 mb-8 text-pretty">
             Your business deserves stability - let's secure it.
           </p>
-          </motion.section>
+         
 
-          <motion.section
-              initial={{ x: -500, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 4.8, ease: "easeOut" }}
-          >  
+         
           <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center items-center">
             <Link href="/start-business">
               <Button
                 size="lg"
                 className="bg-[#2bb673] cursor-pointer  hover:scale-115  hover:bg-white hover:text-[#2bb673] transition-all duration-300 animate-bounce text-white px-8 py-4 text-lg"
               >
-                Book a Consultation
+                Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
           </div>
-          </motion.section>
+          
 
       
         </div>
