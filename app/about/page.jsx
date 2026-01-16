@@ -9,7 +9,8 @@ import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Shield, Users, Layers, Target } from "lucide-react";
+import { Shield, Users,  Layers, Target, Scales, UserCheck, TrendingUp, ShieldCheck, Flag } from "lucide-react";
+// import { ShieldCheckIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 
@@ -26,26 +27,49 @@ export default function AboutPage() {
       icon: Shield,
       title: "Integrity & Trust",
       description:
-        "We protect your business and financial data with the highest level of security and confidentiality.",
+        "Your financial, legal, and people data are handled with confidentiality and care. Our guidance is dependable, ethical, and consistent.",
     },
     {
       icon: Users,
       title: "Client-Centric Approach",
       description:
-        "Every entrepreneur we work with is a partner in success. Your goals are our mission.",
+        "Every engagement is tailored to your stage, goals, and pace—no generic templates, just practical solutions grounded in your reality.",
     },
     {
       icon: Layers,
-      title: "Comprehensive Solutions",
+      title: "Practical, Sustainable Structure",
       description:
-        "From formation to financial management and tax compliance — we provide everything under one roof.",
+        "We design systems that are clear, usable, and easy to maintain—supporting your team without adding friction or administrative burden.",
     },
     {
       icon: Target,
-      title: "Results That Matter",
+      title: "Results That Hold Up",
       description:
-        "We focus on precision, efficiency, and long-term success, so you can focus on innovation and growth.",
+        "Aligned teams, reduced risk, consistent execution, and workspaces where people are supported to perform and grow.",
     },
+  ];
+
+  const whatWeDo = [
+    {
+      icon: Flag ,
+      title: "Business Formation & Governance(US & UK)" ,
+      description:"LLC, Corporation, and LTD formation; DBA and trademark registration; and official records management—ensuring your legal foundation is solid from day one.",
+    } ,
+    {
+      icon: ShieldCheck ,
+      title: "Compliance & Financial Management" ,
+      description: "Support for EIN/ITIN, state and federal filings (including BOI), sales tax and VAT returns, registered agent services, and bookkeeping—turning administrative stress into organized clarity.",
+    } , 
+    {
+      icon: UserCheck,
+      title: "People Infrastructure & HR Strategy",
+      description: "Clear HR policies and processes, recruitment optimization powered by The GC Index, and performance management systems that are fair, consistent, and defensible as your team grows." ,
+    } , 
+    {
+      icon: TrendingUp,
+      title: "Proactive Performance & Wellness(EAP)",
+      description: "Comprehensive Employee Assistance Programs, The GC Index for impact alignment, DISC for behavioral insight, plus change management, DEI training, counseling, and executive coaching—reducing burnout, embracing neurodiversity, and fostering genuine care." ,
+    } 
   ];
 
   const audience = [];
@@ -108,26 +132,23 @@ export default function AboutPage() {
                   <span className="text-[#2bb673]">Our Story:</span> From Insight to Innovation
                 </h2>
                 <p className="text-gray-600 mb-6">
-                  With over <strong className="text-[#2bb673]">5 years+ of hands-on experience</strong> in business formations,
-                  accounting, bookkeeping, payroll management, and compliance, our founder
-                  recognized a recurring problem—entrepreneurs juggling multiple providers for
-                  essential services. The result? Wasted time, miscommunications, and lost focus.
+                <span className="text-[#2bb673]"><strong>TTMHUB</strong></span> helps leaders and teams thrive—personally, relationally, and professionally. 
+                Over time, we observed a consistent challenge: even strong organizations struggle when foundational systems are weak.
                 </p>
                 <p className="text-gray-600 mb-6">
-                  That’s when <strong className="text-[#2bb673]">The Talent Management Hub</strong> was born—a unified solution
-                  that brings everything under one roof. We help founders form, manage, and grow
-                  their businesses through our <strong className="text-[#2bb673]">Compliance Concierge Model</strong>, ensuring
-                  everything runs smoothly behind the scenes.
+                Missed filings, disorganized books, inconsistent HR practices, and overlooked wellness quietly place 
+                growing pressure on leaders—until they are carrying too much and watching good people burn out.
                 </p>
                 <p className="text-gray-600">
-                  We’re not just experts—we’re partners in your success story. Let’s simplify your
-                  business journey and build something extraordinary together.
+                <span className="text-[#2bb673]"><strong>Better Business</strong></span> exists to change that.
+                We provide integrated structural and people support, combining operational rigor with evidence-based tools 
+                such as The GC Index and DISC. The result is businesses that run with clarity, consistency, and confidence—without losing their humanity.
                 </p>
               </div>
               <div className="relative">
                 <img
                   src="/modern-office-collaboration.png"
-                  alt="FAAZ Financial Group team"
+                  alt="TTM Hub"
                   className="rounded-lg shadow-lg"
                 />
               </div>
@@ -139,11 +160,15 @@ export default function AboutPage() {
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">
                 Why Choose Us?
               </h2>
+              <p className="text-xl font-semibold text-gray-600">
+                The Principles That Guide Everything We Do
+              </p> 
+              <br />
               <p className="text-xl text-gray-600">
-                The principles that guide everything we do
+              We combine executive-level standards with a human touch—delivering results that last, without unnecessary complexity or compromise.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -160,21 +185,32 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Who This is For */}
-        {/* <section className="py-20">
+        {/* What We Do */}
+        <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Who This is For?
+              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">
+                What We Do?
               </h2>
-              <p className="text-xl text-pretty text-gray-600">
-              If your goal is a well-run business that supports strong leaders and thriving teams — this is the place to start.
-              Better Business is for organizations that:
+              <p className="text-xl font-semibold text-pretty text-gray-600">
+              Four Core Areas For Business Strength & People Support
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+            {/* <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div> */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {whatWeDo.map((value, index) => (
+                <Card key={index} className="text-center shadow-md hover:shadow-lg transition">
+                  <CardContent className="pt-6">
+                    {/* <value.icon className="h-12 w-12 text-[#2bb673] mx-auto mb-4" /> */}
+                    <div className="rounded-full bg-[#2bb673] text-white mx-auto mb-4 h-12 w-12 flex items-center justify-center"> {index + 1} </div>
+                    <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
+                    <p className="text-gray-600">{value.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
-        </section> */}
+        </section>
 
         {/* CTA Section */}
         <section className="bg-gray-900 text-white py-20">
@@ -189,7 +225,7 @@ export default function AboutPage() {
             <Link href="/contact">  
               <Button
                 size="lg"
-                className="bg-[#2bb673] hover:bg-primary cursor-pointer hover:scale-115 transition-all duration-300 text-white px-8 py-4 text-lg"
+                className="bg-[#2bb673] hover:bg-[#2bb673]/80 cursor-pointer hover:scale-115 transition-all duration-300 text-white px-8 py-4 text-lg"
               >
                 Contact Us Today
               </Button>
