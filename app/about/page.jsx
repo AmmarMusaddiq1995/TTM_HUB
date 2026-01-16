@@ -11,10 +11,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Shield, Users, Layers, Target } from "lucide-react";
 import Link from "next/link";
-// import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
-import Approach from "@/components/approach";
-// import { CanvasRevealEffectDemo } from "@/components/ui/canvas-reveal-effect";
-// import dynamic from "next/dynamic";
+
 
 export default function AboutPage() {
   const stats = [
@@ -87,7 +84,7 @@ export default function AboutPage() {
             <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 text-center">
               Quick Facts
             </h1>
-            <Approach />
+        
             {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-center items-center mx-auto">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center bg-primary/20 w-40 h-40 rounded-full mx-auto" >
