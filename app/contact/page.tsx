@@ -95,7 +95,7 @@ export default function ContactPage() {
       icon: Phone,
       title: "Phone Support",
       details: "+1 (321) 987-6747",
-      description: "Monday - Saturday, 10am - 4pm EST",
+      description: "Monday - Saturday, 7am - 4pm EST",
     },
     {
       icon: Mail,
@@ -103,17 +103,17 @@ export default function ContactPage() {
       details: "grow@ttmhub.co",
       description: "We respond within 24 hours",
     },
-    {
-      icon: MapPin,
-      title: "Headquarters",
-      details: "30 N Gould St # 51825 Sheridan, WY 82801 USA",
-      description: "Serving all 50 states",
-    },
+    // {
+    //   icon: MapPin,
+    //   title: "Headquarters",
+    //   details: "30 N Gould St # 51825 Sheridan, WY 82801 USA",
+    //   description: "Serving all 50 states",
+    // },
     {
       icon: Clock,
       title: "Business Hours",
       details: "Monday - Saturday",
-      description: "10:00 AM - 04:00 PM EST",
+      description: "07:00 AM - 04:00 PM EST",
     },
   ];
 
@@ -139,7 +139,7 @@ export default function ContactPage() {
         {/* Contact Info */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-16">
               {contactInfo.map((info, index) => (
                 <Card key={index} className="text-center">
                   <CardContent className="pt-6">
@@ -156,160 +156,7 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* Contact Form */}
-        {/* <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12">
-                <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                    Send Us a Message
-                  </h2>
-                  <p className="text-gray-600 mb-8">
-                    Fill out the form below and we'll get back to you within 24
-                    hours. For urgent matters, please call our support line.
-                  </p>
-
-                  <div className="space-y-6">
-                    <div className="flex items-start gap-4">
-                      <div className="bg-primary/10 p-2 rounded-lg">
-                        <Phone className="h-5 w-5 text-[#2bb673]" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold">Quick Response</h4>
-                        <p className="text-sm text-gray-600">
-                          Most inquiries answered within 2 hours during business
-                          hours
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-4">
-                      <div className="bg-primary/10 p-2 rounded-lg">
-                        <Mail className="h-5 w-5 text-[#2bb673]" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold">Expert Guidance</h4>
-                        <p className="text-sm text-gray-600">
-                          Get advice from business formation specialists
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Contact Form</CardTitle>
-                    <CardDescription>
-                      Tell us about your business needs
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <form className="space-y-6" onSubmit={handleSubmit}>
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <div>
-                          <Label htmlFor="firstName">First Name *</Label>
-                          <Input 
-                            id="firstName" 
-                            placeholder="John" 
-                            value={formData.firstName}
-                            onChange={handleChange}
-                            required
-                          />
-                        </div>
-                        <div>
-                          <Label htmlFor="lastName">Last Name *</Label>
-                          <Input 
-                            id="lastName" 
-                            placeholder="Doe" 
-                            value={formData.lastName}
-                            onChange={handleChange}
-                            required
-                          />
-                        </div>
-                      </div>
-
-                      <div>
-                        <Label htmlFor="email">Email *</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          placeholder="john@example.com"
-                          value={formData.email}
-                          onChange={handleChange}
-                          required
-                        />
-                      </div>
-
-                      <div>
-                        <Label htmlFor="phone">Phone Number</Label>
-                        <Input
-                          id="phone"
-                          type="tel"
-                          placeholder="(555) 123-4567"
-                          value={formData.phone}
-                          onChange={handleChange}
-                        />
-                      </div>
-
-                      <div>
-                        <Label htmlFor="businessType">Business Type</Label>
-                        <Select value={formData.businessType} onValueChange={handleSelectChange}>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select business type" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="llc">LLC</SelectItem>
-                            <SelectItem value="corporation">
-                              Corporation
-                            </SelectItem>
-                            <SelectItem value="partnership">
-                              Partnership
-                            </SelectItem>
-                            <SelectItem value="sole-proprietorship">
-                              Sole Proprietorship
-                            </SelectItem>
-                            <SelectItem value="other">Other</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-
-                      <div>
-                        <Label htmlFor="subject">Subject</Label>
-                        <Input
-                          id="subject"
-                          placeholder="How can we help you?"
-                          value={formData.subject}
-                          onChange={handleChange}
-                        />
-                      </div>
-
-                      <div>
-                        <Label htmlFor="message">Message *</Label>
-                        <Textarea
-                          id="message"
-                          placeholder="Tell us more about your business needs..."
-                          rows={4}
-                          value={formData.message}
-                          onChange={handleChange}
-                          required
-                        />
-                      </div>
-
-                      <Button
-                        type="submit"
-                        disabled={loading}
-                        className="w-full bg-[#2bb673] hover:bg-primary cursor-pointer hover:scale-115 transition-all duration-300 text-white px-8 py-4 text-lg disabled:opacity-50"
-                      >
-                        {loading ? "Sending..." : "Send Message"}
-                      </Button>
-                    </form>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </section> */}
+       
 
         {/* FAQ Section */}
         <section className="py-20 bg-gray-50">

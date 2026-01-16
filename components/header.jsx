@@ -173,9 +173,27 @@ export function Header() {
             </button>
 
             {activeDropdown === "products" && (
-              <div className="fixed z-50 top-20 left-1/2 -translate-x-1/2 w-[95vw] max-w-[1100px] max-h-[80vh] bg-white border rounded-lg shadow-lg px-6 py-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 overflow-y-auto">
-                {/* Column 1: FORMATION SERVICES */}
-                <div className="min-w-0">
+              <div className="fixed z-50 top-20 left-1/2 -translate-x-1/2 w-[95vw] max-w-[1100px] max-h-[80vh] bg-white border rounded-lg shadow-lg px-6 py-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 overflow-y-auto">
+                {/* Coloumn 1: Strategic People Services */}
+
+                <div className="min-w-0  border-r border-gray-200">
+                  <h3 className="font-semibold text-gray-700 -ml-2 mb-8 text-sm uppercase tracking-wide">
+                    STRATEGIC PEOPLE SERVICES
+                  </h3>
+                  <ul className="space-y-1">
+                    <MenuItem href="/services/llc-formation-2">
+                      Strategic People Support
+                    </MenuItem>
+                    <MenuItem href="/services/eap-services">
+                      Employee Assistance Program
+                    </MenuItem>
+                  </ul>
+                </div>
+                
+                
+                
+                {/* Column 2: FORMATION SERVICES */}
+                <div className="min-w-0  border-r border-gray-200">
                   <h3 className="font-semibold text-gray-700 mb-8 text-sm uppercase tracking-wide">
                     FORMATION SERVICES
                   </h3>
@@ -195,8 +213,8 @@ export function Header() {
                   </ul>
                 </div>
 
-                {/* Column 2: COMPLIANCE SERVICES */}
-                <div className="min-w-0">
+                {/* Column 3: COMPLIANCE SERVICES */}
+                <div className="min-w-0  border-r border-gray-200">
                   <h3 className="font-semibold text-gray-700 mb-8 text-sm uppercase tracking-wide">
                     COMPLIANCE SERVICES
                   </h3>
@@ -222,10 +240,10 @@ export function Header() {
                     <MenuItem href="/services/registered-agent">
                       Registered Agent Services
                     </MenuItem>
-                    <MenuItem href="/services/company-dissolution">
+                    <MenuItem href="/services/company-dissolution" truncate>
                       Company Dissolution(State Fee Vary)
                     </MenuItem>
-                    <MenuItem href="/services/company-revival">
+                    <MenuItem href="/services/company-revival" truncate>
                       Company Revival (State Fee vary)
                     </MenuItem>
                     <MenuItem href="/services/address-change-services">
@@ -254,8 +272,8 @@ export function Header() {
                   </ul>
                 </div>
 
-                {/* Column 3: ACCOUNTING & BOOKKEEPING TAXES */}
-                <div className="min-w-0">
+                {/* Column 4: ACCOUNTING & BOOKKEEPING TAXES */}
+                <div className="min-w-0  border-r border-gray-200">
                   <h3 className="font-semibold text-gray-700 mb-8 text-sm uppercase tracking-wide">
                     Bookkeeping & Taxes
                   </h3>
@@ -269,7 +287,7 @@ export function Header() {
                     <MenuItem href="/services/pro-bookkeeping-services(large-business)" truncate>
                       Full Scale Bookkeeping
                     </MenuItem>
-                    <MenuItem href="/services/full-year-reconciliation-services">
+                    <MenuItem href="/services/full-year-reconciliation-services" truncate>
                       Full-Year Reconciliation Services
                     </MenuItem>
                     <MenuItem href="/services/setting-up-new-books-in-QBO" truncate>
@@ -303,7 +321,7 @@ export function Header() {
                   </ul>
                 </div>
 
-                {/* Column 4: UK FORMATION & COMPLIANCE SERVICES */}
+                {/* Column 5: UK FORMATION & COMPLIANCE SERVICES */}
                 <div className="min-w-0">
                   <h3 className="font-semibold text-gray-700 mb-8 text-sm uppercase tracking-wide">
                     UK FORMATION SERVICES
@@ -318,7 +336,7 @@ export function Header() {
                     <MenuItem href="/services/complex-corp-tax-return-ct600" truncate>
                       Advance Corporation Tax 
                     </MenuItem>
-                    <MenuItem href="/services/registering-client-for-selfassessment">
+                    <MenuItem href="/services/registering-client-for-selfassessment" truncate>
                       Registering Client For Selfassessment
                     </MenuItem>
                     <MenuItem href="/services/simple-self-assessment-filing" truncate>
@@ -418,6 +436,53 @@ export function Header() {
             )}
           </div>
 
+
+              {/* Resources Dropdown */}
+
+              <div className="relative">
+            <button
+              onClick={() => handleDropdownToggle("resources")}
+              className={`flex items-center space-x-1 text-foreground hover:text-orange-600 transition-colors whitespace-nowrap ${
+                activeDropdown === "resources"
+                  ? "text-[#2bb673] border-b-2 border-[#2bb673]"
+                  : ""
+              }`}
+            >
+          <span className="whitespace-nowrap text-black text-xl font-bold">Resources</span>
+              {activeDropdown === "resources" ? (
+                <ChevronUp className="h-4 w-4 font-bold text-black" />
+              ) : (
+                <ChevronDown className="h-4 w-4 font-bold text-black" />
+              )}
+            </button>
+
+            {activeDropdown === "resources" && (
+              <div 
+                className="absolute top-full left-0 mt-2 w-64 bg-white border rounded-lg shadow-lg p-4 z-50"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <ul className="space-y-1">
+                  <li>
+                    <Link
+                      href="/referred-services"
+                      className="text-sm text-gray-600  hover:bg-[#2bb673] hover:text-white rounded-md px-2 py-1 block transition-all duration-200"
+                    >
+                      Reffered Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="#"
+                      className="text-sm text-gray-600  hover:bg-[#2bb673] hover:text-white rounded-md px-2 py-1 block transition-all duration-200"
+                    >
+                      Downloadable Tools
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+
           {/* About Us Dropdown */}
           <div className="relative">
             <button
@@ -471,10 +536,10 @@ export function Header() {
           <div className="flex items-center gap-3 lg:gap-4">
             {session ? (
               <>
-                <span className="text-black max-w-[160px] lg:max-w-[200px] truncate hidden xl:inline">
+                <span className="text-black max-w-[160px] lg:max-w-[200px] truncate hidden 2xl:inline">
                   {session.user?.email || "User"}
                 </span>
-                <Button size="sm" className="cursor-pointer text-lg bg-[#2bb673] hover:bg-primary/60" onClick={handleLogout}>
+                <Button size="sm" className="cursor-pointer text-lg bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-md shadow-black " onClick={handleLogout}>
                   Log Out
                 </Button>
                 <Button
@@ -485,7 +550,7 @@ export function Header() {
                   variant="outline"
                   size="sm"
                   
-                  className="border-black text-black cursor-pointer text-lg hover:bg-[#2bb673] hover:text-white"
+                  className="border-black text-black cursor-pointer text-lg shadow-md shadow-black hover:bg-[#2bb673] hover:text-white"
                 >
                   Dashboard
                 </Button>
@@ -548,6 +613,28 @@ export function Header() {
                   Services & Pricing
                 </AccordionTrigger>
                 <AccordionContent className="space-y-4 overflow-y-auto max-h-[50vh]">
+
+                <div className="space-y-2">
+                    <h4 className="font-semibold text-gray-700 text-xs uppercase tracking-wide">
+                      Strategic People Services
+                    </h4>
+                    <div className="pl-4 space-y-2">
+                      <Link
+                        href="/services/llc-formation-2"
+                        className="block text-sm text-gray-600 hover:text-orange-600"
+                      >
+                        Strategic People Support
+                      </Link>
+                      <Link
+                        href="/services/corporation-formation"
+                        className="block text-sm text-gray-600 hover:text-orange-600"
+                      >
+                        Employee Assistance Program
+                      </Link>
+                     
+                    </div>
+                  </div>
+
                   <div className="space-y-2">
                     <h4 className="font-semibold text-gray-700 text-xs uppercase tracking-wide">
                       Formation Services

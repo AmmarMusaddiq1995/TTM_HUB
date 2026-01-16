@@ -21,7 +21,7 @@ export function ServicesSection() {
     },
     {
       icon: "📈",
-      title: "Strong Leaders",
+      title: "Stretched Leadership",
       description:
         "Businesses that have leaders stretched beyond their capacity.",
       image: "/leaders.png",
@@ -74,9 +74,10 @@ export function ServicesSection() {
               </div>
 
               <div className="flex items-center justify-center mb-4">
-                <div className="h-12 w-12 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+                {/* <div className="h-12 w-12 bg-primary/10 rounded-full flex items-center justify-center mr-3">
                   <span className="text-2xl">{service.icon}</span>
-                </div>
+                </div> */}
+                <img src="/icon.png" alt="Expert People Support" className="w-12 h-12 mr-3" />
                 <h3 className="text-2xl font-bold">{service.title}</h3>
               </div>
 

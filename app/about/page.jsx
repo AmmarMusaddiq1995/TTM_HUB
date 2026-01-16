@@ -11,13 +11,16 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Shield, Users, Layers, Target } from "lucide-react";
 import Link from "next/link";
+import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
+import Approach from "@/components/approach";
+import { CanvasRevealEffectDemo } from "@/components/ui/canvas-reveal-effect";
 
 export default function AboutPage() {
   const stats = [
-    { number: "5+", label: "Years of Expertise" },
-    { number: "200+", label: "Clients Served" },
-    { number: "2", label: "Countries (USA & UK)" },
-    { number: "99%", label: "Client Satisfaction" },
+    { number: "5+", label: "Years Supporting Leaders Globally" },
+    { number: "Diverse", label: "Clients Across Industries" },
+    { number: "US & UK", label: "Business Formation & Compliance Expertise" },
+    { number: "International", label: "Wellness & People Support Capability" },
   ];
 
   const values = [
@@ -62,16 +65,17 @@ export default function AboutPage() {
             {/* <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 text-balance">
               Your Partner in <span className="text-orange-500">Business Growth & Compliance</span>
             </h1> */}
-             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 text-balance">
-                 Simplifying <span className="text-[#2bb673]">Business Formation </span>
-                 Since 2019
+             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 text-center">
+                 Building Structure To Keep <span className="text-[#2bb673]">Business Strong</span>
+                 - And <span className="text-[#2bb673]">People Supported</span>
                </h1>
             
             <p className="text-xl text-gray-600 max-w-3xl mx-auto text-pretty">
-              At <strong>The Talent Management Hub</strong>, we are more than just a service provider—
-              we are the silent architects behind thriving businesses. From company formation and
-              bookkeeping to tax, payroll, and compliance, we empower startups and small businesses
-              to focus on what truly matters—innovation and growth.
+            Better Business is the <strong>TTMHUB</strong> pillar focused on operational clarity and human-centered support.
+            We take care of the essentials—business formation, compliance, bookkeeping, clear HR policies and processes,
+            and proactive performance and wellness—so leaders can focus on growth instead of gaps. <br />
+            As certified The GC Index partners, we help align individual strengths with business needs, 
+            reducing risk and burnout while building confidence, consistency, and momentum across the organization.
             </p>
           </div>
         </section>
@@ -79,17 +83,21 @@ export default function AboutPage() {
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-center items-center mx-auto">
+            <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 text-center">
+              Quick Facts
+            </h1>
+            <Approach />
+            {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-center items-center mx-auto">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center bg-primary/20 w-40 h-40 rounded-full mx-auto" >
                   <div className="text-3xl md:text-4xl font-bold text-[#2bb673] mb-2 flex flex-col items-center justify-center h-full">
                     {stat.number}
                     <span className="text-gray-600 font-medium text-sm">{stat.label}</span>
                   </div>
-                  {/* <div className="text-gray-600 flex items-center justify-center h-full">{stat.label}</div> */}
+                  
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
         </section>
 

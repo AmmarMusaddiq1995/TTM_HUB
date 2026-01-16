@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function WhatsappButton() {
-	const phoneNumber = "+13074001963"; // E.164 without plus for wa.me
+	const phoneNumber = "+13219876747"; // E.164 without plus for wa.me
 	const messageUrl = `https://wa.me/${phoneNumber}`;
 
 	return (

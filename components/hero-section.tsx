@@ -38,7 +38,7 @@ export function HeroSection() {
 
         
           <p className="text-xl lg:text-2xl text-gray-300 mb-8 text-pretty">
-            Your business deserves stability - let's secure it.
+            Your Business Deserves Stability - Let's Secure It!
           </p>
          
 
@@ -65,10 +65,23 @@ export function HeroSection() {
         <div className="container mx-auto  px-4 py-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
           
+
+          <div className="flex flex-col items-center space-y-2">
+              {/* <div className="h-18 w-18 border-2 border-primary/60 rounded-full flex items-center justify-center"> */}
+                {/* <span className="text-primary text-3xl">🎯</span> */}
+                <img src="/icon.png" alt="Expert People Support" className="w-18 h-18" />
+              {/* </div> */}
+              <span className="text-md font-medium text-gray-300">
+                Expert People Support
+              </span>
+            </div>
+
+
             <div className="flex flex-col items-center space-y-2">
-              <div className="h-18 w-18 border-2 border-primary/60 rounded-full flex items-center justify-center">
+              {/* <div className="h-18 w-18 border-2 border-primary/60 rounded-full flex items-center justify-center">
                 <span className="text-primary text-3xl">📋</span>
-              </div>
+              </div> */}
+              <img src="/icon.png" alt="Expert People Support" className="w-18 h-18" />
               <span className="text-md font-medium text-gray-300">
                 Formation and Compliance
               </span>
@@ -84,33 +97,24 @@ export function HeroSection() {
 
          
             <div className="flex flex-col items-center space-y-2">
-              <div className="h-18 w-18 border-2 border-primary/60 rounded-full flex items-center justify-center">
+              {/* <div className="h-18 w-18 border-2 border-primary/60 rounded-full flex items-center justify-center">
                 <span className="text-primary text-3xl">📊</span>
-              </div>            
+              </div>             */}
+              <img src="/icon.png" alt="Expert People Support" className="w-18 h-18" />
               <span className="text-md font-medium text-gray-300">
-                Banking and Bookkeeping
+                Transformative Tools
               </span>
             </div>
             
 
            
             <div className="flex flex-col items-center space-y-2">
-              <div className="h-18 w-18 border-2 border-primary/60 rounded-full flex items-center justify-center">
+              {/* <div className="h-18 w-18 border-2 border-primary/60 rounded-full flex items-center justify-center">
                 <span className="text-primary text-3xl">💡</span>
-              </div>
+              </div> */}
+              <img src="/icon.png" alt="Expert People Support" className="w-18 h-18" />
               <span className="text-md font-medium text-gray-300">
-                Tax Advice and Filing
-              </span>
-            </div>
-            
-
-            
-            <div className="flex flex-col items-center space-y-2">
-              <div className="h-18 w-18 border-2 border-primary/60 rounded-full flex items-center justify-center">
-                <span className="text-primary text-3xl">🎯</span>
-              </div>
-              <span className="text-md font-medium text-gray-300">
-                Expert Customer Support
+                Bookkeeping and Filing
               </span>
             </div>
             

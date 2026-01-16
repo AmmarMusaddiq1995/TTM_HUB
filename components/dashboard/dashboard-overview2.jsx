@@ -396,7 +396,7 @@ export function DashboardOverview2({ user, profile }) {
 
       <div className="w-full p-6 space-y-6">
         {/* Quick Actions */}
-        <Card>
+        {/* <Card>
           <CardHeader>
             <CardTitle>Quick Actions</CardTitle>
             <CardDescription>
@@ -435,7 +435,7 @@ export function DashboardOverview2({ user, profile }) {
              
             </div>
           </CardContent>
-        </Card>
+        </Card> */}
       </div>
     </div>
   );
