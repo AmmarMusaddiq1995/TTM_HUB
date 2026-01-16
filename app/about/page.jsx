@@ -2,7 +2,7 @@
 
 
 /* ----------- Updated code with new frontend  ----------- */
-
+"use client";
 
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -11,9 +11,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Shield, Users, Layers, Target } from "lucide-react";
 import Link from "next/link";
-import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
+// import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 import Approach from "@/components/approach";
-import { CanvasRevealEffectDemo } from "@/components/ui/canvas-reveal-effect";
+// import { CanvasRevealEffectDemo } from "@/components/ui/canvas-reveal-effect";
+// import dynamic from "next/dynamic";
 
 export default function AboutPage() {
   const stats = [
