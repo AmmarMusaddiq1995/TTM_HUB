@@ -109,7 +109,7 @@ export default function AboutPage() {
             <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 text-center">
               Quick Facts
             </h1>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-center items-center mx-auto py-10">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8  justify-center place-items-center  items-center mx-auto py-10">
             <FlipCard title="Experience" description="5+ Years Supporting Leaders Globally" />
             <FlipCard title="Clients" description="Diverse Clients Across Industries" />
             <FlipCard title="Expertise" description="US & UK Business Formation & Compliance Expertise" />
