@@ -112,7 +112,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8  justify-center place-items-center  items-center mx-auto py-10">
             <FlipCard title="Experience" description="5+ Years Supporting Leaders Globally" />
             <FlipCard title="Clients" description="Diverse Clients Across Industries" />
-            <FlipCard title="Expertise" description="US & UK Business Formation & Compliance Expertise" />
+            <FlipCard title="Expertise" description={ <>US & UK Business <br />  25+ Years in HR | Psychology <br /> GC Index | DISC </> } />
             <FlipCard title="Capability" description="International Wellness & People Support Capability" />
             </div>
             
