@@ -12,6 +12,7 @@ import { Badge } from "@/components/ui/badge";
 import { Shield, Users,  Layers, Target, Scales, UserCheck, TrendingUp, ShieldCheck, Flag } from "lucide-react";
 // import { ShieldCheckIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import FlipCard from "@/components/FlipCard";
 
 
 export default function AboutPage() {
@@ -87,9 +88,9 @@ export default function AboutPage() {
             {/* <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 text-balance">
               Your Partner in <span className="text-orange-500">Business Growth & Compliance</span>
             </h1> */}
-             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 text-center">
-                 Building Structure To Keep <span className="text-[#2bb673]">Business Strong</span>
-                 - And <span className="text-[#2bb673]">People Supported</span>
+             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 text-center text-balance">
+                 Building Structure To Keep <span className="text-[#2bb673]">Business Strong
+                 - People Supported</span>
                </h1>
             
             <p className="text-xl text-gray-600 max-w-3xl mx-auto text-pretty">
@@ -108,18 +109,13 @@ export default function AboutPage() {
             <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 text-center">
               Quick Facts
             </h1>
-        
-            {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-center items-center mx-auto">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center bg-primary/20 w-40 h-40 rounded-full mx-auto" >
-                  <div className="text-3xl md:text-4xl font-bold text-[#2bb673] mb-2 flex flex-col items-center justify-center h-full">
-                    {stat.number}
-                    <span className="text-gray-600 font-medium text-sm">{stat.label}</span>
-                  </div>
-                  
-                </div>
-              ))}
-            </div> */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-center items-center mx-auto py-10">
+            <FlipCard title="Experience" description="5+ Years Supporting Leaders Globally" />
+            <FlipCard title="Clients" description="Diverse Clients Across Industries" />
+            <FlipCard title="Expertise" description="US & UK Business Formation & Compliance Expertise" />
+            <FlipCard title="Capability" description="International Wellness & People Support Capability" />
+            </div>
+            
           </div>
         </section>
 
