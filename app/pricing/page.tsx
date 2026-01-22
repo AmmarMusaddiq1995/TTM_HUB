@@ -1,238 +1,222 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Check, X } from "lucide-react"
-import { PricingSection } from "@/components/pricing-section"
-import Link from "next/link"
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "next/link";
+import { Check } from "lucide-react";
 
 export default function PricingPage() {
-  const plans = [
+  // All services organized by category with estimated prices
+  const servicesByCategory = [
     {
-      name: "Starter",
-      price: "$0",
-      description: "Perfect for getting started quickly",
-      popular: false,
-      features: [
-        { name: "LLC Formation", included: true },
-        { name: "Registered Agent (1 year)", included: true },
-        { name: "Articles of Organization", included: true },
-        { name: "Operating Agreement Template", included: true },
-        { name: "EIN Application", included: false },
-        { name: "Business License Research", included: false },
-        { name: "Banking Resolution", included: false },
-        { name: "Expedited Filing", included: false },
-        { name: "Phone Support", included: false },
+      category: "Strategic People Services",
+      services: [
+        { name: "Strategic People Support (HR Services)", price: "Custom Quote", description: "Comprehensive HR support and consulting", link: "/services/hr-services" },
+        { name: "Employee Assistance Program (EAP)", price: "Custom Quote", description: "Employee wellness and support programs", link: "/services/eap-services" },
       ],
-      cta: "Get Started Free",
-      note: "+ state filing fees",
     },
     {
-      name: "Standard",
-      price: "$199",
-      description: "Most popular choice for new businesses",
-      popular: true,
-      features: [
-        { name: "LLC Formation", included: true },
-        { name: "Registered Agent (1 year)", included: true },
-        { name: "Articles of Organization", included: true },
-        { name: "Operating Agreement Template", included: true },
-        { name: "EIN Application", included: true },
-        { name: "Business License Research", included: true },
-        { name: "Banking Resolution", included: true },
-        { name: "Expedited Filing", included: false },
-        { name: "Phone Support", included: true },
+      category: "Formation Services",
+      services: [
+        { name: "LLC Formation", price: "From $250", description: "Varies by state", link: "/services/llc-formation-2" },
+        { name: "Corp. Formation", price: "From $300", description: "Varies by state", link: "/services/corp-formation-2" },
+        { name: "DBA/Trademark Registration", price: "$199", description: "Doing Business As registration", link: "/services/dba-trademark-registration" },
       ],
-      cta: "Choose Standard",
-      note: "+ state filing fees",
     },
     {
-      name: "Premium",
-      price: "$399",
-      description: "Complete package with premium features",
-      popular: false,
-      features: [
-        { name: "LLC Formation", included: true },
-        { name: "Registered Agent (1 year)", included: true },
-        { name: "Articles of Organization", included: true },
-        { name: "Operating Agreement Template", included: true },
-        { name: "EIN Application", included: true },
-        { name: "Business License Research", included: true },
-        { name: "Banking Resolution", included: true },
-        { name: "Expedited Filing", included: true },
-        { name: "Phone Support", included: true },
+      category: "Compliance Services",
+      services: [
+        { name: "EIN Services", price: "$79", description: "Federal Tax ID number application", link: "/services/ein-services" },
+        { name: "BOI Filing Services", price: "$149", description: "Beneficial Ownership Information filing", link: "/services/boi-filing-services" },
+        { name: "ITIN Services", price: "$199", description: "Individual Taxpayer Identification Number", link: "/services/itin-services" },
+        { name: "Sales & Use Tax Registration", price: "$299", description: "State tax registration services", link: "/services/sales-and-usetax-registration" },
+        { name: "Annual Company State Filing", price: "$149", description: "Annual state compliance filing", link: "/services/annual-company-state-filing" },
+        { name: "EIN Closing Services", price: "$199", description: "Close your EIN account", link: "/services/ein-closing-services" },
+        { name: "Registered Agent Services", price: "$199/year", description: "Professional registered agent service", link: "/services/registered-agent" },
+        { name: "Company Dissolution", price: "$299", description: "State fees vary", link: "/services/company-dissolution" },
+        { name: "Company Revival", price: "$299", description: "State fees vary", link: "/services/company-revival" },
+        { name: "Address Change Services", price: "$149", description: "Update business address", link: "/services/address-change-services" },
+        { name: "Filing Articles Of Amendments", price: "$249", description: "State fee excluded", link: "/services/filing-articles-of-amendments" },
       ],
-      cta: "Choose Premium",
-      note: "+ state filing fees",
     },
-  ]
-
-  const addOnServices = [
     {
-      name: "Registered Agent Service",
-      price: "$199/year",
-      description: "Professional business address and document handling",
+      category: "Bookkeeping & Taxes",
+      services: [
+        { name: "SMB Bookkeeping", price: "From $299/month", description: "Small business bookkeeping", link: "/services/pro-bookkeeping-services(small-business)" },
+        { name: "SME Bookkeeping", price: "From $499/month", description: "Medium business bookkeeping", link: "/services/pro-bookkeeping-services(medium-business)" },
+        { name: "Full Scale Bookkeeping", price: "From $799/month", description: "Large business bookkeeping", link: "/services/pro-bookkeeping-services(large-business)" },
+        { name: "Full-Year Reconciliation Services", price: "Custom Quote", description: "Annual reconciliation services", link: "/services/full-year-reconciliation-services" },
+        { name: "Setting Up New Books In QBO/Xero", price: "Custom Quote", description: "Charges vary based on nature of work", link: "/services/setting-up-new-books-in-QBO" },
+      ],
     },
-    { name: "EIN Application", price: "$79", description: "Federal Tax ID number application" },
-    { name: "Operating Agreement", price: "$199", description: "Customized operating agreement for your LLC" },
-    { name: "Business License Research", price: "$199", description: "Comprehensive license and permit research" },
-    { name: "Expedited Filing", price: "$149", description: "Rush processing for faster formation" },
-    { name: "Corporate Seal & Book", price: "$99", description: "Professional corporate seal and record book" },
-  ]
+    {
+      category: "UK Formation & Compliance Services",
+      services: [
+        { name: "UK LTD Formation", price: "£99", description: "UK Limited Company formation", link: "/services/uk-ltd-formation" },
+        { name: "Simple Corporation Tax", price: "£299", description: "Simple CT600 filing", link: "/services/simple-corp-tax-return-ct600" },
+        { name: "Advance Corporation Tax", price: "£499", description: "Complex CT600 filing", link: "/services/complex-corp-tax-return-ct600" },
+        { name: "Registering Client For Self-Assessment", price: "£99", description: "Self-assessment registration", link: "/services/registering-client-for-selfassessment" },
+        { name: "Simple Self Assessment (SA100)", price: "£199", description: "Simple SA100 filing", link: "/services/simple-self-assessment-filing" },
+        { name: "Advance Self Assessment (SA100)", price: "£399", description: "Complex SA100 filing", link: "/services/advance-self-assessment-filing" },
+        { name: "Annual Corporation Tax Accounts", price: "Custom Quote", description: "Annual accounts preparation", link: "/services/annual-accounts-preparation" },
+        { name: "Confirmation Statement Filing", price: "£49", description: "Annual confirmation statement", link: "/services/confirmation-statement-filing-services" },
+        { name: "VAT Registration", price: "£149", description: "UK VAT registration", link: "/services/vat-registration-services" },
+        { name: "VAT Return Filing", price: "£99", description: "VAT return filing service", link: "/services/vat-return-filing-services" },
+        { name: "Tax Budgeting & Investment Appraisal", price: "Custom Quote", description: "Tax planning services", link: "/services/tax-budgeting-services" },
+        { name: "Initial Compliance After Formation", price: "£199", description: "Post-formation compliance setup", link: "/services/initial-compliance-after-formation" },
+      ],
+    },
+  ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-cyan-50 to-blue-50 py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 text-balance">
-                Simple, Transparent Pricing
-              </h1>
-              <p className="text-xl text-gray-600 mb-8 text-pretty">
-                Choose the package that's right for your business. No hidden fees, no surprises.
-              </p>
-            </div>
+        <section className="py-20 px-4">
+          <div className="container max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
+              <span className="text-[#2bb673]">Pricing</span> & Services
+            </h1>
+            <p className="text-xl text-muted-foreground mb-8 text-pretty">
+              Transparent pricing for all our services. Get a quote or start your service today.
+            </p>
           </div>
         </section>
 
-        <PricingSection />
+        {/* Services by Category */}
+        <section className="py-16 px-4">
+          <div className="container max-w-7xl mx-auto space-y-16">
+            {servicesByCategory.map((category, categoryIndex) => (
+              <div key={categoryIndex} className="space-y-6">
+                <div className="text-center">
+                  <h2 className="text-3xl font-bold mb-2">{category.category}</h2>
+                  <div className="w-24 h-1 bg-[#2bb673] mx-auto"></div>
+                </div>
 
-        Pricing Plans
-        {/* <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {plans.map((plan, index) => (
-                <Card key={index} className={`relative ${plan.popular ? "ring-2 ring-cyan-500 scale-105" : ""}`}>
-                  {plan.popular && (
-                    <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-cyan-600">
-                      Most Popular
-                    </Badge>
-                  )}
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                    <CardDescription>{plan.description}</CardDescription>
-                    <div className="text-4xl font-bold text-cyan-600 mt-4">
-                      {plan.price}
-                      <span className="text-sm font-normal text-gray-500 block">{plan.note}</span>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3 mb-8">
-                      {plan.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center gap-3">
-                          {feature.included ? (
-                            <Check className="h-5 w-5 text-orange-500 flex-shrink-0" />
-                          ) : (
-                            <X className="h-5 w-5 text-gray-300 flex-shrink-0" />
-                          )}
-                          <span className={feature.included ? "text-gray-900" : "text-gray-400"}>{feature.name}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Button
-                      className={`w-full ${plan.popular ? "bg-cyan-600 hover:bg-cyan-700" : ""}`}
-                      variant={plan.popular ? "default" : "outline"}
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {category.services.map((service, serviceIndex) => (
+                    <Card
+                      key={serviceIndex}
+                      className="hover:shadow-lg transition-shadow duration-200 border-gray-200"
                     >
-                      {plan.cta}
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                      <CardHeader>
+                        <CardTitle className="text-lg font-semibold mb-2">
+                          {service.name}
+                        </CardTitle>
+                        <div className="flex items-baseline gap-2">
+                          <span className="text-2xl font-bold text-[#2bb673]">
+                            {service.price}
+                          </span>
+                        </div>
+                        <p className="text-sm text-muted-foreground mt-2">
+                          {service.description}
+                        </p>
+                      </CardHeader>
+                      <CardContent>
+                        <Link href={service.link}>
+                          <Button
+                            className="w-full bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-md shadow-black hover:scale-105 cursor-pointer"
+                          >
+                            Get Started
+                          </Button>
+                        </Link>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
-        </section> */}
+        </section>
 
-        {/* Add-on Services */}
-        {/* <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Add-on Services</h2>
-              <p className="text-xl text-gray-600">Enhance your package with additional services</p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-              {addOnServices.map((service, index) => (
-                <Card key={index}>
-                  <CardContent className="pt-6">
-                    <div className="flex justify-between items-start mb-3">
-                      <h3 className="font-semibold">{service.name}</h3>
-                      <span className="text-cyan-600 font-bold">{service.price}</span>
-                    </div>
-                    <p className="text-sm text-gray-600 mb-4">{service.description}</p>
-                    <Button variant="outline" size="sm" className="w-full bg-transparent">
-                      Add to Package
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+        {/* Note Section */}
+        <section className="py-16 px-4 bg-muted/50">
+          <div className="container max-w-4xl mx-auto">
+            <Card className="border-[#2bb673]/20">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-center">
+                  Pricing Information
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Check className="h-5 w-5 text-[#2bb673] mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold mb-1">Formation Services</p>
+                    <p className="text-sm text-muted-foreground">
+                      Formation service prices vary by state due to different state filing fees. 
+                      Contact us for a precise quote based on your state of formation.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="h-5 w-5 text-[#2bb673] mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold mb-1">Custom Quotes</p>
+                    <p className="text-sm text-muted-foreground">
+                      Services marked as "Custom Quote" are priced based on your specific needs. 
+                      Fill out our form or contact us for a personalized quote.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="h-5 w-5 text-[#2bb673] mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold mb-1">Monthly Services</p>
+                    <p className="text-sm text-muted-foreground">
+                      Bookkeeping and subscription services are billed monthly. 
+                      Prices may vary based on transaction volume and complexity.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="h-5 w-5 text-[#2bb673] mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold mb-1">State Fees</p>
+                    <p className="text-sm text-muted-foreground">
+                      Some services require state filing fees that are separate from our service fees. 
+                      These fees are passed through at cost and vary by state.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
-        </section> */}
-
-        {/* State Fees */}
-        {/* <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">State Filing Fees</h2>
-              <p className="text-xl text-gray-600 mb-8">
-                Required state fees vary by location. Here are some popular states:
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              {[
-                { state: "Delaware", fee: "$90" },
-                { state: "Nevada", fee: "$75" },
-                { state: "Wyoming", fee: "$100" },
-                { state: "Texas", fee: "$300" },
-                { state: "California", fee: "$70" },
-                { state: "Florida", fee: "$125" },
-                { state: "New York", fee: "$200" },
-                { state: "Illinois", fee: "$150" },
-              ].map((item, index) => (
-                <Card key={index} className="text-center">
-                  <CardContent className="pt-6">
-                    <h3 className="font-semibold mb-2">{item.state}</h3>
-                    <p className="text-2xl font-bold text-cyan-600">{item.fee}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            <div className="text-center mt-8">
-              <p className="text-gray-600">
-                Don't see your state?{" "}
-                <Button variant="link" className="p-0 h-auto text-cyan-600">
-                  View all state fees
-                </Button>
-              </p>
-            </div>
-          </div>
-        </section> */}
+        </section>
 
         {/* CTA Section */}
-        <section className="bg-gray-900 text-white py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of entrepreneurs who chose FaazFinancialGroup for their formation needs.
+        <section className="py-20 px-4">
+          <div className="container max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Need Help Choosing?
+            </h2>
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Our team is here to help you find the right service for your business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/services/llc-formation-2">
-              <Button size="lg" className="bg-cyan-600 hover:bg-cyan-700">
-                Start Your LLC Today
-              </Button>
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  className="text-lg bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer px-8 py-4"
+                >
+                  Contact Us
+                </Button>
               </Link>
-             
+              <Link href="/services/llc-formation-2">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="text-lg border-[#2bb673] text-[#2bb673] hover:bg-[#2bb673] hover:text-white shadow-md shadow-black hover:scale-105 cursor-pointer px-8 py-4"
+                >
+                  Start Your Business
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
       </main>
       <Footer />
     </div>
-  )
+  );
 }

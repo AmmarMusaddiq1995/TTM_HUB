@@ -125,7 +125,7 @@ export function CTASection() {
   <section className="py-20 bg-gray-50 text-black">
     <div className="container px-4 text-center mx-auto">
       <h2 className="text-3xl lg:text-6xl font-extrabold mb-6 text-balance">
-        How It <span className="text-[#2bb673]">Works</span> 
+        How We <span className="text-[#2bb673]">Work</span> 
       </h2>
 
       <div className="grid md:grid-cols-4 gap-6  mx-auto py-8 place-items-center">

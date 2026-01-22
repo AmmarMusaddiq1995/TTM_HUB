@@ -74,13 +74,7 @@ export async function POST(req) {
         <p><strong>Key Concerns or Context:</strong> ${keyConcernsOrContext || "-"}</p>
         <p><strong>How did they hear about you?</strong> ${howDidYouHearAboutUs || "-"}</p>
 
-        <hr style="margin: 20px 0; border-color: #e5e7eb;" />
-        <p style="font-size: 12px; color: #6b7280;">Full JSON payload:</p>
-        <pre style="font-size: 11px; white-space: pre-wrap; background:#f9fafb; padding:12px; border-radius:8px; border:1px solid #e5e7eb;">${JSON.stringify(
-          formData,
-          null,
-          2
-        )}</pre>
+        
       </div>
     `;
 

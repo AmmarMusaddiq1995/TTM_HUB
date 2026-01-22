@@ -181,7 +181,7 @@ export function Header() {
                     STRATEGIC PEOPLE SERVICES
                   </h3>
                   <ul className="space-y-1">
-                    <MenuItem href="/services/llc-formation-2">
+                    <MenuItem href="/services/hr-services">
                       Strategic People Support
                     </MenuItem>
                     <MenuItem href="/services/eap-services">
@@ -527,6 +527,14 @@ export function Header() {
               </div>
             )}
           </div>
+
+          {/* Pricing Link */}
+          <Link
+            href="/pricing"
+            className="whitespace-nowrap text-black text-xl font-bold hover:text-[#2bb673] transition-colors"
+          >
+            Pricing
+          </Link>
         </nav>
 
         {/* Desktop Actions */}
@@ -620,13 +628,13 @@ export function Header() {
                     </h4>
                     <div className="pl-4 space-y-2">
                       <Link
-                        href="/services/llc-formation-2"
+                        href="/services/hr-services"
                         className="block text-sm text-gray-600 hover:text-orange-600"
                       >
                         Strategic People Support
                       </Link>
                       <Link
-                        href="/services/corporation-formation"
+                        href="/services/eap-services"
                         className="block text-sm text-gray-600 hover:text-orange-600"
                       >
                         Employee Assistance Program
@@ -1040,6 +1048,22 @@ export function Header() {
                       className="block text-sm text-gray-600 hover:text-orange-600"
                     >
                       Contact Us
+                    </Link>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="pricing">
+                <AccordionTrigger className="text-sm">
+                  Pricing
+                </AccordionTrigger>
+                <AccordionContent>
+                  <div className="pl-4">
+                    <Link
+                      href="/pricing"
+                      className="block text-sm text-gray-600 hover:text-orange-600"
+                    >
+                      View All Pricing
                     </Link>
                   </div>
                 </AccordionContent>
