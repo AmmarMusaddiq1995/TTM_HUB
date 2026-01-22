@@ -19,8 +19,7 @@ export function Footer() {
               <Image src="/logottm.png" alt="The Talent Management Hub" width={140} height={20} />
             </Link>
             <p className="text-gray-600 mb-4">
-              Making business formation simple and affordable for entrepreneurs
-              everywhere.
+              Making business formations and governance accessible, affordable and simple for entrepreneurs everywhere!
             </p>
           </div>
 

@@ -29,29 +29,31 @@ export function EapServicesForm() {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
   const [formData, setFormData] = useState({
-    businessName: "",
-    businessEmailId: "",
-    ownerFullLegalName: "",
-    businessAddress: "",
-    reasonOfDissolution: "",
-    contactNumber: "",
-    articlesOfFormation: "",
-    einLetter: "",
-    // packageType: "",
+    companyName: "",
+    totalHeadCount: "",
+    country: "",
+    industry: "",
+    primaryOfficeLocation: "",
+    companyWebsite: "",
+    primaryContactNameRole: "",
+    emailAddress: "",
+    phoneWhatsappNumber: "",
+    bestMethodToContactYou: "",
+    howShouldEmployeesAccessSupport: "",
+    doYouNeedAfterHoursAccess: "",
+    preferredTurnaroundTimeForFirstAppointment: "",
+    doYouNeedUrgentCrisisEscalationGuidance: "",
+    targetStartDate: "",
+    budgetApproach: "",
+    estimatedBudgetRange: "",
+    billingCountryCurrency: "",
+    keyConcernsOrContext: "",
+    howDidYouHearAboutUs: "",
   });
 
   const { user } = useAuthContext();
   const [userPersonalId, setUserPersonalId] = useState(null);
-  const [price, setPrice] = useState(0);
-//   useEffect(()=>{
-//     if(formData.packageType === "normal"){
-//       const selectedPrice = 165;
-//       setPrice(selectedPrice);
-//     } else if(formData.packageType === "express"){
-//       const selectedPrice = 200;
-//       setPrice(selectedPrice);
-//     }
-//   }, [formData.packageType]);
+  
   useEffect(() => {
     const fetchUserData = async () => {
       if (!user?.id) return;
@@ -75,36 +77,7 @@ export function EapServicesForm() {
     fetchUserData();
   }, [user]);
 
-  const handleFileUpload = async (e, type) => {
-    
 
-    let fileUrl = null;
-    const fileName = `${userPersonalId}/${type}/${Date.now()}-${
-      e.target.files[0].name
-    }`;
-    const file = e.target.files[0];
-    const { error: uploadError } = await supabase.storage
-      .from("uploads")
-      .upload(fileName, file);
-
-    if (uploadError) {
-      console.error("Error uploading file:", uploadError);
-    } else {
-      console.log("File uploaded successfully");
-    }
-
-    const { data: publicUrlData } = supabase.storage
-      .from("uploads")
-      .getPublicUrl(fileName);
-
-    fileUrl = publicUrlData.publicUrl;
-    console.log("fileUrl :", fileUrl);
-
-    setFormData({
-      ...formData,
-      [type]: fileUrl,
-    });
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -120,7 +93,8 @@ export function EapServicesForm() {
       console.log("user :", user);
 
       if (!user || userError) {
-        alert("Please login to submit business formation", userError);
+        alert("Please login to submit this form.");
+        setLoading(false);
         return;
       }
 
@@ -140,7 +114,7 @@ export function EapServicesForm() {
           form_data: submissionData,
           status: "pending",
           payment_status: "pending",
-          amount:price
+          // amount:price
 
 
         },
@@ -148,7 +122,25 @@ export function EapServicesForm() {
 
       console.log("form_submissions inserted successfully");
 
-      router.push("/form-submission-success");
+      // Fire-and-forget: send notification email to internal team
+      try {
+        const res = await fetch("/api/eap-services-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ formData: submissionData }),
+        });
+
+        if (!res.ok) {
+          console.error("Failed to send EAP notification email");
+        }
+      } catch (emailErr) {
+        console.error("Error calling EAP email API:", emailErr);
+      }
+
+      alert("Thank you! We will get back to you shortly on your email.");
+      router.push("/");
     } catch (err) {
       console.error("Error submitting form:", err);
       alert("Something went wrong.");
@@ -498,8 +490,9 @@ export function EapServicesForm() {
               </div>
 
 
-              <div className="space-y-2">
+              <div className="space-y-2 ">
                 <Label htmlFor="topSupportAreas">Top Support Areas For Your Team (Pick Upto 3)</Label>
+              
               
                 <div className="flex items-center space-x-2 ">
                   <input
@@ -643,47 +636,271 @@ export function EapServicesForm() {
                 </div>
                 
               </div>
-
-
-
-
               
 
-
-
-            
-
-             
-
-             
-{/* 
               <div className="space-y-2">
-                <Label htmlFor="file" className="block text-sm font-medium text-gray-700 mb-2">Articles of Formation/Organization/Certificate of Formation</Label>
-                <input
-                  type="file"
-                  id="articlesOfFormation"
-                  onChange={(e) => {
-                    handleFileUpload(e, "articlesOfFormation");
-                  }}
-                  required
-                  placeholder="Scan of your articles of formation/organization/certificate of formation"
-                  className="border-gray-300 shadow-md shadow-black border rounded-md p-1 cursor-pointer"
+              <Label htmlFor="preferredSupportChannel">
+                Preferred Support Channel?
+              </Label>
+              <Select
+                value={formData.preferredSupportChannel}
+                onValueChange={(value) =>
+                  setFormData({ ...formData, preferredSupportChannel: value })
+                }
+                required
+              >
+                <SelectTrigger className="border-gray-300 shadow-md shadow-black">
+                  <SelectValue placeholder="Select an option" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="Virtual_Only"> Virtual Only </SelectItem>
+                  <SelectItem value="In_Person_Virtual"> In-Person + Virtual </SelectItem>
+                  <SelectItem value="Not_Sure"> Not Sure </SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <hr style={{ border: "1px solid #e0e0e0" }} />
+
+            <div className="space-y-2">
+              <h2 className="text-lg font-bold text-center">
+                 Access & Response Expectations
+              </h2>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="howShouldEmployeesAccessSupport">
+                How should employees access support?
+              </Label>
+              <Select
+                value={formData.howShouldEmployeesAccessSupport}
+                onValueChange={(value) =>
+                  setFormData({ ...formData, howShouldEmployeesAccessSupport: value })
+                }
+                required
+              >
+                <SelectTrigger className="border-gray-300 shadow-md shadow-black">
+                  <SelectValue placeholder="Select an option" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="Self_Referral"> Self-Referral </SelectItem>
+                  <SelectItem value="Manager_Referral"> Manager Referral </SelectItem>
+                  <SelectItem value="HR_Referral"> HR Referral </SelectItem>
+                  <SelectItem value="A_Mix"> A Mix </SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+
+            <div className="space-y-2">
+              <Label htmlFor="doYouNeedAfterHoursAccess">
+                Do you need after hours access?
+              </Label>
+              <Select
+                value={formData.doYouNeedAfterHoursAccess}
+                onValueChange={(value) =>
+                  setFormData({ ...formData, doYouNeedAfterHoursAccess: value })
+                }
+                required
+              >
+                <SelectTrigger className="border-gray-300 shadow-md shadow-black">
+                  <SelectValue placeholder="Select an option" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="Yes"> Yes </SelectItem>
+                  <SelectItem value="No"> No </SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+
+            <div className="space-y-2">
+              <Label htmlFor="preferredTurnaroundTimeForFirstAppointment">
+                Preferred turnaround time for first appointment?
+              </Label>
+              <Select
+                value={formData.preferredTurnaroundTimeForFirstAppointment}
+                onValueChange={(value) =>
+                  setFormData({ ...formData, preferredTurnaroundTimeForFirstAppointment: value })
+                }
+                required
+              >
+                <SelectTrigger className="border-gray-300 shadow-md shadow-black">
+                  <SelectValue placeholder="Select an option" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="24-48_hours"> 24-48 hours </SelectItem>
+                  <SelectItem value="3-5_business_days"> 3-5 business days </SelectItem>
+                  <SelectItem value="within_7_days"> within 7 days </SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+
+            <div className="space-y-2">
+              <Label htmlFor="doYouNeedUrgentCrisisEscalationGuidance">
+                Do you need urgent/crisis escalation guidance?
+              </Label>
+              <Select
+                value={formData.doYouNeedUrgentCrisisEscalationGuidance}
+                onValueChange={(value) =>
+                  setFormData({ ...formData, doYouNeedUrgentCrisisEscalationGuidance: value })
+                }
+                required
+              >
+                <SelectTrigger className="border-gray-300 shadow-md shadow-black">
+                  <SelectValue placeholder="Select an option" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="Yes"> Yes </SelectItem>
+                  <SelectItem value="No"> No </SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+
+            <hr style={{ border: "1px solid #e0e0e0" }} />
+
+            <div className="space-y-2">
+              <h2 className="text-lg font-bold text-center">
+                 Launch & Communication
+              </h2>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="targetStartDate">
+                Target start date
+              </Label>
+              <Select
+                value={formData.targetStartDate}
+                onValueChange={(value) =>
+                  setFormData({ ...formData, targetStartDate: value })
+                }
+                required
+              >
+                <SelectTrigger className="border-gray-300 shadow-md shadow-black">
+                  <SelectValue placeholder="Select an option" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="ASAP"> ASAP </SelectItem>
+                  <SelectItem value="Within_30_days"> Within 30 days </SelectItem>
+                  <SelectItem value="Within_60_days"> Within 60 days </SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <hr style={{ border: "1px solid #e0e0e0" }} />
+
+            <div className="space-y-2">
+              <h2 className="text-lg font-bold text-center">
+                 Commercials (Optional, but help us quote correctly)
+              </h2>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="budgetApproach">
+                Budget Approach
+              </Label>
+              <Select
+                value={formData.budgetApproach}
+                onValueChange={(value) =>
+                  setFormData({ ...formData, budgetApproach: value })
+                }
+                optional
+              >
+                <SelectTrigger className="border-gray-300 shadow-md shadow-black">
+                  <SelectValue placeholder="Select an option" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="Per_employee_per_month"> Per employee per month </SelectItem>
+                  <SelectItem value="Fixed_monthly_retainer"> Fixed monthly retainer </SelectItem>
+                  <SelectItem value="Pay_per_use"> Pay per use </SelectItem>
+                  <SelectItem value="Not_sure"> Not sure </SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="space-y-2">
+                <Label htmlFor="estimatedBudgetRange">
+                  Estimated Budget Range (Optional)
+                </Label>
+                <Input
+                  id="estimatedBudgetRange"
+                  value={formData.estimatedBudgetRange}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      estimatedBudgetRange: e.target.value,
+                    })
+                  }
+                  className="border-gray-300 shadow-md shadow-black"
+                  optional
                 />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="file">EIN letter</Label>
-                <input
-                  type="file"
-                  id="einLetter"
-                  onChange={(e) => {
-                    handleFileUpload(e, "einLetter");
-                  }}
-                  required
-                  placeholder="Upload your EIN letter"
-                  className="border-gray-300 shadow-md shadow-black border rounded-md p-1 cursor-pointer"
+                <Label htmlFor="billingCountryCurrency">
+                  Billing Country & Currency (Optional)
+                </Label>
+                <Input
+                  id="billingCountryCurrency"
+                  value={formData.billingCountryCurrency}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      billingCountryCurrency: e.target.value,
+                    })
+                  }
+                  className="border-gray-300 shadow-md shadow-black"
+                  optional
                 />
-              </div> */}
+              </div>
+
+              <hr style={{ border: "1px solid #e0e0e0" }} />
+
+              <div className="space-y-2">
+              <h2 className="text-lg font-bold text-center">
+                 Anything Else We Should Know?
+              </h2>
+            </div>    
+
+            <div className="space-y-2">
+                <Label htmlFor="keyConcernsOrContext">
+                  Key Concerns Or Context (Optional)
+                </Label>
+                <Input
+                  id="keyConcernsOrContext"
+                  value={formData.keyConcernsOrContext}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      keyConcernsOrContext: e.target.value,
+                    })
+                  }
+                  className="border-gray-300 shadow-md shadow-black"
+                  optional
+                />
+              </div>
+
+
+              <div className="space-y-2">
+                <Label htmlFor="howDidYouHearAboutUs">
+                  How did you hear about us? (Optional)
+                </Label>
+                <Input
+                  id="howDidYouHearAboutUs"
+                  value={formData.howDidYouHearAboutUs}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      howDidYouHearAboutUs: e.target.value,
+                    })
+                  }
+                  className="border-gray-300 shadow-md shadow-black"
+                  optional
+                />
+              </div>
+
 
               
              

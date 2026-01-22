@@ -529,7 +529,7 @@ export function SalesAndUsetaxRegistrationForm() {
             </div>
 
             <Button type="submit" className="w-full bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-md shadow-black hover:scale-105 cursor-pointer px-8 py-4" disabled={loading}>
-              {loading ? "Submitting..." : "Start Sales and Usetax Registration"}
+              {loading ? "Submitting..." : "Start Sales and Use Tax Registration"}
             </Button>
           </form>
         </CardContent>

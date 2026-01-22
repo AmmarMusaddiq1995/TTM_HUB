@@ -16,9 +16,7 @@ export default function EapServicesPage() {
             <span className="text-[#2bb673]">EAP</span> Services
           </h1>
           <p className="text-xl text-muted-foreground mb-8 text-pretty">
-            Secure your business name and brand identity legally. 
-            We help you file your DBA (Doing Business As) or Trademark registration quickly, 
-            ensuring compliance across all U.S. states.
+          Is high turnover creeping into your culture? Our HR and Employee Assistance Program (EAP) support can help take a holistic approach to well-being and positive impact. We kick start with confidential assessments to understand what your team really needs, then we give you hands on support and interventions to make thing better.
           </p>
           <Link href="/submission-forms/eap-services-form">
             <Button size="lg" className="text-lg bg-[#2bb673] hover:bg-[#2bb673]/80 shadow-xl shadow-black hover:scale-105 cursor-pointer px-8 py-4">
@@ -32,17 +30,17 @@ export default function EapServicesPage() {
       <section className="py-16 px-4 bg-muted/50">
         <div className="container max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">
-            Why You Need DBA / Trademark Registration
+            Why You Need EAP Services
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card>
               <CardHeader>
                 <Shield className="h-12 w-12 text-[#2bb673] mb-4" />
-                <CardTitle>Legal Protection</CardTitle>
+                <CardTitle>Stronger Employee Wellbeing</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Protect your business name and brand identity from being used by others.
+                EAPs provide confidential support for mental health, stress, and personal challenges—helping employees feel valued and supported.
                 </p>
               </CardContent>
             </Card>
@@ -50,12 +48,11 @@ export default function EapServicesPage() {
             <Card>
               <CardHeader>
                 <Briefcase className="h-12 w-12 text-[#2bb673] mb-4" />
-                <CardTitle>Operate Under a Trade Name</CardTitle>
+                <CardTitle>Improved Productivity</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  A DBA lets you legally run your business under a trade name 
-                  different from your LLC or personal name.
+                When employees have access to timely support, they can focus better, perform consistently, and contribute more effectively.
                 </p>
               </CardContent>
             </Card>
@@ -63,12 +60,11 @@ export default function EapServicesPage() {
             <Card>
               <CardHeader>
                 <Check className="h-12 w-12 text-[#2bb673] mb-4" />
-                <CardTitle>State & Federal Compliance</CardTitle>
+                <CardTitle>Healthier Workplace Culture</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  We handle all state filings and USPTO paperwork, 
-                  ensuring full compliance for your DBA or trademark.
+                EAPs promote trust, psychological safety, and a culture where people feel comfortable seeking help.
                 </p>
               </CardContent>
             </Card>
@@ -76,11 +72,11 @@ export default function EapServicesPage() {
             <Card>
               <CardHeader>
                 <Rocket className="h-12 w-12 text-[#2bb673] mb-4" />
-                <CardTitle>Build Brand Credibility</CardTitle>
+                <CardTitle>Business Risk & Cost Reduction</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Gain customer trust and stand out by registering your business or brand name officially.
+                Supporting employees proactively reduces turnover, workplace conflicts, and the hidden costs of unmanaged stress.
                 </p>
               </CardContent>
             </Card>

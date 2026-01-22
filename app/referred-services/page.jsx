@@ -38,7 +38,7 @@ export default function ReferredServicesPage() {
           tags: ["Software", "IT", "Solutions", "Web Development"],
           verified: true,
           featured: true,
-          websiteUrl: "https://ftssolution.tech"
+          websiteUrl: "https://better.business.ttmhub.co/ftssolution.tech"
         }
       ];
 

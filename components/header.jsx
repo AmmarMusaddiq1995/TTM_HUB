@@ -164,7 +164,7 @@ export function Header() {
                   : ""
               }`}
             >
-              <span className="whitespace-nowrap text-black text-xl font-bold">Services & Pricing</span>
+              <span className="whitespace-nowrap text-black text-xl font-bold">Services</span>
               {activeDropdown === "products" ? (
                 <ChevronUp className="h-4 w-4 font-bold text-black" />
               ) : (
@@ -467,7 +467,7 @@ export function Header() {
                       href="/referred-services"
                       className="text-sm text-gray-600  hover:bg-[#2bb673] hover:text-white rounded-md px-2 py-1 block transition-all duration-200"
                     >
-                      Reffered Services
+                      Referred Services
                     </Link>
                   </li>
                   <li>
@@ -475,7 +475,7 @@ export function Header() {
                       href="#"
                       className="text-sm text-gray-600  hover:bg-[#2bb673] hover:text-white rounded-md px-2 py-1 block transition-all duration-200"
                     >
-                      Downloadable Tools
+                     Tools
                     </Link>
                   </li>
                 </ul>
@@ -610,7 +610,7 @@ export function Header() {
             <Accordion type="single" collapsible className="w-full ">
               <AccordionItem value="services">
                 <AccordionTrigger className="text-sm ">
-                  Services & Pricing
+                  Services 
                 </AccordionTrigger>
                 <AccordionContent className="space-y-4 overflow-y-auto max-h-[50vh]">
 
@@ -998,6 +998,30 @@ export function Header() {
                   </div>
                 </AccordionContent>
               </AccordionItem>
+
+
+              <AccordionItem value="resources">
+                <AccordionTrigger className="text-sm">
+                  Resources
+                </AccordionTrigger>
+                <AccordionContent>
+                  <div className="pl-4 space-y-2">
+                    <Link
+                      href="/referred-services"
+                      className="block text-sm text-gray-600 hover:text-orange-600"
+                    >
+                      Referred Services
+                    </Link>
+                    <Link
+                      href="#"
+                      className="block text-sm text-gray-600 hover:text-orange-600"
+                    >
+                      Tools
+                    </Link>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+
 
               <AccordionItem value="about">
                 <AccordionTrigger className="text-sm">
