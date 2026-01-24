@@ -164,7 +164,7 @@ export function Header() {
                   : ""
               }`}
             >
-              <span className="whitespace-nowrap text-black text-xl font-bold">Services</span>
+              <span className="whitespace-nowrap text-black text-xl font-bold">Solutions</span>
               {activeDropdown === "products" ? (
                 <ChevronUp className="h-4 w-4 font-bold text-black" />
               ) : (
@@ -388,6 +388,14 @@ export function Header() {
             )}
           </div>
 
+           {/* Pricing Link */}
+           <Link
+            href="/pricing"
+            className="whitespace-nowrap text-black text-xl font-bold hover:text-[#2bb673] transition-colors"
+          >
+            Pricing
+          </Link>
+
       
 
           {/* Better Me Better Teams Dropdown */}
@@ -528,13 +536,7 @@ export function Header() {
             )}
           </div>
 
-          {/* Pricing Link */}
-          <Link
-            href="/pricing"
-            className="whitespace-nowrap text-black text-xl font-bold hover:text-[#2bb673] transition-colors"
-          >
-            Pricing
-          </Link>
+         
         </nav>
 
         {/* Desktop Actions */}
@@ -618,7 +620,7 @@ export function Header() {
             <Accordion type="single" collapsible className="w-full ">
               <AccordionItem value="services">
                 <AccordionTrigger className="text-sm ">
-                  Services 
+                  Solutions 
                 </AccordionTrigger>
                 <AccordionContent className="space-y-4 overflow-y-auto max-h-[50vh]">
 
@@ -985,6 +987,23 @@ export function Header() {
                 </AccordionContent>
               </AccordionItem>
 
+              <AccordionItem value="pricing">
+                <AccordionTrigger className="text-sm">
+                  Pricing
+                </AccordionTrigger>
+                <AccordionContent>
+                  <div className="pl-4">
+                    <Link
+                      href="/pricing"
+                      className="block text-sm text-gray-600 hover:text-orange-600"
+                    >
+                      View All Pricing
+                    </Link>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+
               <AccordionItem value="get-better">
                 <AccordionTrigger className="text-sm">
                   Get Better
@@ -1053,22 +1072,7 @@ export function Header() {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="pricing">
-                <AccordionTrigger className="text-sm">
-                  Pricing
-                </AccordionTrigger>
-                <AccordionContent>
-                  <div className="pl-4">
-                    <Link
-                      href="/pricing"
-                      className="block text-sm text-gray-600 hover:text-orange-600"
-                    >
-                      View All Pricing
-                    </Link>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
+           
 
             <div className="pt-2 border-t space-y-2">
               {session ? (

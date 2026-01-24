@@ -143,7 +143,7 @@ export default function AboutPage() {
               </div>
               <div className="relative">
                 <img
-                  src="/modern-office-collaboration.png"
+                  src="/about.png"
                   alt="TTM Hub"
                   className="rounded-lg shadow-lg"
                 />
