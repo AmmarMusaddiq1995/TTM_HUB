@@ -184,8 +184,8 @@ export function Header() {
                     <MenuItem href="/services/hr-services">
                       Strategic People Support
                     </MenuItem>
-                    <MenuItem href="/services/eap-services">
-                      Employee Assistance Program
+                    <MenuItem href="/services/eap-services" truncate>
+                      Innovative Employee Assistance Program
                     </MenuItem>
                   </ul>
                 </div>
@@ -637,9 +637,9 @@ export function Header() {
                       </Link>
                       <Link
                         href="/services/eap-services"
-                        className="block text-sm text-gray-600 hover:text-orange-600"
+                        className="block text-sm text-gray-600 hover:text-orange-600 "
                       >
-                        Employee Assistance Program
+                        Innovative Employee Assistance Program
                       </Link>
                      
                     </div>

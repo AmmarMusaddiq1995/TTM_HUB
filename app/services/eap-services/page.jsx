@@ -13,7 +13,7 @@ export default function EapServicesPage() {
       <section className="py-20 px-4">
         <div className="container max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            <span className="text-[#2bb673]">EAP</span> Services
+            <span className="text-[#2bb673]">Innovative EAP</span> Services
           </h1>
           <p className="text-xl text-muted-foreground mb-8 text-pretty">
           
