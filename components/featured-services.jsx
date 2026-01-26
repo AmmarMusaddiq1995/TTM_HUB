@@ -41,7 +41,7 @@ style={{
       loading="lazy"
       className="absolute inset-0 h-full w-full rounded-[16px] bg-[#000000] object-cover "
       alt="Eap Services"
-      src="/eap.png"
+      src="/EAP.png"
       style={{
         boxShadow: "rgba(0, 0, 0, 0.05) 0px 5px 6px 0px",
         opacity: 1,
