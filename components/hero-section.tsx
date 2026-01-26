@@ -33,7 +33,7 @@ export function HeroSection() {
 
           <h1 className="text-4xl lg:text-6xl font-extrabold mb-6 text-balance ">
             {/* Let's Make <span className="text-[#2bb673]">Better Business</span> Together */}
-            <TextGenerateEffect words="Let's Make Better Business Together" className="text-4xl lg:text-6xl font-extrabold mb-6 text-balance"></TextGenerateEffect>
+            <TextGenerateEffect words="Let's Make Better Businesses , Together!" className="text-4xl lg:text-6xl font-extrabold mb-6 text-balance"></TextGenerateEffect>
           </h1>
 
         

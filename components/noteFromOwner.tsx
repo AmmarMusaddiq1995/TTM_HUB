@@ -128,7 +128,7 @@ export default function NoteFromOwner() {
             transition={{ duration: 0.6 }}
             className="text-lg font-semibold text-gray-900 pt-6"
           >
-            Let’s Build Better Business, Together.
+            Let’s Build Better Businesses , Together!
           </motion.p>
 
         </div>

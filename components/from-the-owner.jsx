@@ -29,7 +29,7 @@ export function FromTheOwner() {
                 </CardItem>
                 <CardItem translateZ="100" className="w-full mt-4">
                   <img
-                    src="/lara.jpg"
+                    src="/lara1.jpeg"
                     height="1000"
                     width="1000"
                     className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl shadow-[#2bb673]"
