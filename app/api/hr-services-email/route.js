@@ -4,28 +4,9 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 const TO_EMAIL = process.env.HR_SERVICES_NOTIFICATION_EMAIL || "grow@ttmhub.co";
 
-// Helper function to format checkbox values
-const formatCheckboxes = (formData, checkboxKeys) => {
-  const selected = checkboxKeys
-    .filter((key) => formData[key])
-    .map((key) => {
-      // Convert camelCase to readable format
-      return key
-        .replace(/([A-Z])/g, " $1")
-        .replace(/^./, (str) => str.toUpperCase())
-        .trim();
-    });
-  return selected.length > 0 ? selected.join(", ") : "None selected";
-};
-
-// Helper function to format work model checkboxes
-const formatWorkModel = (formData) => {
-  const models = [];
-  if (formData.onSite) models.push("On-Site");
-  if (formData.remote) models.push("Remote");
-  if (formData.hybrid) models.push("Hybrid");
-  if (formData.fieldBased) models.push("Field Based / Multi Site");
-  return models.length > 0 ? models.join(", ") : "None selected";
+// Helper function to format array values
+const formatArray = (arr) => {
+  return arr && arr.length > 0 ? arr.join(", ") : "None selected";
 };
 
 export async function POST(req) {
@@ -63,60 +44,24 @@ export async function POST(req) {
     } = formData;
 
     // HR Services interested in
-    const hrServicesInterested = formatCheckboxes(formData, [
-      "jobDescriptionsOrgStructure",
-      "contractsLettersTemplates",
-      "recruitmentProcessSupport",
-      "onboardingDesign",
-      "hrAudit",
-      "hrPoliciesHandbookReviewUpdate",
-      "conflictResolutionSupport",
-      "investigationsIncidentResponseSupport",
-      "disciplinaryProcessesSupport",
-      "grievanceHandlingSupport",
-      "managerCoachingForPerformanceConversations",
-      "performanceManagementDesignCleanUp",
-      "pipDesignSupport",
-      "coachingForSupervisorsPeopleLeaders",
-      "leadershipCoachingEcosystem",
-      "teamInterventionsFacilitation",
-      "cultureWellness",
-      "successionPlanning",
-    ]);
+    const { hrServicesInterested = [] } = formData;
+    const hrServicesInterestedText = formatArray(hrServicesInterested);
 
     // What's driving this request
-    const drivingFactors = formatCheckboxes(formData, [
-      "weAreGrowingFast",
-      "performanceIssues",
-      "conflictComplaints",
-      "complianceRiskConcerns",
-      "leadershipCapabilityGaps",
-      "highTurnover",
-      "needToFormalizeHRSystems",
-    ]);
+    const { whatsDrivingThisRequest = [] } = formData;
+    const drivingFactorsText = formatArray(whatsDrivingThisRequest);
 
     // What they have in place
-    const haveInPlace = formatCheckboxes(formData, [
-      "employeeHandbookPolicies",
-      "employmentContracts",
-      "jobDescriptions",
-      "performanceReviewProcess",
-      "disciplinaryProcedure",
-      "grievanceProcedure",
-      "onboardingProcess",
-      "trainingPlan",
-      "noneOfTheAboveNotSure",
-    ]);
+    const { doYouHaveTheFollowingInPlace = [] } = formData;
+    const haveInPlaceText = formatArray(doYouHaveTheFollowingInPlace);
+
+    // Work Model
+    const { workModel = [] } = formData;
+    const workModelText = formatArray(workModel);
 
     // Any of the following apply
-    const specialCircumstances = formatCheckboxes(formData, [
-      "multipleLocations",
-      "shiftWork24HoursOperation",
-      "contractorsAsMajorWorkforceSegment",
-      "remoteWorkforceAcrossCountries",
-      "recentRestructureMerger",
-      "highPublicFacingRisk",
-    ]);
+    const { anyOfTheFollowingApply = [] } = formData;
+    const specialCircumstancesText = formatArray(anyOfTheFollowingApply);
 
     const html = `
       <div style="font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; border: 1px solid #e5e7eb; border-radius: 12px;">
@@ -128,7 +73,7 @@ export async function POST(req) {
         <p><strong>Industry:</strong> ${industry || "-"}</p>
         <p><strong>Country(ies) Of Operation:</strong> ${country || "-"}</p>
         <p><strong>Company Size:</strong> ${companySize || "-"}</p>
-        <p><strong>Work Model:</strong> ${formatWorkModel(formData)}</p>
+        <p><strong>Work Model:</strong> ${workModelText}</p>
         <p><strong>Company Website:</strong> ${companyWebsite || "Not provided"}</p>
 
         <h3 style="margin-top: 20px; margin-bottom: 12px; color: #15803d; border-bottom: 2px solid #15803d; padding-bottom: 8px;">Primary Contact</h3>
@@ -139,16 +84,16 @@ export async function POST(req) {
 
         <h3 style="margin-top: 20px; margin-bottom: 12px; color: #15803d; border-bottom: 2px solid #15803d; padding-bottom: 8px;">What Support Do You Need?</h3>
         <p><strong>HR Services Interested In:</strong></p>
-        <p style="margin-left: 20px; background: #f9fafb; padding: 12px; border-radius: 8px; border-left: 4px solid #15803d;">${hrServicesInterested}</p>
+        <p style="margin-left: 20px; background: #f9fafb; padding: 12px; border-radius: 8px; border-left: 4px solid #15803d;">${hrServicesInterestedText}</p>
         
         <p style="margin-top: 12px;"><strong>What's driving this request right now? (Up to 2):</strong></p>
-        <p style="margin-left: 20px; background: #f9fafb; padding: 12px; border-radius: 8px; border-left: 4px solid #15803d;">${drivingFactors}</p>
+        <p style="margin-left: 20px; background: #f9fafb; padding: 12px; border-radius: 8px; border-left: 4px solid #15803d;">${drivingFactorsText}</p>
 
         <h3 style="margin-top: 20px; margin-bottom: 12px; color: #15803d; border-bottom: 2px solid #15803d; padding-bottom: 8px;">Current HR Setup</h3>
         <p><strong>Do You Currently Have An HR Functions?</strong> ${doYouCurrentlyHaveAnHRFunctions || "-"}</p>
         
         <p style="margin-top: 12px;"><strong>Do you have the following in place?</strong></p>
-        <p style="margin-left: 20px; background: #f9fafb; padding: 12px; border-radius: 8px; border-left: 4px solid #15803d;">${haveInPlace}</p>
+        <p style="margin-left: 20px; background: #f9fafb; padding: 12px; border-radius: 8px; border-left: 4px solid #15803d;">${haveInPlaceText}</p>
         
         <p style="margin-top: 12px;"><strong>Any active HR matters we should be aware of?</strong> ${anyActiveHRMattersWeShouldBeAwareOf || "-"}</p>
 
@@ -158,7 +103,7 @@ export async function POST(req) {
         <p><strong>Unionized Environment?</strong> ${unionizedEnvironment || "-"}</p>
         
         <p style="margin-top: 12px;"><strong>Any of the following apply? (Optional Multi-Select):</strong></p>
-        <p style="margin-left: 20px; background: #f9fafb; padding: 12px; border-radius: 8px; border-left: 4px solid #15803d;">${specialCircumstances || "None selected"}</p>
+        <p style="margin-left: 20px; background: #f9fafb; padding: 12px; border-radius: 8px; border-left: 4px solid #15803d;">${specialCircumstancesText}</p>
 
         <h3 style="margin-top: 20px; margin-bottom: 12px; color: #15803d; border-bottom: 2px solid #15803d; padding-bottom: 8px;">Goals, Timeline & Urgency</h3>
         <p><strong>What does success look like in 60-90 days?</strong></p>

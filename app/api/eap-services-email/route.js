@@ -26,6 +26,7 @@ export async function POST(req) {
       emailAddress,
       phoneWhatsappNumber,
       bestMethodToContactYou,
+      preferredSupportChannel,
       howShouldEmployeesAccessSupport,
       doYouNeedAfterHoursAccess,
       preferredTurnaroundTimeForFirstAppointment,
@@ -38,6 +39,17 @@ export async function POST(req) {
       howDidYouHearAboutUs,
       // checkbox + other fields are included via JSON.stringify below
     } = formData;
+
+ 
+
+    const { topSupportAreas = [] } = formData;
+
+        const supportAreasText = topSupportAreas.length > 0 ? topSupportAreas.join(", ") : "-";
+
+    const { servicesIncluded = [] } = formData;
+   
+        const servicesIncludedText = servicesIncluded.length > 0 ? servicesIncluded.join(", ") : "-";
+
 
     const html = `
       <div style="font-family: Arial, sans-serif; max-width: 640px; margin: 0 auto; padding: 16px; border: 1px solid #e5e7eb; border-radius: 12px;">
@@ -57,6 +69,16 @@ export async function POST(req) {
         <p><strong>Email Address:</strong> ${emailAddress || "-"}</p>
         <p><strong>Phone / WhatsApp:</strong> ${phoneWhatsappNumber || "-"}</p>
         <p><strong>Best Method to Contact:</strong> ${bestMethodToContactYou || "-"}</p>
+
+        <h3 style="margin-top: 16px; margin-bottom: 8px;">Services You Want Included</h3>
+        <p><strong>Selected Services:</strong> ${servicesIncludedText}</p>
+
+        <h3 style="margin-top: 16px; margin-bottom: 8px;">Top Support Areas</h3>
+        <p><strong>Selected Areas:</strong> ${supportAreasText}</p>
+
+        <h3 style="margin-top: 16px; margin-bottom: 8px;">Preferred Support Channel</h3>
+        <p><strong>Preferred Support Channel:</strong> ${preferredSupportChannel || "-"}</p>
+
 
         <h3 style="margin-top: 16px; margin-bottom: 8px;">Access & Response Expectations</h3>
         <p><strong>How should employees access support?</strong> ${howShouldEmployeesAccessSupport || "-"}</p>

@@ -16,18 +16,64 @@ import { useAuthContext } from "@/context/AppContext";
 import { useRouter } from "next/navigation";
 import { Footer } from "../footer";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { Info } from "lucide-react";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { CalendarIcon } from "lucide-react";
-import { Calendar } from "@/components/ui/calendar";
-
-
+import { toast } from "sonner";
 
 
 export function EapServicesForm() {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
+
+  const SERVICES_INCLUDED = [
+    "General mental health support",
+    "Wellness development",
+    "Psycho-Educational Workshops",
+    "In-Person Counselling",
+    "Behaviour change consulting",
+    "Psychotherapy / counseling",
+  ];
+
+  const TOP_SUPPORT_AREAS = [
+    "Stress & Burnout",
+    "Conflict at Work",
+    "Anxiety & Depression",
+    "Grief & Loss",
+    "Substance Misuse",
+    "Family Relationship Strain",
+    "Financial Stress",
+    "Workplace Change",
+    "Trauma Exposure",
+    "Harassment Concerns",
+  ];
+/* -------- Old Use State Model */
+
+  // const [formData, setFormData] = useState({
+  //   companyName: "",
+  //   totalHeadCount: "",
+  //   country: "",
+  //   industry: "",
+  //   primaryOfficeLocation: "",
+  //   companyWebsite: "",
+  //   primaryContactNameRole: "",
+  //   emailAddress: "",
+  //   phoneWhatsappNumber: "",
+  //   bestMethodToContactYou: "",
+
+  //   howShouldEmployeesAccessSupport: "",
+  //   doYouNeedAfterHoursAccess: "",
+  //   preferredTurnaroundTimeForFirstAppointment: "",
+  //   doYouNeedUrgentCrisisEscalationGuidance: "",
+  //   targetStartDate: "",
+  //   budgetApproach: "",
+  //   estimatedBudgetRange: "",
+  //   billingCountryCurrency: "",
+  //   keyConcernsOrContext: "",
+  //   howDidYouHearAboutUs: "",
+
+
+  // });
+
+  /* New UseState Model */
+
   const [formData, setFormData] = useState({
     companyName: "",
     totalHeadCount: "",
@@ -39,6 +85,12 @@ export function EapServicesForm() {
     emailAddress: "",
     phoneWhatsappNumber: "",
     bestMethodToContactYou: "",
+
+  
+    servicesIncluded: [],        // ✅ NEW
+    topSupportAreas: [],        // ✅ NEW (Pick up to 3)
+  
+    preferredSupportChannel: "",
     howShouldEmployeesAccessSupport: "",
     doYouNeedAfterHoursAccess: "",
     preferredTurnaroundTimeForFirstAppointment: "",
@@ -49,6 +101,7 @@ export function EapServicesForm() {
     billingCountryCurrency: "",
     keyConcernsOrContext: "",
     howDidYouHearAboutUs: "",
+    consent: false,
   });
 
   const { user } = useAuthContext();
@@ -112,8 +165,8 @@ export function EapServicesForm() {
           user_id: userPersonalId,
           service_name: "EAP Services",
           form_data: submissionData,
-          status: "pending",
-          payment_status: "pending",
+          // status: "pending",
+          // payment_status: "pending",
           // amount:price
 
 
@@ -139,7 +192,7 @@ export function EapServicesForm() {
         console.error("Error calling EAP email API:", emailErr);
       }
 
-      alert("Thank you! We will get back to you shortly on your email.");
+      alert("Thank you! A TTMHUB team member will review and contact you to schedule a discovery call. Confidentiality Note: Information shared here is treated as confidential and used only for scoping your request.");
       router.push("/");
     } catch (err) {
       console.error("Error submitting form:", err);
@@ -309,7 +362,7 @@ export function EapServicesForm() {
                     })
                   }
                   className="border-gray-300 shadow-md shadow-black"
-                  required
+                  optional
                 />
               </div>
               
@@ -332,7 +385,7 @@ export function EapServicesForm() {
 
 
               <div className="space-y-2">
-                <Label htmlFor="emailAddress">Email Address</Label>
+                <Label htmlFor="emailAddress">Email Address (Will Be Used For Communication)</Label>
                 <Input
                   id="emailAddress"
                   value={formData.emailAddress}
@@ -400,97 +453,80 @@ export function EapServicesForm() {
               </h2>
             </div>
 
-            <div className="space-y-2">
-                <Label htmlFor="servicesYouWantIncluded">Services You Want Included (Check All That Apply)</Label>
-              
-                <div className="flex items-center space-x-2 ">
+              {/* New Block */}
+
+              <div className="space-y-2">
+               <Label>Services You Want Included (Select all that apply)</Label>
+
+                {SERVICES_INCLUDED.map((service) => (
+                 <div key={service} className="flex items-center space-x-2">
                   <input
-                    id="generalMentalHealth"
-                    type="checkbox"
-                    checked={!!formData.generalMentalHealth}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        generalMentalHealth: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="generalMentalHealth">General  mental health support for your organization</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="wellnessDevelopment"
-                    type="checkbox"
-                    checked={!!formData.wellnessDevelopment}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        wellnessDevelopment: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="wellnessDevelopment">Wellness development</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="psychoEducationalWorkshops"
-                    type="checkbox"
-                    checked={!!formData.psychoEducationalWorkshops}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        psychoEducationalWorkshops: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="psychoEducationalWorkshops">Psycho-Educational Workshops (Anxiety/Stress/Anger Management/DEI Awareness)</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="inPersonCounselling"
-                    type="checkbox"
-                    checked={!!formData.inPersonCounselling}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        inPersonCounselling: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="inPersonCounselling">In-Person Counselling (Where Available)</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="behaviourChangeConsulting"
-                    type="checkbox"
-                    checked={!!formData.behaviourChangeConsulting}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        behaviourChangeConsulting: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="behaviourChangeConsulting">Behaviour Change Consulting</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="psychotherapyCounseling"
-                    type="checkbox"
-                    checked={!!formData.psychotherapyCounseling}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        psychotherapyCounseling: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="psychotherapyCounseling">Psychotherapy / Counseling</Label>
-                </div>
-              </div>
+                   type="checkbox"
+                   checked={formData.servicesIncluded.includes(service)}
+                   onChange={(e) => {
+                     if (e.target.checked) {
+                       setFormData({
+                                    ...formData,
+                                    servicesIncluded: [...formData.servicesIncluded, service],
+                                   });
+                             } else {
+                                   setFormData({
+                                             ...formData,
+                                             servicesIncluded: formData.servicesIncluded.filter(
+                                             (item) => item !== service
+                                             ),
+                                             });
+                                    }
+                                   }}
+                                  />
+                       <Label>{service}</Label>
+                     </div>
+                  ))}
+               </div>
 
 
-              <div className="space-y-2 ">
+<div className="space-y-2">
+  <Label>Top Support Areas For Your Team (Pick up to 3)</Label>
+
+  {TOP_SUPPORT_AREAS.map((area) => {
+    const isChecked = formData.topSupportAreas.includes(area);
+
+    return (
+      <div key={area} className="flex items-center space-x-2">
+        <input
+          type="checkbox"
+          checked={isChecked}
+          onChange={(e) => {
+            if (e.target.checked) {
+              if (formData.topSupportAreas.length >= 3) return;
+              setFormData({
+                ...formData,
+                topSupportAreas: [...formData.topSupportAreas, area],
+              });
+            } else {
+              setFormData({
+                ...formData,
+                topSupportAreas: formData.topSupportAreas.filter(
+                  (item) => item !== area
+                ),
+              });
+            }
+          }}
+        />
+        <Label>{area}</Label>
+      </div>
+    );
+  })}
+
+  {formData.topSupportAreas.length >= 3 && (
+    <p className="text-sm text-red-500">
+      You can select up to 3 support areas only
+    </p>
+  )}
+</div>
+
+
+              {/* <div className="space-y-2 ">
                 <Label htmlFor="topSupportAreas">Top Support Areas For Your Team (Pick Upto 3)</Label>
               
               
@@ -635,7 +671,9 @@ export function EapServicesForm() {
                   <Label htmlFor="harassmentConcerns">Harassment Concerns</Label>
                 </div>
                 
-              </div>
+              </div> */}
+
+              
               
 
               <div className="space-y-2">
@@ -899,6 +937,23 @@ export function EapServicesForm() {
                   className="border-gray-300 shadow-md shadow-black"
                   optional
                 />
+              </div>
+
+              <div className="space-y-2">
+              <div className="flex items-center space-x-2">
+                  <input
+                    id="consent"
+                    type="checkbox"
+                    checked={!!formData.consent}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        consent: e.target.checked,
+                      })
+                    }
+                  />
+                  <Label htmlFor="consent">I confirm I am authorised to submit this enquiry on behalf of my organisation.</Label>
+                </div>
               </div>
 
 

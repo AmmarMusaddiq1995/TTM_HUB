@@ -28,8 +28,92 @@ import { Calendar } from "@/components/ui/calendar";
 export function HrServicesForm() {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
+
+  const WORK_MODEL = [
+    "On-Site",
+    "Remote",
+    "Hybrid",
+    "Field Based / Multi Site",
+  ];
+
+  const HR_SERVICES_INTERESTED = [
+    "Job Descriptions/Org Structure",
+    "Contracts/Letters/Templates",
+    "Recruitment Process Support",
+    "Onboarding Design",
+    "HR Audit",
+    "HR Policies/Handbook Review/Update",
+    "Conflict Resolution Support",
+    "Investigations/Incident Response Support",
+    "Disciplinary Processes Support",
+    "Grievance Handling Support",
+    "Manager Coaching for Performance Conversations",
+    "Performance Management Design/Clean-up",
+    "PIP Design/Support (Performance Improvement Plans)",
+    "Coaching for Supervisors/People Leaders",
+    "Leadership Coaching Ecosystem (Better Me/Better Teams)",
+    "Team Interventions/Facilitation",
+    "Culture & Wellness",
+    "Succession Planning",
+  ];
+
+  const DRIVING_FACTORS = [
+    "We're growing fast",
+    "Performance issues",
+    "Conflict / Complaints",
+    "Compliance /Risk concerns",
+    "Leadership capability gaps",
+    "High turnover",
+    "Need to formalize HR systems",
+  ];
+
+  const HAVE_IN_PLACE = [
+    "Employee handbook/policies",
+    "Employment contracts",
+    "Job descriptions",
+    "Performance review process",
+    "Disciplinary procedure",
+    "Grievance procedure",
+    "Onboarding process",
+    "Training plan",
+    "None of the above/Not sure",
+  ];
+
+  const ANY_OF_THE_FOLLOWING_APPLY = [
+    "Multiple Locations",
+    "Shift work / 24-hours operation",
+    "Contractors as major workforce segment",
+    "Remote workforce across countries",
+    "Recent restructure/merger",
+    "High public-facing risk (regulated / safety-critical)",
+  ];
+
   const [formData, setFormData] = useState({
-   
+    companyName: "",
+    industry: "",
+    country: "",
+    companySize: "",
+    workModel: [],
+    primaryContactNameRole: "",
+    emailAddress: "",
+    companyWebsite: "",
+    phoneWhatsappNumber: "",
+    bestMethodToContactYou: "",
+    hrServicesInterested: [],
+    whatsDrivingThisRequest: [],
+    doYouCurrentlyHaveAnHRFunctions: "",
+    doYouHaveTheFollowingInPlace: [],
+    anyActiveHRMattersWeShouldBeAwareOf: "",
+    totalEmployees: "",
+    totalPeopleLeadersSupervisors: "",
+    unionizedEnvironment: "",
+    anyOfTheFollowingApply: [],
+    whatDoesSuccessLookLikeIn6090Days: "",
+    whenDoYouWantSupportToStart: "",
+    urgencyLevel: "",
+    preferredEngagementType: "",
+    estimatedBudgetRange: "",
+    anythingElseWeShouldKnowBeforeWeConnect: "",
   });
 
   const { user } = useAuthContext();
@@ -279,7 +363,7 @@ export function HrServicesForm() {
               </Select>
             </div>
 
-            <div className="space-y-2">
+            {/* <div className="space-y-2">
                 <Label htmlFor="workModel">Work Model</Label>
                 <div className="flex items-center space-x-2 ">
                   <input
@@ -337,7 +421,36 @@ export function HrServicesForm() {
                   />
                   <Label htmlFor="fieldBased">Field Based / Multi Site</Label>
                 </div>
-            </div>
+            </div> */}
+
+            <div className="space-y-2">
+               <Label>Work Model</Label>
+
+                {WORK_MODEL.map((workModel) => (
+                 <div key={workModel} className="flex items-center space-x-2">
+                  <input
+                   type="checkbox"
+                   checked={formData.workModel.includes(workModel)}
+                   onChange={(e) => {
+                     if (e.target.checked) {
+                       setFormData({
+                                    ...formData,
+                                    workModel: [...formData.workModel, workModel],
+                                   });
+                             } else {
+                                   setFormData({
+                                             ...formData,
+                                             workModel: formData.workModel.filter(
+                                             (item) => item !== workModel
+                                             ),
+                                             });
+                                    }
+                                   }}
+                                  />
+                       <Label>{workModel}</Label>
+                     </div>
+                  ))}
+               </div>
 
             <div className="space-y-2">
                 <Label htmlFor="primaryContactNameRole">Primary Contact Name & Role</Label>
@@ -442,6 +555,35 @@ export function HrServicesForm() {
             </div>
 
             <div className="space-y-2">
+               <Label>Which HR Services Are You Interested In? (Select all that apply)</Label>
+
+                {HR_SERVICES_INTERESTED.map((service) => (
+                 <div key={service} className="flex items-center space-x-2">
+                  <input
+                   type="checkbox"
+                   checked={formData.hrServicesInterested.includes(service)}
+                   onChange={(e) => {
+                     if (e.target.checked) {
+                       setFormData({
+                                    ...formData,
+                                    hrServicesInterested: [...formData.hrServicesInterested, service],
+                                   });
+                             } else {
+                                   setFormData({
+                                             ...formData,
+                                             hrServicesInterested: formData.hrServicesInterested.filter(
+                                             (item) => item !== service
+                                             ),
+                                             });
+                                    }
+                                   }}
+                                  />
+                       <Label>{service}</Label>
+                     </div>
+                  ))}
+               </div>
+
+            {/* <div className="space-y-2">
                 <Label htmlFor="servicesYouWantIncluded">Which HR Services Are You Interested In? (Check All That Apply)</Label>
               
                 <div className="flex items-center space-x-2 ">
@@ -714,118 +856,47 @@ export function HrServicesForm() {
                   <Label htmlFor="successionPlanning">Succession planning</Label>
                 </div>
 
-              </div>
+              </div> */}
 
 
-              <div className="space-y-2 ">
-                <Label htmlFor="whatsDrivingThisRequestRightNow">What's driving this request right now? (Pick Upto 2)</Label>
-              
-              
-                <div className="flex items-center space-x-2 ">
-                  <input
-                    id="weAreGrowingFast"
-                    type="checkbox"
-                    checked={!!formData.weAreGrowingFast}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        weAreGrowingFast: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="weAreGrowingFast">We're growing fast</Label>
-                </div>
+              <div className="space-y-2">
+                <Label>What's driving this request right now? (Pick up to 2)</Label>
 
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="performanceIssues"
-                    type="checkbox"
-                    checked={!!formData.performanceIssues}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        performanceIssues: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="performanceIssues">Performance issues</Label>
-                </div>
+                {DRIVING_FACTORS.map((factor) => {
+                  const isChecked = formData.whatsDrivingThisRequest.includes(factor);
 
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="conflictComplaints"
-                    type="checkbox"
-                    checked={!!formData.conflictComplaints}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        conflictComplaints: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="conflictComplaints">Conflict / Complaints</Label>
-                </div>
+                  return (
+                    <div key={factor} className="flex items-center space-x-2">
+                      <input
+                        type="checkbox"
+                        checked={isChecked}
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            if (formData.whatsDrivingThisRequest.length >= 2) return;
+                            setFormData({
+                              ...formData,
+                              whatsDrivingThisRequest: [...formData.whatsDrivingThisRequest, factor],
+                            });
+                          } else {
+                            setFormData({
+                              ...formData,
+                              whatsDrivingThisRequest: formData.whatsDrivingThisRequest.filter(
+                                (item) => item !== factor
+                              ),
+                            });
+                          }
+                        }}
+                      />
+                      <Label>{factor}</Label>
+                    </div>
+                  );
+                })}
 
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="complianceRiskConcerns"
-                    type="checkbox"
-                    checked={!!formData.complianceRiskConcerns}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        complianceRiskConcerns: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="complianceRiskConcerns">Compliance /Risk concerns</Label>
-                </div>
-
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="leadershipCapabilityGaps"
-                    type="checkbox"
-                    checked={!!formData.leadershipCapabilityGaps}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        leadershipCapabilityGaps: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="leadershipCapabilityGaps">Leadership capability gaps</Label>
-                </div>
-
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="highTurnover"
-                    type="checkbox"
-                    checked={!!formData.highTurnover}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        highTurnover: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="highTurnover">High turnover</Label>
-                </div>
-
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="needToFormalizeHRSystems"
-                    type="checkbox"
-                    checked={!!formData.needToFormalizeHRSystems}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        needToFormalizeHRSystems: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="needToFormalizeHRSystems">Need to formalize HR systems</Label>
-                </div>
-                
+                {formData.whatsDrivingThisRequest.length >= 2 && (
+                  <p className="text-sm text-red-500">
+                    You can select up to 2 driving factors only
+                  </p>
+                )}
               </div>
 
               <hr style={{ border: "1px solid #e0e0e0" }} />
@@ -862,145 +933,32 @@ export function HrServicesForm() {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="doYouCurrentlyHaveAnHRFunctions">
-                Do you have the following in place?
-              </Label>
+              <Label>Do you have the following in place?</Label>
 
-              <div className="flex items-center space-x-2">
+              {HAVE_IN_PLACE.map((item) => (
+                <div key={item} className="flex items-center space-x-2">
                   <input
-                    id="employeeHandbookPolicies"
                     type="checkbox"
-                    checked={!!formData.employeeHandbookPolicies}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        employeeHandbookPolicies: e.target.checked,
-                      })
-                    }
+                    checked={formData.doYouHaveTheFollowingInPlace.includes(item)}
+                    onChange={(e) => {
+                      if (e.target.checked) {
+                        setFormData({
+                          ...formData,
+                          doYouHaveTheFollowingInPlace: [...formData.doYouHaveTheFollowingInPlace, item],
+                        });
+                      } else {
+                        setFormData({
+                          ...formData,
+                          doYouHaveTheFollowingInPlace: formData.doYouHaveTheFollowingInPlace.filter(
+                            (selectedItem) => selectedItem !== item
+                          ),
+                        });
+                      }
+                    }}
                   />
-                  <Label htmlFor="employeeHandbookPolicies">Employee handbook/policies</Label>
+                  <Label>{item}</Label>
                 </div>
-
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="employmentContracts"
-                    type="checkbox"
-                    checked={!!formData.employmentContracts}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        employmentContracts: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="employmentContracts">Employment contracts</Label>
-                </div>
-
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="jobDescriptions"
-                    type="checkbox"
-                    checked={!!formData.jobDescriptions}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        jobDescriptions: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="jobDescriptions">Job descriptions</Label>
-                </div>
-
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="performanceReviewProcess"
-                    type="checkbox"
-                    checked={!!formData.performanceReviewProcess}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        performanceReviewProcess: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="performanceReviewProcess">Performance review process</Label>
-                </div>
-
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="disciplinaryProcedure"
-                    type="checkbox"
-                    checked={!!formData.disciplinaryProcedure}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        disciplinaryProcedure: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="disciplinaryProcedure">Disciplinary procedure</Label>
-                </div>
-
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="grievanceProcedure"
-                    type="checkbox"
-                    checked={!!formData.grievanceProcedure}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        grievanceProcedure: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="grievanceProcedure">Grievance procedure</Label>
-                </div>
-
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="onboardingProcess"
-                    type="checkbox"
-                    checked={!!formData.onboardingProcess}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        onboardingProcess: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="onboardingProcess">Onboarding process</Label>
-                </div>
-
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="trainingPlan"
-                    type="checkbox"
-                    checked={!!formData.trainingPlan}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        trainingPlan: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="trainingPlan">Training plan</Label>
-                </div>
-
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="noneOfTheAboveNotSure"
-                    type="checkbox"
-                    checked={!!formData.noneOfTheAboveNotSure}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        noneOfTheAboveNotSure: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="noneOfTheAboveNotSure">None of the above/Not sure</Label>
-                </div>
-
+              ))}
             </div>
 
             <div className="space-y-2">
@@ -1089,99 +1047,32 @@ export function HrServicesForm() {
             </div>
 
             <div className="space-y-2">
-                <Label htmlFor="totalPeopleLeadersSupervisors">
-                    Any of the following apply? (Optional Multi-Select)
-                </Label>
+                <Label>Any of the following apply? (Optional Multi-Select)</Label>
 
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="multipleLocations"
-                    type="checkbox"
-                    checked={!!formData.multipleLocations}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        multipleLocations: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="multipleLocations">Multiple Locations</Label>
-                </div>
-
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="shiftWork24HoursOperation"
-                    type="checkbox"
-                    checked={!!formData.shiftWork24HoursOperation}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        shiftWork24HoursOperation: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="shiftWork24HoursOperation">Shift work / 24-hours operation</Label>
-                </div>
-
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="contractorsAsMajorWorkforceSegment"
-                    type="checkbox"
-                    checked={!!formData.contractorsAsMajorWorkforceSegment}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        contractorsAsMajorWorkforceSegment: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="contractorsAsMajorWorkforceSegment">Contractors as major workforce segment</Label>
-                </div>
-
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="remoteWorkforceAcrossCountries"
-                    type="checkbox"
-                    checked={!!formData.remoteWorkforceAcrossCountries}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        remoteWorkforceAcrossCountries: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="remoteWorkforceAcrossCountries">Remote workforce across countries</Label>
-                </div>
-
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="noneOfTheAboveNotSure"
-                    type="checkbox"
-                    checked={!!formData.recentRestructureMerger}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        recentRestructureMerger: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="recentRestructureMerger">Recent restructure/merger</Label>
-                </div>
-
-                <div className="flex items-center space-x-2">
-                  <input
-                    id="highPublicFacingRisk"
-                    type="checkbox"
-                    checked={!!formData.highPublicFacingRisk}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        highPublicFacingRisk: e.target.checked,
-                      })
-                    }
-                  />
-                  <Label htmlFor="highPublicFacingRisk">High public-facing risk (regulated / safety-critical)</Label>
-                </div>
+                {ANY_OF_THE_FOLLOWING_APPLY.map((item) => (
+                  <div key={item} className="flex items-center space-x-2">
+                    <input
+                      type="checkbox"
+                      checked={formData.anyOfTheFollowingApply.includes(item)}
+                      onChange={(e) => {
+                        if (e.target.checked) {
+                          setFormData({
+                            ...formData,
+                            anyOfTheFollowingApply: [...formData.anyOfTheFollowingApply, item],
+                          });
+                        } else {
+                          setFormData({
+                            ...formData,
+                            anyOfTheFollowingApply: formData.anyOfTheFollowingApply.filter(
+                              (selectedItem) => selectedItem !== item
+                            ),
+                          });
+                        }
+                      }}
+                    />
+                    <Label>{item}</Label>
+                  </div>
+                ))}
             </div>
 
             <hr style={{ border: "1px solid #e0e0e0" }} />
