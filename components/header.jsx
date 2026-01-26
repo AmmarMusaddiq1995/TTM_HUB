@@ -409,7 +409,7 @@ export function Header() {
                   : ""
               }`}
             >
-          <span className="whitespace-nowrap text-black text-xl font-bold">Get Better</span>
+          <span className="whitespace-nowrap text-black text-xl font-bold">Our Ecosystem</span>
               {activeDropdown === "better" ? (
                 <ChevronUp className="h-4 w-4 font-bold text-black" />
               ) : (
@@ -1006,7 +1006,7 @@ export function Header() {
 
               <AccordionItem value="get-better">
                 <AccordionTrigger className="text-sm">
-                  Get Better
+                  Our Ecosystem
                 </AccordionTrigger>
                 <AccordionContent>
                   <div className="pl-4 space-y-2">
