@@ -8,9 +8,9 @@ import FlipCard from "./FlipCard";
 export function CTASection() {
   const router = useRouter();
 
-  const handleClick = () => {
-    router.push("/services/llc-formation-2");
-  };
+  // const handleClick = () => {
+  //   router.push("/services/llc-formation-2");
+  // };
   return (
     // <section className="py-20 bg-gray-50 text-black">
     //   <div className="container px-4 text-center mx-auto">
@@ -150,11 +150,12 @@ export function CTASection() {
       </div>
 
       <Button
-        onClick={handleClick}
+        // onClick={handleClick}
+        onClick = {() => document.getElementById("section-4")?.scrollIntoView({ behavior: "smooth" })}
         size="lg"
         className="bg-[#2bb673] mt-10 cursor-pointer text-primary-foreground shadow-md shadow-black hover:scale-115 hover:shadow-lg hover:bg-[#2bb673]/80 transition-all duration-300 px-8 py-6 text-lg"
       >
-        Start Your Compliance Process
+        Configure Your Package
         <ArrowRight className="ml-2 h-5 w-5" />
       </Button>
 
