@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/select";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { toast } from "react-hot-toast";
+import ContactForm from "@/components/ContactForm";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -154,6 +155,12 @@ export default function ContactPage() {
               ))}
             </div>
           </div>
+        </section>
+       
+       <section>
+        <div className="container mx-auto px-4">
+        <ContactForm />
+        </div>
         </section>
 
        
