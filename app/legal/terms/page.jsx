@@ -18,7 +18,10 @@ export default function TermsPage() {
           </p>
           <div className="mt-4">
             <span className="inline-block rounded bg-[#2bb673] px-3 py-1 text-sm font-medium text-white">
-              The Talent Management Hub — A Wyoming Limited Liability Company
+              The Talent Management Hub — A Wyoming Limited Liability Company <br /><br />
+              Better Business Services Terms & Conditions
+Applies to Formation Services, Compliance Services, Bookkeeping & Taxes, and UK Formation & Tax Services offered on business.ttmhub.co.
+
             </span>
           </div>
         </header>
@@ -413,7 +416,10 @@ export default function TermsPage() {
           </p>
           <div className="mt-4">
             <span className="inline-block rounded bg-[#2bb673] px-3 py-1 text-sm font-medium text-white">
-              The Talent Management Hub — A Wyoming Limited Liability Company
+              The Talent Management Hub — A Wyoming Limited Liability Company <br /><br />
+              Strategic People ServicesTerms & Conditions
+              Applies only to Strategic People Servicesservices and related engagements.
+
             </span>
           </div>
         </header>
