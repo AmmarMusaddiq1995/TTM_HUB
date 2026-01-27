@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight, Star, StarHalf } from "lucide-react";
 import Link from "next/link";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import { motion } from "framer-motion";
@@ -37,7 +37,7 @@ export function HeroSection() {
           </h1>
 
         
-          <p className="text-xl lg:text-2xl text-gray-300 mb-8 text-pretty">
+          <p className="text-xl lg:text-2xl text-white mb-8 text-pretty">
             Your Business Deserves Stability - Let's Secure It!
           </p>
          
@@ -53,7 +53,27 @@ export function HeroSection() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
+
           </div>
+
+          <div className="flex items-center space-x-4 text-sm mt-4 justify-center">
+            <span className="font-semibold">Excellent 4.5 out of 5</span>
+            <div className="flex items-center space-x-1">
+              {[...Array(4)].map((_, i) => (
+                <Star
+                  key={i}
+                  className="h-4 w-4 fill-[#2bb673] text-[#2bb673]"
+                />
+              ))}
+              <StarHalf className="h-4 w-4 fill-[#2bb673] text-[#2bb673]" />
+            </div>
+            {/* <span className="text-gray-300">24,000 reviews</span> */}
+            <a href="https://www.trustpilot.com/review/ttmhub.co" target="_blank" rel="noopener noreferrer"><span className="text-white font-semibold  hover:underline">Rate Us On Trust Pilot</span></a>
+          </div> 
+
+         
+
+          
           
 
       
@@ -71,7 +91,7 @@ export function HeroSection() {
                 {/* <span className="text-primary text-3xl">🎯</span> */}
                 <img src="/icon.png" alt="Expert People Support" className="w-18 h-18" />
               {/* </div> */}
-              <span className="text-md font-medium text-gray-300">
+              <span className="text-md font-medium text-white">
                 Expert People Support
               </span>
             </div>
@@ -82,7 +102,7 @@ export function HeroSection() {
                 <span className="text-primary text-3xl">📋</span>
               </div> */}
               <img src="/icon.png" alt="Expert People Support" className="w-18 h-18" />
-              <span className="text-md font-medium text-gray-300">
+              <span className="text-md font-medium text-white">
                 Formation and Compliance
               </span>
             </div>
@@ -101,7 +121,7 @@ export function HeroSection() {
                 <span className="text-primary text-3xl">📊</span>
               </div>             */}
               <img src="/icon.png" alt="Expert People Support" className="w-18 h-18" />
-              <span className="text-md font-medium text-gray-300">
+              <span className="text-md font-medium text-white">
                 Transformative Tools
               </span>
             </div>
@@ -113,7 +133,7 @@ export function HeroSection() {
                 <span className="text-primary text-3xl">💡</span>
               </div> */}
               <img src="/icon.png" alt="Expert People Support" className="w-18 h-18" />
-              <span className="text-md font-medium text-gray-300">
+              <span className="text-md font-medium text-white">
                 Bookkeeping and Filing
               </span>
             </div>

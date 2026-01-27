@@ -77,108 +77,108 @@ export function PricingSection() {
   const getPricing = () => {
     const pricingTable = {
       "LLC Formation": {
-        "Alabama": { Starter: { normal: 420, express: 490 }, Pro: { normal: 450, express: 520 }, Premium: { normal: 500, express: 570 } },
-        "Alaska": { Starter: { normal: 470, express: 540 }, Pro: { normal: 500, express: 570 }, Premium: { normal: 550, express: 620 } },
-        "Arizona": { Starter: { normal: 270, express: 340 }, Pro: { normal: 300, express: 370 }, Premium: { normal: 350, express: 420 } },
-        "Arkansas": { Starter: { normal: 270, express: 340 }, Pro: { normal: 300, express: 370 }, Premium: { normal: 350, express: 420 } },
-        "California": { Starter: { normal: 285, express: 355 }, Pro: { normal: 315, express: 385 }, Premium: { normal: 365, express: 435 } },
-        "Colorado": { Starter: { normal: 250, express: 320 }, Pro: { normal: 280, express: 350 }, Premium: { normal: 330, express: 400 } },
-        "Connecticut": { Starter: { normal: 335, express: 405 }, Pro: { normal: 365, express: 435 }, Premium: { normal: 415, express: 485 } },
-        "Delaware": { Starter: { normal: 420, express: 490 }, Pro: { normal: 450, express: 520 }, Premium: { normal: 500, express: 570 } },
-        "Florida": { Starter: { normal: 300, express: 370 }, Pro: { normal: 330, express: 400 }, Premium: { normal: 380, express: 450 } },
-        "Georgia": { Starter: { normal: 300, express: 370 }, Pro: { normal: 330, express: 400 }, Premium: { normal: 380, express: 450 } },
-        "Hawaii": { Starter: { normal: 270, express: 340 }, Pro: { normal: 300, express: 370 }, Premium: { normal: 350, express: 420 } },
-        "Idaho": { Starter: { normal: 305, express: 375 }, Pro: { normal: 335, express: 405 }, Premium: { normal: 385, express: 455 } },
-        "Illinois": { Starter: { normal: 370, express: 440 }, Pro: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
-        "Indiana": { Starter: { normal: 320, express: 390 }, Pro: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
-        "Iowa": { Starter: { normal: 270, express: 340 }, Pro: { normal: 300, express: 370 }, Premium: { normal: 350, express: 420 } },
-        "Kansas": { Starter: { normal: 370, express: 440 }, Pro: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
-        "Kentucky": { Starter: { normal: 250, express: 320 }, Pro: { normal: 280, express: 350 }, Premium: { normal: 330, express: 400 } },
-        "Louisiana": { Starter: { normal: 320, express: 390 }, Pro: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
-        "Maine": { Starter: { normal: 395, express: 465 }, Pro: { normal: 425, express: 495 }, Premium: { normal: 475, express: 545 } },
-        "Maryland": { Starter: { normal: 320, express: 390 }, Pro: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
-        "Massachusetts": { Starter: { normal: 720, express: 790 }, Pro: { normal: 750, express: 820 }, Premium: { normal: 800, express: 870 } },
-        "Michigan": { Starter: { normal: 270, express: 340 }, Pro: { normal: 300, express: 370 }, Premium: { normal: 350, express: 420 } },
-        "Minnesota": { Starter: { normal: 370, express: 440 }, Pro: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
-        "Mississippi": { Starter: { normal: 270, express: 340 }, Pro: { normal: 300, express: 370 }, Premium: { normal: 350, express: 420 } },
-        "Missouri": { Starter: { normal: 270, express: 340 }, Pro: { normal: 300, express: 370 }, Premium: { normal: 350, express: 420 } },
-        "Montana": { Starter: { normal: 250, express: 320 }, Pro: { normal: 280, express: 350 }, Premium: { normal: 330, express: 400 } },
-        "Nebraska": { Starter: { normal: 320, express: 390 }, Pro: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
-        "Nevada": { Starter: { normal: 420, express: 490 }, Pro: { normal: 450, express: 520 }, Premium: { normal: 500, express: 570 } },
-        "New Hampshire": { Starter: { normal: 320, express: 390 }, Pro: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
-        "New Jersey": { Starter: { normal: 350, express: 420 }, Pro: { normal: 380, express: 450 }, Premium: { normal: 430, express: 500 } },
-        "New Mexico": { Starter: { normal: 250, express: 320 }, Pro: { normal: 280, express: 350 }, Premium: { normal: 330, express: 400 } },
-        "New York": { Starter: { normal: 420, express: 490 }, Pro: { normal: 450, express: 520 }, Premium: { normal: 500, express: 570 } },
-        "North Carolina": { Starter: { normal: 350, express: 420 }, Pro: { normal: 380, express: 450 }, Premium: { normal: 430, express: 500 } },
-        "North Dakota": { Starter: { normal: 335, express: 405 }, Pro: { normal: 365, express: 435 }, Premium: { normal: 415, express: 485 } },
-        "Ohio": { Starter: { normal: 300, express: 370 }, Pro: { normal: 330, express: 400 }, Premium: { normal: 380, express: 450 } },
-        "Oklahoma": { Starter: { normal: 320, express: 390 }, Pro: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
-        "Oregon": { Starter: { normal: 305, express: 375 }, Pro: { normal: 335, express: 405 }, Premium: { normal: 385, express: 455 } },
-        "Pennsylvania": { Starter: { normal: 350, express: 420 }, Pro: { normal: 380, express: 450 }, Premium: { normal: 430, express: 500 } },
-        "Rhode Island": { Starter: { normal: 370, express: 440 }, Pro: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
-        "South Carolina": { Starter: { normal: 320, express: 390 }, Pro: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
-        "South Dakota": { Starter: { normal: 370, express: 440 }, Pro: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
-        "Tennessee": { Starter: { normal: 520, express: 590 }, Pro: { normal: 550, express: 620 }, Premium: { normal: 600, express: 670 } },
-        "Texas": { Starter: { normal: 505, express: 575 }, Pro: { normal: 535, express: 605 }, Premium: { normal: 585, express: 655 } },
-        "Utah": { Starter: { normal: 370, express: 440 }, Pro: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
-        "Vermont": { Starter: { normal: 335, express: 405 }, Pro: { normal: 365, express: 435 }, Premium: { normal: 415, express: 485 } },
-        "Virginia": { Starter: { normal: 320, express: 390 }, Pro: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
-        "Washington": { Starter: { normal: 420, express: 490 }, Pro: { normal: 450, express: 520 }, Premium: { normal: 500, express: 570 } },
-        "West Virginia": { Starter: { normal: 370, express: 440 }, Pro: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
-        "Wisconsin": { Starter: { normal: 350, express: 420 }, Pro: { normal: 380, express: 450 }, Premium: { normal: 430, express: 500 } },
-        "Wyoming": { Starter: { normal: 300, express: 370 }, Pro: { normal: 330, express: 400 }, Premium: { normal: 380, express: 450 } }
+        "Alabama": { Starter: { normal: 420, express: 490 }, Standard: { normal: 450, express: 520 }, Premium: { normal: 500, express: 570 } },
+        "Alaska": { Starter: { normal: 470, express: 540 }, Standard: { normal: 500, express: 570 }, Premium: { normal: 550, express: 620 } },
+        "Arizona": { Starter: { normal: 270, express: 340 }, Standard: { normal: 300, express: 370 }, Premium: { normal: 350, express: 420 } },
+        "Arkansas": { Starter: { normal: 270, express: 340 }, Standard: { normal: 300, express: 370 }, Premium: { normal: 350, express: 420 } },
+        "California": { Starter: { normal: 285, express: 355 }, Standard: { normal: 315, express: 385 }, Premium: { normal: 365, express: 435 } },
+        "Colorado": { Starter: { normal: 250, express: 320 }, Standard: { normal: 280, express: 350 }, Premium: { normal: 330, express: 400 } },
+        "Connecticut": { Starter: { normal: 335, express: 405 }, Standard: { normal: 365, express: 435 }, Premium: { normal: 415, express: 485 } },
+        "Delaware": { Starter: { normal: 420, express: 490 }, Standard: { normal: 450, express: 520 }, Premium: { normal: 500, express: 570 } },
+        "Florida": { Starter: { normal: 300, express: 370 }, Standard: { normal: 330, express: 400 }, Premium: { normal: 380, express: 450 } },
+        "Georgia": { Starter: { normal: 300, express: 370 }, Standard: { normal: 330, express: 400 }, Premium: { normal: 380, express: 450 } },
+        "Hawaii": { Starter: { normal: 270, express: 340 }, Standard: { normal: 300, express: 370 }, Premium: { normal: 350, express: 420 } },
+        "Idaho": { Starter: { normal: 305, express: 375 }, Standard: { normal: 335, express: 405 }, Premium: { normal: 385, express: 455 } },
+        "Illinois": { Starter: { normal: 370, express: 440 }, Standard: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
+        "Indiana": { Starter: { normal: 320, express: 390 }, Standard: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
+        "Iowa": { Starter: { normal: 270, express: 340 }, Standard: { normal: 300, express: 370 }, Premium: { normal: 350, express: 420 } },
+        "Kansas": { Starter: { normal: 370, express: 440 }, Standard: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
+        "Kentucky": { Starter: { normal: 250, express: 320 }, Standard: { normal: 280, express: 350 }, Premium: { normal: 330, express: 400 } },
+        "Louisiana": { Starter: { normal: 320, express: 390 }, Standard: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
+        "Maine": { Starter: { normal: 395, express: 465 }, Standard: { normal: 425, express: 495 }, Premium: { normal: 475, express: 545 } },
+        "Maryland": { Starter: { normal: 320, express: 390 }, Standard: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
+        "Massachusetts": { Starter: { normal: 720, express: 790 }, Standard: { normal: 750, express: 820 }, Premium: { normal: 800, express: 870 } },
+        "Michigan": { Starter: { normal: 270, express: 340 }, Standard: { normal: 300, express: 370 }, Premium: { normal: 350, express: 420 } },
+        "Minnesota": { Starter: { normal: 370, express: 440 }, Standard: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
+        "Mississippi": { Starter: { normal: 270, express: 340 }, Standard: { normal: 300, express: 370 }, Premium: { normal: 350, express: 420 } },
+        "Missouri": { Starter: { normal: 270, express: 340 },Standard: { normal: 300, express: 370 }, Premium: { normal: 350, express: 420 } },
+        "Montana": { Starter: { normal: 250, express: 320 }, Standard: { normal: 280, express: 350 }, Premium: { normal: 330, express: 400 } },
+        "Nebraska": { Starter: { normal: 320, express: 390 }, Standard: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
+        "Nevada": { Starter: { normal: 420, express: 490 }, Standard: { normal: 450, express: 520 }, Premium: { normal: 500, express: 570 } },
+        "New Hampshire": { Starter: { normal: 320, express: 390 }, Standard: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
+        "New Jersey": { Starter: { normal: 350, express: 420 },Standard: { normal: 380, express: 450 }, Premium: { normal: 430, express: 500 } },
+        "New Mexico": { Starter: { normal: 250, express: 320 }, Standard: { normal: 280, express: 350 }, Premium: { normal: 330, express: 400 } },
+        "New York": { Starter: { normal: 420, express: 490 }, Standard: { normal: 450, express: 520 }, Premium: { normal: 500, express: 570 } },
+        "North Carolina": { Starter: { normal: 350, express: 420 }, Standard: { normal: 380, express: 450 }, Premium: { normal: 430, express: 500 } },
+        "North Dakota": { Starter: { normal: 335, express: 405 }, Standard: { normal: 365, express: 435 }, Premium: { normal: 415, express: 485 } },
+        "Ohio": { Starter: { normal: 300, express: 370 }, Standard: { normal: 330, express: 400 }, Premium: { normal: 380, express: 450 } },
+        "Oklahoma": { Starter: { normal: 320, express: 390 }, Standard: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
+        "Oregon": { Starter: { normal: 305, express: 375 }, Standard: { normal: 335, express: 405 }, Premium: { normal: 385, express: 455 } },
+        "Pennsylvania": { Starter: { normal: 350, express: 420 }, Standard: { normal: 380, express: 450 }, Premium: { normal: 430, express: 500 } },
+        "Rhode Island": { Starter: { normal: 370, express: 440 }, Standard: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
+        "South Carolina": { Starter: { normal: 320, express: 390 }, Standard: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
+        "South Dakota": { Starter: { normal: 370, express: 440 }, Standard: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
+        "Tennessee": { Starter: { normal: 520, express: 590 }, Standard: { normal: 550, express: 620 }, Premium: { normal: 600, express: 670 } },
+        "Texas": { Starter: { normal: 505, express: 575 }, Standard: { normal: 535, express: 605 }, Premium: { normal: 585, express: 655 } },
+        "Utah": { Starter: { normal: 370, express: 440 }, Standard: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
+        "Vermont": { Starter: { normal: 335, express: 405 }, Standard: { normal: 365, express: 435 }, Premium: { normal: 415, express: 485 } },
+        "Virginia": { Starter: { normal: 320, express: 390 }, Standard: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
+        "Washington": { Starter: { normal: 420, express: 490 }, Standard: { normal: 450, express: 520 }, Premium: { normal: 500, express: 570 } },
+        "West Virginia": { Starter: { normal: 370, express: 440 }, Standard: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
+        "Wisconsin": { Starter: { normal: 350, express: 420 }, Standard: { normal: 380, express: 450 }, Premium: { normal: 430, express: 500 } },
+        "Wyoming": { Starter: { normal: 300, express: 370 }, Standard: { normal: 330, express: 400 }, Premium: { normal: 380, express: 450 } }
       },
       "C Corporation Formation": {
-        "Alabama": { Starter: { normal: 470, express: 540 }, Pro: { normal: 500, express: 570 }, Premium: { normal: 550, express: 620 } },
-        "Alaska": { Starter: { normal: 520, express: 590 }, Pro: { normal: 550, express: 620 }, Premium: { normal: 600, express: 670 } },
-        "Arizona": { Starter: { normal: 320, express: 390 }, Pro: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
-        "Arkansas": { Starter: { normal: 320, express: 390 }, Pro: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
-        "California": { Starter: { normal: 335, express: 405 }, Pro: { normal: 365, express: 435 }, Premium: { normal: 415, express: 485 } },
-        "Colorado": { Starter: { normal: 300, express: 370 }, Pro: { normal: 330, express: 400 }, Premium: { normal: 380, express: 450 } },
-        "Connecticut": { Starter: { normal: 385, express: 455 }, Pro: { normal: 415, express: 485 }, Premium: { normal: 465, express: 535 } },
-        "Delaware": { Starter: { normal: 470, express: 540 }, Pro: { normal: 500, express: 570 }, Premium: { normal: 550, express: 620 } },
-        "Florida": { Starter: { normal: 350, express: 420 }, Pro: { normal: 380, express: 450 }, Premium: { normal: 430, express: 500 } },
-        "Georgia": { Starter: { normal: 350, express: 420 }, Pro: { normal: 380, express: 450 }, Premium: { normal: 430, express: 500 } },
-        "Hawaii": { Starter: { normal: 320, express: 390 }, Pro: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
-        "Idaho": { Starter: { normal: 355, express: 425 }, Pro: { normal: 385, express: 455 }, Premium: { normal: 435, express: 505 } },
-        "Illinois": { Starter: { normal: 420, express: 490 }, Pro: { normal: 450, express: 520 }, Premium: { normal: 500, express: 570 } },
-        "Indiana": { Starter: { normal: 370, express: 420 }, Pro: { normal: 400, express: 450 }, Premium: { normal: 450, express: 500 } },
-        "Iowa": { Starter: { normal: 320, express: 390 }, Pro: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
-        "Kansas": { Starter: { normal: 420, express: 490 }, Pro: { normal: 450, express: 520 }, Premium: { normal: 500, express: 570 } },
-        "Kentucky": { Starter: { normal: 300, express: 370 }, Pro: { normal: 330, express: 400 }, Premium: { normal: 380, express: 450 } },
-        "Louisiana": { Starter: { normal: 370, express: 440 }, Pro: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
-        "Maine": { Starter: { normal: 445, express: 515 }, Pro: { normal: 475, express: 545 }, Premium: { normal: 525, express: 595 } },
-        "Maryland": { Starter: { normal: 370, express: 440 }, Pro: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
-        "Massachusetts": { Starter: { normal: 770, express: 840 }, Pro: { normal: 800, express: 870 }, Premium: { normal: 850, express: 920 } },
-        "Michigan": { Starter: { normal: 320, express: 390 }, Pro: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
-        "Minnesota": { Starter: { normal: 420, express: 490 }, Pro: { normal: 450, express: 520 }, Premium: { normal: 500, express: 570 } },
-        "Mississippi": { Starter: { normal: 320, express: 390 }, Pro: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
-        "Missouri": { Starter: { normal: 320, express: 390 }, Pro: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
-        "Montana": { Starter: { normal: 300, express: 370 }, Pro: { normal: 330, express: 400 }, Premium: { normal: 380, express: 450 } },
-        "Nebraska": { Starter: { normal: 370, express: 440 }, Pro: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
-        "Nevada": { Starter: { normal: 470, express: 540 }, Pro: { normal: 500, express: 570 }, Premium: { normal: 550, express: 620 } },
-        "New Hampshire": { Starter: { normal: 370, express: 440 }, Pro: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
-        "New Jersey": { Starter: { normal: 400, express: 470 }, Pro: { normal: 430, express: 520 }, Premium: { normal: 480, express: 570 } },
-        "New Mexico": { Starter: { normal: 300, express: 370 }, Pro: { normal: 330, express: 400 }, Premium: { normal: 380, express: 450 } },
-        "New York": { Starter: { normal: 470, express: 540 }, Pro: { normal: 500, express: 570 }, Premium: { normal: 550, express: 620 } },
-        "North Carolina": { Starter: { normal: 400, express: 470 }, Pro: { normal: 430, express: 520 }, Premium: { normal: 480, express: 570 } },
-        "North Dakota": { Starter: { normal: 385, express: 455 }, Pro: { normal: 415, express: 485 }, Premium: { normal: 465, express: 535 } },
-        "Ohio": { Starter: { normal: 350, express: 420 }, Pro: { normal: 380, express: 450 }, Premium: { normal: 430, express: 500 } },
-        "Oklahoma": { Starter: { normal: 370, express: 440 }, Pro: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
-        "Oregon": { Starter: { normal: 355, express: 425 }, Pro: { normal: 385, express: 455 }, Premium: { normal: 435, express: 505 } },
-        "Pennsylvania": { Starter: { normal: 400, express: 470 }, Pro: { normal: 430, express: 520 }, Premium: { normal: 480, express: 570 } },
-        "Rhode Island": { Starter: { normal: 420, express: 490 }, Pro: { normal: 450, express: 520 }, Premium: { normal: 500, express: 570 } },
-        "South Carolina": { Starter: { normal: 370, express: 440 }, Pro: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
-        "South Dakota": { Starter: { normal: 420, express: 490 }, Pro: { normal: 450, express: 520 }, Premium: { normal: 500, express: 570 } },
-        "Tennessee": { Starter: { normal: 570, express: 640 }, Pro: { normal: 600, express: 670 }, Premium: { normal: 650, express: 720 } },
-        "Texas": { Starter: { normal: 555, express: 625 }, Pro: { normal: 585, express: 655 }, Premium: { normal: 635, express: 705 } },
-        "Utah": { Starter: { normal: 420, express: 490 }, Pro: { normal: 450, express: 520 }, Premium: { normal: 500, express: 570 } },
-        "Vermont": { Starter: { normal: 385, express: 455 }, Pro: { normal: 415, express: 485 }, Premium: { normal: 465, express: 535 } },
-        "Virginia": { Starter: { normal: 370, express: 440 }, Pro: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
-        "Washington": { Starter: { normal: 470, express: 540 }, Pro: { normal: 500, express: 570 }, Premium: { normal: 550, express: 620 } },
-        "West Virginia": { Starter: { normal: 420, express: 490 }, Pro: { normal: 450, express: 520 }, Premium: { normal: 500, express: 570 } },
-        "Wisconsin": { Starter: { normal: 400, express: 470 }, Pro: { normal: 430, express: 500 }, Premium: { normal: 480, express: 550 } },
-        "Wyoming": { Starter: { normal: 350, express: 420 }, Pro: { normal: 380, express: 450 }, Premium: { normal: 430, express: 500 } }
+        "Alabama": { Starter: { normal: 470, express: 540 }, Standard: { normal: 500, express: 570 }, Premium: { normal: 550, express: 620 } },
+        "Alaska": { Starter: { normal: 520, express: 590 }, Standard: { normal: 550, express: 620 }, Premium: { normal: 600, express: 670 } },
+        "Arizona": { Starter: { normal: 320, express: 390 }, Standard: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
+        "Arkansas": { Starter: { normal: 320, express: 390 }, Standard: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
+        "California": { Starter: { normal: 335, express: 405 }, Standard: { normal: 365, express: 435 }, Premium: { normal: 415, express: 485 } },
+        "Colorado": { Starter: { normal: 300, express: 370 }, Standard: { normal: 330, express: 400 }, Premium: { normal: 380, express: 450 } },
+        "Connecticut": { Starter: { normal: 385, express: 455 }, Standard: { normal: 415, express: 485 }, Premium: { normal: 465, express: 535 } },
+        "Delaware": { Starter: { normal: 470, express: 540 }, Standard: { normal: 500, express: 570 }, Premium: { normal: 550, express: 620 } },
+        "Florida": { Starter: { normal: 350, express: 420 }, Standard: { normal: 380, express: 450 }, Premium: { normal: 430, express: 500 } },
+        "Georgia": { Starter: { normal: 350, express: 420 }, Standard: { normal: 380, express: 450 }, Premium: { normal: 430, express: 500 } },
+        "Hawaii": { Starter: { normal: 320, express: 390 }, Standard: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
+        "Idaho": { Starter: { normal: 355, express: 425 }, Standard: { normal: 385, express: 455 }, Premium: { normal: 435, express: 505 } },
+        "Illinois": { Starter: { normal: 420, express: 490 }, Standard: { normal: 450, express: 520 }, Premium: { normal: 500, express: 570 } },
+        "Indiana": { Starter: { normal: 370, express: 420 }, Standard: { normal: 400, express: 450 }, Premium: { normal: 450, express: 500 } },
+        "Iowa": { Starter: { normal: 320, express: 390 }, Standard: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
+        "Kansas": { Starter: { normal: 420, express: 490 }, Standard: { normal: 450, express: 520 }, Premium: { normal: 500, express: 570 } },
+        "Kentucky": { Starter: { normal: 300, express: 370 }, Standard: { normal: 330, express: 400 }, Premium: { normal: 380, express: 450 } },
+        "Louisiana": { Starter: { normal: 370, express: 440 }, Standard: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
+        "Maine": { Starter: { normal: 445, express: 515 }, Standard: { normal: 475, express: 545 }, Premium: { normal: 525, express: 595 } },
+        "Maryland": { Starter: { normal: 370, express: 440 }, Standard: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
+        "Massachusetts": { Starter: { normal: 770, express: 840 }, Standard: { normal: 800, express: 870 }, Premium: { normal: 850, express: 920 } },
+        "Michigan": { Starter: { normal: 320, express: 390 }, Standard: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
+        "Minnesota": { Starter: { normal: 420, express: 490 }, Standard: { normal: 450, express: 520 }, Premium: { normal: 500, express: 570 } },
+        "Mississippi": { Starter: { normal: 320, express: 390 }, Standard: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
+        "Missouri": { Starter: { normal: 320, express: 390 }, Standard: { normal: 350, express: 420 }, Premium: { normal: 400, express: 470 } },
+        "Montana": { Starter: { normal: 300, express: 370 }, Standard: { normal: 330, express: 400 }, Premium: { normal: 380, express: 450 } },
+        "Nebraska": { Starter: { normal: 370, express: 440 }, Standard: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
+        "Nevada": { Starter: { normal: 470, express: 540 }, Standard: { normal: 500, express: 570 }, Premium: { normal: 550, express: 620 } },
+        "New Hampshire": { Starter: { normal: 370, express: 440 }, Standard: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
+        "New Jersey": { Starter: { normal: 400, express: 470 }, Standard: { normal: 430, express: 520 }, Premium: { normal: 480, express: 570 } },
+        "New Mexico": { Starter: { normal: 300, express: 370 }, Standard: { normal: 330, express: 400 }, Premium: { normal: 380, express: 450 } },
+        "New York": { Starter: { normal: 470, express: 540 }, Standard: { normal: 500, express: 570 }, Premium: { normal: 550, express: 620 } },
+        "North Carolina": { Starter: { normal: 400, express: 470 }, Standard: { normal: 430, express: 520 }, Premium: { normal: 480, express: 570 } },
+        "North Dakota": { Starter: { normal: 385, express: 455 }, Standard: { normal: 415, express: 485 }, Premium: { normal: 465, express: 535 } },
+        "Ohio": { Starter: { normal: 350, express: 420 }, Standard: { normal: 380, express: 450 }, Premium: { normal: 430, express: 500 } },
+        "Oklahoma": { Starter: { normal: 370, express: 440 }, Standard: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
+        "Oregon": { Starter: { normal: 355, express: 425 }, Standard: { normal: 385, express: 455 }, Premium: { normal: 435, express: 505 } },
+        "Pennsylvania": { Starter: { normal: 400, express: 470 }, Standard: { normal: 430, express: 520 }, Premium: { normal: 480, express: 570 } },
+        "Rhode Island": { Starter: { normal: 420, express: 490 }, Standard: { normal: 450, express: 520 }, Premium: { normal: 500, express: 570 } },
+        "South Carolina": { Starter: { normal: 370, express: 440 }, Standard: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
+        "South Dakota": { Starter: { normal: 420, express: 490 }, Standard: { normal: 450, express: 520 }, Premium: { normal: 500, express: 570 } },
+        "Tennessee": { Starter: { normal: 570, express: 640 }, Standard: { normal: 600, express: 670 }, Premium: { normal: 650, express: 720 } },
+        "Texas": { Starter: { normal: 555, express: 625 }, Standard: { normal: 585, express: 655 }, Premium: { normal: 635, express: 705 } },
+        "Utah": { Starter: { normal: 420, express: 490 }, Standard: { normal: 450, express: 520 }, Premium: { normal: 500, express: 570 } },
+        "Vermont": { Starter: { normal: 385, express: 455 }, Standard: { normal: 415, express: 485 }, Premium: { normal: 465, express: 535 } },
+        "Virginia": { Starter: { normal: 370, express: 440 }, Standard: { normal: 400, express: 470 }, Premium: { normal: 450, express: 520 } },
+        "Washington": { Starter: { normal: 470, express: 540 }, Standard: { normal: 500, express: 570 }, Premium: { normal: 550, express: 620 } },
+        "West Virginia": { Starter: { normal: 420, express: 490 }, Standard: { normal: 450, express: 520 }, Premium: { normal: 500, express: 570 } },
+        "Wisconsin": { Starter: { normal: 400, express: 470 }, Standard: { normal: 430, express: 500 }, Premium: { normal: 480, express: 550 } },
+        "Wyoming": { Starter: { normal: 350, express: 420 }, Standard: { normal: 380, express: 450 }, Premium: { normal: 430, express: 500 } }
       }
     };
 
@@ -191,7 +191,7 @@ export function PricingSection() {
     
     return {
       Starter: stateData.Starter[packageType],
-      Pro: stateData.Pro[packageType],
+      Standard: stateData.Standard[packageType],
       Premium: stateData.Premium[packageType]
     };
   };
@@ -201,7 +201,7 @@ export function PricingSection() {
   const plans = [
     {
       name: "Starter",
-      price: `$${currentPrices.Starter}`,
+      price: `$${Math.ceil((currentPrices.Starter)*1.04)}`,
       period: "",
       description: "Get your business started with the basics",
       popular: false,
@@ -216,7 +216,7 @@ export function PricingSection() {
     },
     {
       name: "Standard",
-      price: `$${currentPrices.Pro}`,
+      price: `$${Math.ceil((currentPrices.Standard)*1.04)}`,
       period: "",
       description: "Most popular plan for new businesses",
       popular: true,
@@ -233,7 +233,7 @@ export function PricingSection() {
     },
     {
       name: "Premium",
-      price: `$${currentPrices.Premium}`,
+      price: `$${Math.ceil((currentPrices.Premium)*1.04)}`,
       period: "",
       description: "Complete package for serious entrepreneurs",
       popular: false,
@@ -375,7 +375,7 @@ export function PricingSection() {
           {(formData.packageType || formData.state || formData.selectService) && (
             <div className="mt-6 p-4 bg-primary/5 rounded-lg border border-primary/20">
               <p className="text-sm text-gray-600 text-center">
-                <span className="font-medium">Current pricing:</span> Starter ${currentPrices.Starter} • Pro ${currentPrices.Pro} • Premium ${currentPrices.Premium}
+                <span className="font-medium">Current pricing:</span> Starter ${Math.ceil((currentPrices.Starter)*1.04)} • Standard ${Math.ceil((currentPrices.Standard)*1.04)} • Premium ${Math.ceil((currentPrices.Premium)*1.04)}
                 {formData.packageType && (
                   <span className="block mt-1 text-xs">
                     {formData.packageType === "normal" && "Normal processing: 14 business days"}
@@ -412,27 +412,28 @@ export function PricingSection() {
               }`}
               
             >
+              {plan.name === "Starter" && (
+                <div className="absolute top-7 lg:top-4 -right-2 lg:-right-6 z-10">
+                  <span className="bg-[#2bb673] text-white px-3 py-1 text-xs font-semibold rounded shadow-sm rotate-45 inline-block">
+                    YOUR CHOICE
+                  </span>
+                </div>
+              )}
               {plan.name === "Standard" && (
-                <div className="absolute top-4 -right-9 z-10">
-                  <span className="bg-orange-500 text-white px-3 py-1 text-xs font-semibold rounded shadow-sm rotate-45 inline-block">
+                <div className="absolute top-9 lg:top-6 -right-2 lg:-right-7 z-10">
+                  <span className="bg-[#2bb673] text-white px-3 py-1 text-xs font-semibold rounded shadow-sm rotate-45 inline-block">
                     RECOMMENDED
                   </span>
                 </div>
               )}
               {plan.name === "Premium" && (
-                <div className="absolute top-12 -right-6 z-10">
-                  <span className="bg-orange-500 text-white px-3 py-1 text-xs font-semibold rounded shadow-sm rotate-45 inline-block origin-top-right">
+                <div className="absolute top-15 lg:top-14 -right-2 lg:-right-6 z-10">
+                  <span className="bg-[#2bb673] text-white px-3 py-1 text-xs font-semibold rounded shadow-sm rotate-45 inline-block origin-top-right">
                     BEST VALUE
                   </span>
                 </div>
               )}
-              {/* {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-primary text-secondary-foreground px-4 py-1 rounded-full text-sm font-medium">
-                    MOST POPULAR
-                  </span>
-                </div>
-              )} */}
+              
 
               <CardHeader className="text-center pb-8">
                 <CardTitle className="text-2xl font-bold">
@@ -460,14 +461,14 @@ export function PricingSection() {
 
                 <Button
                   className={`w-full ${
-                    plan.popular ? "bg-primary hover:bg-primary/90" : ""
+                    plan.popular ? "bg-[#2bb673] hover:bg-[#2bb673]/90 cursor-pointer shadow-md shadow-black hover:scale-105" : ""
                   }`}
                   variant={plan.popular ? "default" : "outline"}
                   onClick={() => {
                     const serviceType = formData.selectService || "LLC Formation";
                     const packageType = formData.packageType || "normal";
                     const state = formData.state || "Alabama";
-                    const price = currentPrices[plan.name];
+                    const price = Math.ceil(currentPrices[plan.name]*1.04);
                     
                     // Create URL parameters
                     const params = new URLSearchParams({
@@ -488,8 +489,8 @@ export function PricingSection() {
                 >
                   {plan.name === "Starter"
                     ? "Get Starter"
-                    : plan.name === "Pro"
-                    ? "Get Pro"
+                    : plan.name === "Standard"
+                    ? "Get Standard"
                     : "Get Premium"}
                 </Button>
               </CardContent>
@@ -500,7 +501,7 @@ export function PricingSection() {
         <div className="text-center mt-12">
           <p className="text-sm text-muted-foreground">
             *Promotional terms are based on receiving complete information.
-            FaazFinancialGroup processing times do not include Secretary of
+            TTMHUB processing times do not include Secretary of
             State processing times, which can vary.
           </p>
         </div>

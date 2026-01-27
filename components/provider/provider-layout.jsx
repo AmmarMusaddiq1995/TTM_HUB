@@ -19,9 +19,9 @@ import { toast } from "react-toastify";
 
 const navigation = [
   { name: "Overview", href: "/provider", icon: LayoutDashboard },
-  { name: "My Forms", href: "/provider/forms", icon: FileText },
-  { name: "Reports", href: "/provider/reports", icon: BarChart3 },
-  { name: "Settings", href: "/provider/settings", icon: Settings },
+  // { name: "My Forms", href: "/provider/forms", icon: FileText },
+  // { name: "Reports", href: "/provider/reports", icon: BarChart3 },
+  // { name: "Settings", href: "/provider/settings", icon: Settings },
 ];
 
 export function ProviderLayout({ children }) {

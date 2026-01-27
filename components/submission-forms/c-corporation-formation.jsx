@@ -172,6 +172,10 @@ const PACKAGE_EXCLUDED = [
   "Website/Domains",
 ];
 
+const getBasePriceFromDisplay = (displayPrice) => {
+ return Math.round(displayPrice / 1.04);
+};
+
 export function CorporationFormationForm({ pricingData }) {
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
@@ -278,6 +282,8 @@ export function CorporationFormationForm({ pricingData }) {
         return;
       }
 
+      const baseAmountForDB = getBasePriceFromDisplay(price);
+
       const submissionData = {
         ...formData,
         members,
@@ -299,7 +305,8 @@ export function CorporationFormationForm({ pricingData }) {
           form_data: submissionData,
           status: "pending",
           payment_status: "pending",
-          amount: price,
+          // amount: price,
+          amount: baseAmountForDB,
           payment_id: "",
         },
       ]).select().single();
