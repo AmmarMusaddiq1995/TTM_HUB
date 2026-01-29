@@ -57,7 +57,7 @@ export default function LoginPage() {
 
         <Card className="hover:shadow-xl transition-all duration-300 shadow-md shadow-black">
           <CardHeader className="text-center">
-            <CardTitle className="text-2xl">Welcome Back</CardTitle>
+            <CardTitle className="text-2xl">Welcome Back To Better Businesses</CardTitle>
             <CardDescription>
               Sign in to your account to manage your business
             </CardDescription>
