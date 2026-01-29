@@ -37,6 +37,8 @@ export function ProviderOverview() {
   const [uploadedFiles, setUploadedFiles] = useState({});
   const [isDragOver, setIsDragOver] = useState(false);
   const [selectedFiles, setSelectedFiles] = useState([]);
+  const [govtFeesInput, setGovtFeesInput] = useState("");
+  const [savingGovtFees, setSavingGovtFees] = useState(false);
 
   const [counts, setCounts] = useState({
     pending: 0,
@@ -67,6 +69,7 @@ export function ProviderOverview() {
           provider_paid,
           paid_on,
           payment_screenshot_url,
+          govt_fees,
           user_data (
           first_name,
           last_name,
@@ -101,6 +104,43 @@ export function ProviderOverview() {
       .reduce((acc, s) => acc + Math.ceil(s.provider_share), 0);
     setCounts({ pending, inProgress, completed, providerShare, pendingAmount });
   };
+
+ /* -------------- Govt Fees Handler -------------- */
+
+ const handleSaveGovtFees = async (submissionId) => {
+  if (govtFeesInput === "" || Number(govtFeesInput) < 0) {
+    toast.error("Please enter a valid govt fee amount");
+    return;
+  }
+
+  try {
+    setSavingGovtFees(true);
+
+    const { error } = await supabase
+      .from("form_submissions")
+      .update({
+        govt_fees: Number(govtFeesInput),
+      })
+      .eq("id", submissionId);
+
+    if (error) {
+      console.error(error);
+      toast.error("Failed to save govt fees");
+      return;
+    }
+
+    toast.success("Govt fees saved. Shares recalculated ✅");
+    setGovtFeesInput("");
+    fetchFormSubmissions(); // optional, realtime already exists
+  } catch (err) {
+    console.error(err);
+    toast.error("Something went wrong");
+  } finally {
+    setSavingGovtFees(false);
+  }
+};
+
+/* -------------- File Upload Handler -------------- */
 
   const handleFileUpload = async (formId, userId, files, paymentId) => {
     if (!files || files.length === 0) return;
@@ -522,6 +562,7 @@ export function ProviderOverview() {
                 {/* <th className="px-4 py-3 border-b">Payment ID</th> */}
                 <th className="px-4 py-3 border-b text-center">Actions</th>
                 <th className="px-4 py-3 border-b">Amount</th>
+                <th className="px-4 py-3 border-b">Govt Fees</th>
                 {/* <th className="px-4 py-3 border-b">Owner Share</th> */}
                 <th className="px-4 py-3 border-b">Got Paid</th>
                 <th className="px-4 py-3 border-b">Paid On</th>
@@ -596,30 +637,7 @@ export function ProviderOverview() {
                     </Badge>
                    
                   </td>
-                  {/* <td className="px-4 py-3">
-                    <span className="font-medium text-gray-800">${Math.ceil(submission.amount)}</span>
-                  </td> */}
-                  
                  
-
-                  {/* <td className="px-4 py-3 font-medium text-gray-800 relative group cursor-pointer">
-                     {submission.payment_id ? (
-                     <>
-                      <span>
-                         {`${submission.payment_id.slice(0, 3)}***${submission.payment_id.slice(-3)}`}
-                       </span>
-                      <span
-                        onClick={() => navigator.clipboard.writeText(submission.payment_id)}
-                         className="absolute bottom-full -mb-4 left-1/2 -translate-x-1/2 hidden group-hover:block bg-gray-800 text-white text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap"
-                       >
-                         {submission.payment_id}
-                      <span className="ml-2 text-gray-300">(Click to copy)</span>
-                       </span>
-                     </>
-                     ) : (
-                     "N/A"
-                       )}
-                  </td> */}
                   
                   <td className="px-4 py-3 text-center">
                     <Button
@@ -634,8 +652,34 @@ export function ProviderOverview() {
                     <span className="font-medium text-gray-800">${Math.ceil(submission.provider_share)}</span>
                   </td>
                   {/* <td className="px-4 py-3">
-                    <span className="font-medium text-gray-800">${Math.ceil(submission.owner_commission)}</span>
+                    <span className="font-medium text-gray-800">${Math.ceil(submission.govt_fees)}</span>
                   </td> */}
+                  <td className="px-4 py-3">
+                     {submission.govt_fees !== null ? (
+                        <span className="font-medium text-gray-800">
+                         ${submission.govt_fees}
+                        </span>
+                        ) : (
+                        <div className="flex items-center gap-2">
+                        <Input
+                        type="number"
+                        min="0"
+                        placeholder="Enter"
+                        className="w-24 h-8 text-sm"
+                        value={govtFeesInput}
+                        onChange={(e) => setGovtFeesInput(e.target.value)}
+                        />
+                        <Button
+                        size="sm"
+                        disabled={savingGovtFees}
+                        onClick={() => handleSaveGovtFees(submission.id)}
+                        >
+                        {savingGovtFees ? "Saving..." : "Save"}
+                        </Button>
+                       </div>
+                       )}
+                  </td>
+                
                   <td className="px-4 py-3">
                     <span className="font-medium text-gray-800">{submission.provider_paid ? "Yes" : "No"}</span>
                   </td>
@@ -656,38 +700,7 @@ export function ProviderOverview() {
         </div>
       </Card>
 
-      {/* <h2 className="text-2xl font-semibold text-gray-800">Service Wise Summary</h2> */}
-
-      {/* <Card className="shadow-md border border-gray-200">
-        <div className="overflow-x-auto">
-          <table className="min-w-full text-sm text-left border-collapse">
-            <thead className="bg-gray-100 text-gray-700 uppercase text-xs">
-              <tr>
-                <th className="px-4 py-3 border-b">Service</th>
-                <th className="px-4 py-3 border-b">Total Orders</th>
-                <th className="px-4 py-3 border-b">Total Revenue</th>
-                <th className="px-4 py-3 border-b">Provider's Share</th>
-                <th className="px-4 py-3 border-b">Owner Share</th>
-                <th className="px-4 py-3 border-b">Completed Orders</th>
-                <th className="px-4 py-3 border-b">Paid Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              {filteredData.map((submission) => (
-                <tr key={submission.id} className="border-b hover:bg-gray-50 transition-all">
-                  <td className="px-4 py-3 font-medium text-gray-800">{submission.service_name}</td>
-                  <td className="px-4 py-3">{submission.total_orders}</td>
-                  <td className="px-4 py-3">${Math.ceil(submission.total_revenue)}</td>
-                  <td className="px-4 py-3">${Math.ceil(submission.provider_share)}</td>
-                  <td className="px-4 py-3">${Math.ceil(submission.owner_commission)}</td>
-                  <td className="px-4 py-3">{submission.completed_orders}</td>
-                  <td className="px-4 py-3">{submission.paid_status}</td>
-              </tr>
-            ))}
-            </tbody>
-          </table>
-        </div>
-      </Card> */}
+     
 
       {/* Modal for JSON data */}
       {selectedSubmission && (
@@ -890,11 +903,7 @@ export function ProviderOverview() {
                           <td className="py-2 px-3 font-medium text-gray-800 capitalize w-1/3">
                             {key.replace(/_/g, " ")}
                           </td>
-                          {/* <td className="py-2 px-3 text-gray-700 break-words w-2/3">
-                            {typeof value === "object"
-                              ? JSON.stringify(value, null, 2)
-                              : String(value)}
-                          </td> */}
+                         
 
                           <td className="py-2 px-3 text-gray-700 break-words w-2/3">
                             {renderHumanReadable(value, key)}

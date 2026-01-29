@@ -91,6 +91,7 @@ export function AdminOverview4() {
             <tr>
               <th className="p-2 border">Service</th>
               <th className="p-2 border">Amount</th>
+              <th className="p-2 border">Govt Fees</th>
               <th className="p-2 border">Provider Share</th>
               <th className="p-2 border">Status</th>
               <th className="p-2 border">Paid</th>
@@ -103,6 +104,7 @@ export function AdminOverview4() {
               <tr key={f.id} className="text-center">
                 <td className="p-2 border">{f.service_name}</td>
                 <td className="p-2 border">${Math.ceil(f.amount)}</td>
+                <td className="p-2 border">${Math.ceil(f.govt_fees)}</td>
                 <td className="p-2 border">${Math.ceil(f.provider_share)}</td>
                 <td className="p-2 border">{f.status}</td>
                 <td className="p-2 border">{f.provider_paid ? "✅" : "❌"}</td>
