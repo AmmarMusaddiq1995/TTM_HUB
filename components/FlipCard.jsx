@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-export default function FlipCard({ title, description }) {
+export default function FlipCard({ title, description, className }) {
   const [flipped, setFlipped] = useState(false);
 
   const isMobile =
@@ -22,9 +22,9 @@ export default function FlipCard({ title, description }) {
       >
         {/* FRONT */}
         <div
-          className="absolute inset-0 rounded-2xl bg-white border border-[#2bb673] shadow-xl shadow-black
+          className={`absolute inset-0 rounded-2xl bg-white border border-[#2bb673] shadow-xl shadow-black
           flex items-center justify-center
-          [backface-visibility:hidden]"
+          [backface-visibility:hidden] ${className}`}
         >
           <h3 className="text-2xl font-bold text-gray-900 text-center px-4">
             {title}
@@ -34,7 +34,7 @@ export default function FlipCard({ title, description }) {
         {/* BACK */}
         <div
           className="absolute inset-0 rounded-2xl bg-[#2bb673] text-white shadow-xl shadow-black
-          flex items-center justify-center px-6
+          flex items-center justify-center px-6 overflow-hidden
           [transform:rotateY(180deg)]
           [backface-visibility:hidden]"
         >
