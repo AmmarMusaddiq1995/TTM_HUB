@@ -126,8 +126,8 @@ export default function ContactPage() {
         <section className="bg-gradient-to-br from-primary/10 to-primary/5 py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 text-balance">
-                Get in Touch
+              <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 text-balance">
+                Get in <span className="text-[#2bb673]">Touch</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 text-pretty">
                 Have questions about starting your business? Our expert team is
@@ -137,8 +137,14 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* Contact Info */}
         <section className="py-16">
+        <div className="container mx-auto px-4">
+        <ContactForm />
+        </div>
+        </section>
+
+        {/* Contact Info */}
+        <section className="mb-16">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-16">
               {contactInfo.map((info, index) => (
@@ -157,11 +163,7 @@ export default function ContactPage() {
           </div>
         </section>
        
-       <section>
-        <div className="container mx-auto px-4">
-        <ContactForm />
-        </div>
-        </section>
+      
 
        
 

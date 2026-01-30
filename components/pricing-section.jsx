@@ -436,7 +436,7 @@ export function PricingSection() {
               
 
               <CardHeader className="text-center pb-8">
-                <CardTitle className="text-2xl font-bold">
+                <CardTitle className="text-2xl font-extrabold bg-[#2bb673] rounded-full text-white px-4 py-2">
                   {plan.name}
                 </CardTitle>
                 <div className="mt-4">
@@ -493,6 +493,9 @@ export function PricingSection() {
                     ? "Get Standard"
                     : "Get Premium"}
                 </Button>
+                <span className="text-xs text-muted-foreground text-center block ">
+                  *No Hidden Fees/Charges.
+                </span>
               </CardContent>
             </Card>
           ))}

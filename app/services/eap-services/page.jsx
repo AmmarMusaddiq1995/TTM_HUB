@@ -18,7 +18,7 @@ export default function EapServicesPage() {
           <p className="text-xl text-muted-foreground mb-8 text-pretty">
           
 Innovative Employee Assistance Programme (IEAP) is a structured, work-based support service designed to help employees and organizations address personal and work-related challenges that negatively impact wellbeing, performance, and workplace stability.
-Unlike traditional counselling-only models, GCC’s IEAP applies an innovative, systems-oriented approach—aligning psychological support with leadership expectations, organizational values, and, where applicable, ongoing culture transformation initiatives.
+Unlike traditional counselling-only models, TTMHUB’s IEAP applies an innovative, systems-oriented approach—aligning psychological support with leadership expectations, organizational values, and, where applicable, ongoing culture transformation initiatives.
 
           </p>
           <Link href="/submission-forms/eap-services-form">

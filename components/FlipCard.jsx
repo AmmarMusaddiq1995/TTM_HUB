@@ -29,7 +29,7 @@ export default function FlipCard({ title, description, className }) {
           <h3 className="text-2xl font-bold text-gray-900 text-center px-4">
             {title}
           </h3>
-        </div>
+        </div> 
 
         {/* BACK */}
         <div

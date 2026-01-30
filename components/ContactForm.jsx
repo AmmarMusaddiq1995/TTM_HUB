@@ -81,7 +81,7 @@ export default function ContactForm() {
       <input
         required
         placeholder="Full Name"
-        className="w-full border p-2 rounded"
+        className="w-full bg-white border p-2 rounded"
         value={formData.name}
         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
       />
@@ -90,21 +90,21 @@ export default function ContactForm() {
         required
         type="email"
         placeholder="Email Address"
-        className="w-full border p-2 rounded"
+        className="w-full bg-white border p-2 rounded"
         value={formData.email}
         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
       />
 
       <input
         placeholder="WhatsApp Number"
-        className="w-full border p-2 rounded"
+        className="w-full bg-white border p-2 rounded"
         value={formData.whatsapp}
         onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
       />
 
       <input
         placeholder="Company Name"
-        className="w-full border p-2 rounded"
+        className="w-full bg-white border p-2 rounded"
         value={formData.companyName}
         onChange={(e) =>
           setFormData({ ...formData, companyName: e.target.value })
@@ -113,14 +113,14 @@ export default function ContactForm() {
 
       <input
         placeholder="Location"
-        className="w-full border p-2 rounded"
+        className="w-full bg-white border p-2 rounded"
         value={formData.location}
         onChange={(e) => setFormData({ ...formData, location: e.target.value })}
       />
 
       {/* MULTI-SELECT DROPDOWN */}
       <div>
-        <p className="font-medium mb-1">Support Related To</p>
+        <p className="font-semibold mb-1">Support Related To :</p>
         {SUPPORT_OPTIONS.map((option) => (
           <label key={option} className="flex items-center gap-2">
             <input
@@ -137,7 +137,7 @@ export default function ContactForm() {
 
       {/* CHECKBOX GROUP */}
       <div>
-        <p className="font-medium mb-1">I Want To</p>
+        <p className="font-semibold mb-1">I Want To :</p>
         {INTENT_OPTIONS.map((option) => (
           <label key={option} className="flex items-center gap-2">
             <input
@@ -153,14 +153,14 @@ export default function ContactForm() {
       <textarea
         placeholder="Your Message"
         rows={4}
-        className="w-full border p-2 rounded"
+        className="w-full bg-white border p-2 rounded"
         value={formData.message}
         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
       />
 
       <button
         disabled={loading}
-        className="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800"
+        className="w-full bg-green-700 text-white py-2 rounded-xl shadow-md shadow-black cursor-pointer hover:bg-green-800 hover:scale-105 transition-all duration-300"
       >
         {loading ? "Sending..." : "Submit"}
       </button>

@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import FlipCard from "@/components/FlipCard";
+import Link from "next/link";
 
 export default function GCIndexPage() {
 
@@ -96,9 +97,11 @@ export default function GCIndexPage() {
           </p>
          
           <div className="mt-10 flex justify-center">
-            <Button className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-6 text-base rounded-xl">
+            <Link href="/contact">
+            <Button className="bg-emerald-600 cursor-pointer shadow-lg shadow-black hover:bg-emerald-500 hover:scale-115 transition-all duration-300 text-white px-10 py-6 rounded-xl">
               Request a Call
             </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -120,7 +123,7 @@ export default function GCIndexPage() {
             The GC Index® is a <strong className="text-black font-extrabold">Digital Organimetric Tool</strong> that measures energy for impact — not personality or competency. It identifies how people naturally contribute so teams can be designed for results, not guesswork. This creates a shared language for teams and leaders; simple, practical, and focused on business outcomes.
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-12 text-white place-items-center">
+          {/* <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-12 text-white place-items-center"> */}
             {/* {["Game Changer", "Strategist", "Implementer", "Polisher", "Play Maker"].map((type) => (
               <Card key={type} className="bg-[#2bb673] shadow-lg shadow-black">
                 <CardContent className="p-6 text-center font-extrabold text-xl text-white">
@@ -128,7 +131,7 @@ export default function GCIndexPage() {
                 </CardContent>
               </Card>
             ))} */}
-            <div className="shadow-lg shadow-black bg-[#60C1A1] rounded-full w-40 h-40 flex items-center justify-center hover:scale-120 transition-all duration-300">
+            {/* <div className="shadow-lg shadow-black bg-[#60C1A1] rounded-full w-40 h-40 flex items-center justify-center hover:scale-120 transition-all duration-300">
               <p className="font-bold text-xl text-center">Game Changer</p>
             </div>
             <div className="shadow-lg shadow-black bg-[#136B8D] rounded-full w-40 h-40 flex items-center justify-center hover:scale-120 transition-all duration-300">
@@ -142,9 +145,10 @@ export default function GCIndexPage() {
             </div>
             <div className="shadow-lg shadow-black bg-[#B02F7C] rounded-full w-40 h-40 flex items-center justify-center hover:scale-120 transition-all duration-300">
               <p className="font-bold text-xl text-center">Play Maker</p>
-            </div>
+            </div> */}
 
-          </div>
+          {/* </div> */}
+          <img src="/gc.png" alt="GC Index" className="w-full h-full object-cover mt-12" />
         </div>
       </section>
 
@@ -201,9 +205,11 @@ export default function GCIndexPage() {
         <h2 className="text-3xl font-semibold">Ready to strengthen execution and alignment?</h2>
         <p className="mt-4 text-gray-600">We’ll help you implement GC Index in a way that delivers measurable results.</p>
         <div className="mt-8">
+          <Link href="/contact">
           <Button className="bg-emerald-600 cursor-pointer shadow-lg shadow-black hover:bg-emerald-500 hover:scale-115 transition-all duration-300 text-white px-10 py-6 rounded-xl">
             Request a Call
           </Button>
+          </Link>
         </div>
       </section>
     </main>

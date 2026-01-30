@@ -187,6 +187,12 @@ export function Header() {
                     <MenuItem href="/services/eap-services" truncate>
                       Innovative Employee Assistance Program
                     </MenuItem>
+                    <MenuItem href="/gc-index" truncate>
+                      GC Index Intervention
+                    </MenuItem>
+                    <MenuItem href="/disc-personality-program" truncate>
+                      DISC Personality Program
+                    </MenuItem>
                   </ul>
                 </div>
                 
