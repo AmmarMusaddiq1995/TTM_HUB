@@ -97,11 +97,11 @@ export function ProviderOverview() {
     const inProgress = data.filter((s) => s.status === "in-progress").length;
     const completed = data.filter((s) => s.status === "completed").length;
     // const totalRevenue = data.reduce((acc, s) => acc + Math.ceil(s.amount), 0);
-    const providerShare = data.reduce((acc, s) => acc + Math.ceil(s.provider_share), 0);
+    const providerShare = data.reduce((acc, s) => acc + s.provider_share, 0);
     // Pending amount: provider share for orders where customer payment succeeded/paid but provider hasn't been paid yet
     const pendingAmount = data
       .filter((s) => !s.provider_paid && (s.payment_status === "paid" || s.payment_status === "succeeded"))
-      .reduce((acc, s) => acc + Math.ceil(s.provider_share), 0);
+      .reduce((acc, s) => acc + s.provider_share, 0);
     setCounts({ pending, inProgress, completed, providerShare, pendingAmount });
   };
 
@@ -649,7 +649,7 @@ export function ProviderOverview() {
                   </td>
 
                   <td className="px-4 py-3">
-                    <span className="font-medium text-gray-800">${Math.ceil(submission.provider_share)}</span>
+                    <span className="font-medium text-gray-800">${submission.provider_share}</span>
                   </td>
                   {/* <td className="px-4 py-3">
                     <span className="font-medium text-gray-800">${Math.ceil(submission.govt_fees)}</span>

@@ -78,10 +78,10 @@ export function AdminOverview4() {
         <Card><CardHeader><CardTitle>Pending</CardTitle></CardHeader><CardContent><p className="text-2xl">{stats.pending}</p></CardContent></Card>
         <Card><CardHeader><CardTitle>In Progress</CardTitle></CardHeader><CardContent><p className="text-2xl">{stats.inProgress}</p></CardContent></Card>
         <Card><CardHeader><CardTitle>Completed</CardTitle></CardHeader><CardContent><p className="text-2xl">{stats.completed}</p></CardContent></Card>
-        <Card><CardHeader><CardTitle>Total Provider Share</CardTitle></CardHeader><CardContent><p className="text-2xl">${Math.ceil(stats.totalProviderShare)}</p></CardContent></Card>
-        <Card><CardHeader><CardTitle>Total Owner Commission</CardTitle></CardHeader><CardContent><p className="text-2xl">${Math.ceil(stats.totalOwnerCommission)}</p></CardContent></Card>
-        <Card><CardHeader><CardTitle>Paid Provider Share</CardTitle></CardHeader><CardContent><p className="text-2xl text-green-600">${Math.ceil(stats.paidShare)}</p></CardContent></Card>
-        <Card><CardHeader><CardTitle>Unpaid Provider Share</CardTitle></CardHeader><CardContent><p className="text-2xl text-red-500">${Math.ceil(stats.unpaidShare)}</p></CardContent></Card>
+        <Card><CardHeader><CardTitle>Total Provider Share</CardTitle></CardHeader><CardContent><p className="text-2xl">${stats.totalProviderShare}</p></CardContent></Card>
+        <Card><CardHeader><CardTitle>Total Owner Commission</CardTitle></CardHeader><CardContent><p className="text-2xl">${stats.totalOwnerCommission}</p></CardContent></Card>
+        <Card><CardHeader><CardTitle>Paid Provider Share</CardTitle></CardHeader><CardContent><p className="text-2xl text-green-600">${stats.paidShare}</p></CardContent></Card>
+        <Card><CardHeader><CardTitle>Unpaid Provider Share</CardTitle></CardHeader><CardContent><p className="text-2xl text-red-500">${stats.unpaidShare}</p></CardContent></Card>
       </div>
 
       {/* Table */}
@@ -103,9 +103,9 @@ export function AdminOverview4() {
             {forms.map((f) => (
               <tr key={f.id} className="text-center">
                 <td className="p-2 border">{f.service_name}</td>
-                <td className="p-2 border">${Math.ceil(f.amount)}</td>
-                <td className="p-2 border">${Math.ceil(f.govt_fees)}</td>
-                <td className="p-2 border">${Math.ceil(f.provider_share)}</td>
+                <td className="p-2 border">${f.amount}</td>
+                <td className="p-2 border">${f.govt_fees}</td>
+                <td className="p-2 border">${f.provider_share}</td>
                 <td className="p-2 border">{f.status}</td>
                 <td className="p-2 border">{f.provider_paid ? "✅" : "❌"}</td>
                 <td className="p-2 border">
