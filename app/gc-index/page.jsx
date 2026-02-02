@@ -6,6 +6,21 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import FlipCard from "@/components/FlipCard";
 import Link from "next/link";
+import faq from "@/data/faq.json";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+
+// Renders FAQ text; supports HTML in faq.json for styling:
+// - Bold: <strong>text</strong> or <b>text</b>
+// - Color: <span style="color:#2bb673">text</span> (escape quotes in JSON: \")
+// - Italic: <em>text</em>
+function FaqText({ content, className = "" }) {
+  if (!content) return null;
+  const hasHtml = /<[a-z][\s\S]*>/i.test(content);
+  if (hasHtml) {
+    return <span className={className} dangerouslySetInnerHTML={{ __html: content }} />;
+  }
+  return <span className={className}>{content}</span>;
+}
 
 export default function GCIndexPage() {
 
@@ -202,7 +217,7 @@ export default function GCIndexPage() {
 
       {/* CTA */}
       <section className="py-24 bg-gradient-to-br from-primary/10 to-primary/5 text-center">
-        <h2 className="text-3xl font-semibold">Ready to strengthen execution and alignment?</h2>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-semibold text-center text-gray-900">Ready to strengthen execution and alignment?</h2>
         <p className="mt-4 text-gray-600">We’ll help you implement GC Index in a way that delivers measurable results.</p>
         <div className="mt-8">
           <Link href="/contact">
@@ -212,6 +227,41 @@ export default function GCIndexPage() {
           </Link>
         </div>
       </section>
+
+      {/* FAQ's Section */}
+
+      <section  className="bg-gray-50 py-20 px-5 ">
+        <div className="container mx-auto">
+          <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-semibold mb-12 text-center text-gray-900">Frequently Asked <span className="text-[#2bb673]">Questions</span></h3>
+          <Accordion type="single" collapsible className="w-full">
+            {faq
+              .filter((item) => item.question?.trim())
+              .map((item, index) => (
+                <AccordionItem key={index} value={`item-${index}`}>
+                  <AccordionTrigger className="text-gray-900 text-lg sm:text-xl md:text-2xl lg:text-2xl font-semibold text-left">
+                    <FaqText content={item.question} />
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-600 text-md sm:text-xl md:text-xl lg:text-xl gap-4 text-balance">
+                    {Array.isArray(item.answer) ? (
+                      <ul className="list-decimal list-inside space-y-2 pl-2 mt-2">
+                        {item.answer.map((point, i) => (
+                          <li key={i} className="leading-relaxed">
+                            <FaqText content={point} />
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="leading-relaxed">
+                        <FaqText content={item.answer} />
+                      </p>
+                    )}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+          </Accordion>
+        </div>
+      </section>
+
     </main>
     <Footer />
     </>

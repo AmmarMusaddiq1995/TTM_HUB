@@ -647,6 +647,18 @@ export function Header() {
                       >
                         Innovative Employee Assistance Program
                       </Link>
+                      <Link
+                        href="/gc-index"
+                        className="block text-sm text-gray-600 hover:text-orange-600 "
+                      >
+                        GC Index Intervention
+                      </Link>
+                      <Link
+                        href="/disc-personality-program"
+                        className="block text-sm text-gray-600 hover:text-orange-600 "
+                      >
+                        DISC Personality Program
+                      </Link>
                      
                     </div>
                   </div>
@@ -1008,7 +1020,6 @@ export function Header() {
                   </div>
                 </AccordionContent>
               </AccordionItem>
-            </Accordion>
 
               <AccordionItem value="get-better">
                 <AccordionTrigger className="text-sm">
@@ -1032,7 +1043,6 @@ export function Header() {
                 </AccordionContent>
               </AccordionItem>
 
-
               <AccordionItem value="resources">
                 <AccordionTrigger className="text-sm">
                   Resources
@@ -1055,7 +1065,6 @@ export function Header() {
                 </AccordionContent>
               </AccordionItem>
 
-
               <AccordionItem value="about">
                 <AccordionTrigger className="text-sm">
                   Get To Know Us
@@ -1077,6 +1086,8 @@ export function Header() {
                   </div>
                 </AccordionContent>
               </AccordionItem>
+
+            </Accordion>
 
            
 

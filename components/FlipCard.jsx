@@ -38,9 +38,9 @@ export default function FlipCard({ title, description, className }) {
           [transform:rotateY(180deg)]
           [backface-visibility:hidden]"
         >
-          <p className="text-center text-base leading-relaxed">
+          <div className="text-center text-base leading-relaxed">
             {description}
-          </p>
+          </div>
         </div>
       </div>
     </div>

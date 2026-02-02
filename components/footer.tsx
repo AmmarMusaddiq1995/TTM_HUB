@@ -53,10 +53,18 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="/services/registered-agent"
+                  href="/services/hr-services"
                   className="hover:text-[#2bb673] transition-colors"
                 >
-                  Registered Agent
+                 HR Services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/gc-index"
+                  className="hover:text-[#2bb673] transition-colors"
+                >
+                 GC Index Intervention
                 </a>
               </li>
             </ul>
