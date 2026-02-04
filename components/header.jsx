@@ -486,7 +486,7 @@ export function Header() {
                   </li>
                   <li>
                     <Link
-                      href="#"
+                      href="/tools"
                       className="text-sm text-gray-600  hover:bg-[#2bb673] hover:text-white rounded-md px-2 py-1 block transition-all duration-200"
                     >
                      Tools
@@ -1056,7 +1056,7 @@ export function Header() {
                       Referred Services
                     </Link>
                     <Link
-                      href="#"
+                      href="/tools"
                       className="block text-sm text-gray-600 hover:text-orange-600"
                     >
                       Tools

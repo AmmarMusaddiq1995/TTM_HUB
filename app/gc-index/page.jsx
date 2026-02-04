@@ -47,7 +47,7 @@ export default function GCIndexPage() {
     description: (
     <div className="px-4 py-4">
     <p>We help your leaders & team members understand</p>
-    <ul className="list-disc list-inside mt-4">
+    <ul className="list-disc list-inside mt-4 text-sm">
       <li>Where they create their best impact</li>
       <li>How to avoid overextension and unhelpful defaults</li>
       <li>What they need from others to perform at their best</li>
@@ -58,8 +58,8 @@ export default function GCIndexPage() {
       title: "Team Impact Reviews & Alignment",
       description: (
       <div className="px-4 py-4">
-      <p>We map team impact patterns to reveal strengths, gaps, and risks—then facilitate practical alignment on:</p>
-      <ul className="list-disc list-inside mt-4 text-pretty">
+      <p className="mt-2">To reveal strengths, gaps, and risks—then facilitate practical alignment on:</p>
+      <ul className="list-disc list-inside text-pretty text-sm">
         <li>Decision rights and handoffs</li>
         <li>Collaboration norms</li>
         <li>Where to slow down, where to speed up, and where quality needs protecting</li>
