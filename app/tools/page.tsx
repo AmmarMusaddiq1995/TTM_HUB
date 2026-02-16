@@ -88,7 +88,7 @@ export default function ToolsPage() {
             <h1 className="text-3xl font-extrabold text-gray-900 mb-6 text-center">
               What You'll Find Here
             </h1>
-            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-6 mx-auto items-center">
               {
                 whatYoullFind.map((item)=>(
                   <FlipCard key={item.title} title={item.title} description={item.description} className={item.className} />

@@ -129,23 +129,33 @@ export function CTASection() {
       </h2>
 
       <div className="grid md:grid-cols-4 gap-6  mx-auto py-8 place-items-center">
-        <FlipCard title="1. Start Your Application" 
+        <FlipCard title="1. Start Your Application" className=""
         description={ <> 
         <p className="text-balance">Complete a short service application to tell us what you need.</p> <br /> 
         <p className="text-balance">For Strategic People Services , we begin with a discovery call to understand you goals , context and priorities.</p>
         </> } />
-        <FlipCard title="2. We Align & Get To Work" 
+        <FlipCard title="2. We Align & Get To Work" className=""
         description={ <>
-        <p className="text-balance">After reviewing your application, we move forward based on your selected service—either preparing and filing required documentation or sharing a tailored proposal outlining scope, timelines, and support options.</p>
+        <p className="text-balance">Once your application is reviewed, we proceed based on your selected service:</p>
+        <ul className=" text-xs ">
+          <li><strong className="text-black">Formation & Compliance Srvices etc:</strong> We began preparing & filing your documentation according to your choosen package</li>
+          <li><strong className="text-black">Strategic People Services:</strong> We prepare a tailored proposal outlining scope, timelines, and support options for your approval.</li>
+        </ul>
          </>
         } />
-        <FlipCard title="3. Receive Your Documents & Access" 
+        <FlipCard title="3. Receive Your Documents & Access" className=""
         description={ <>
-        <p className="text-balance">Your finalized documents or service confirmation are delivered to your dashboard or email, along with clear next steps to ensure a smooth and timely process.</p>
-        </>} /> 
-        <FlipCard title="4. Ready To Launch & Grow" 
+        <ul className=" text-sm ">
+          <li><strong className="text-black">Formation & Compliance etc:</strong> Your completed documents (e.g, formation paperwork, EIN, registerations etc) are delivered to your dashboard.</li>
+          <li><strong className="text-black">Strategic People Services:</strong> You recieve confirmation, documentation and next steps via email.</li>
+        </ul>
+         </>} /> 
+        <FlipCard title="4. Ready To Launch & Grow" className=""
         description={ <>
-        <p className="text-balance">With your business set up correctly or services activated, you’re ready to move forward with confidence—supported by the right tools, structure, and ongoing support to help your business and people thrive.</p>
+        <ul className=" text-sm ">
+          <li><strong className="text-black">New Businesses:</strong> With your company set up correctly, you're ready to launch with confidence.</li>
+          <li><strong className="text-black">Strategic People Services:</strong> You gain access to the agreed upon services,tools, and ongoing support, so your people and business can thrive.</li>
+        </ul>
         </>} />
       </div>
 
