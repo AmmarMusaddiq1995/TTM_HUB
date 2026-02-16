@@ -131,12 +131,12 @@ export function CTASection() {
       <div className="grid md:grid-cols-4 gap-6  mx-auto py-8 place-items-center">
         <FlipCard title="1. Start Your Application" className=""
         description={ <> 
-        <p className="text-balance">Complete a short service application to tell us what you need.</p> <br /> 
-        <p className="text-balance">For Strategic People Services , we begin with a discovery call to understand you goals , context and priorities.</p>
+        <p className="">Complete a short service application to tell us what you need.</p> <br /> 
+        <p className="text-pretty">For Strategic People Services , we begin with a discovery call to understand you goals , context and priorities.</p>
         </> } />
         <FlipCard title="2. We Align & Get To Work" className=""
         description={ <>
-        <p className="text-balance">Once your application is reviewed, we proceed based on your selected service:</p>
+        <p className="text-pretty">Once your application is reviewed, we proceed based on your selected service:</p>
         <ul className=" text-xs ">
           <li><strong className="text-black">Formation & Compliance Srvices etc:</strong> We began preparing & filing your documentation according to your choosen package</li>
           <li><strong className="text-black">Strategic People Services:</strong> We prepare a tailored proposal outlining scope, timelines, and support options for your approval.</li>
